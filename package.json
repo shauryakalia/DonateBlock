@@ -1,0 +1,25 @@
+{
+  "name": "donateblock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shauryak3/DonateBlock.git"
+  },
+  "author": "DonateBlockTeam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shauryak3/DonateBlock/issues"
+  },
+  "homepage": "https://github.com/shauryak3/DonateBlock#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "lodash": "^4.17.10",
+    "mongoose": "^5.2.14"
+  }
+}
