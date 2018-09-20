@@ -5,7 +5,8 @@
 module.exports = {
 
   600 : "error",
-  601 : "User Verification failed via EvolveChain",
+
+  601 : "Information missing can't register",
   602 : "Unable to get user's data from EvolveChain",
   603 : "db error",
   604 : "phone or password or isd code missing" ,

@@ -80,6 +80,19 @@ module.exports  = {
         aadhaar           :   _.get(req,['body','Aadhaar'],'')
       };
 
+      if(!db_details.first_name || !db_details.phone || !db_details.password || !db_details.last_name || !db_details.aadhaar){
+        
+        let invalidDetailError = {
+          status: true,
+          error: _.get(errorCode, 601, ''),
+          statusCode: 601
+        };
+
+        LOG.console.info("ERROR : " + invalidDetailError.error); //Adding error in the log file
+        _.set(req, 'error', invalidDetailError);
+        return next();
+      }
+
     
       let details  = await DB.registerUser(db_details);//Adding a new verified user in DB
 
@@ -178,7 +191,7 @@ module.exports  = {
 
       }
 
-      let token = await jwt.sign({ xb_id: details._id, time: new Date().getTime() }, appConst.secret_key);//generating token
+      let token = await jwt.sign({ db_id: details._id, time: new Date().getTime() }, appConst.secret_key);//generating token
 
       let updatedDetails = await DB.addTokenForVerifiedUser( details._id, token);//adding session token for the user in db
 
@@ -253,7 +266,7 @@ module.exports  = {
 
       let decodedId = await jwt.verify(token, appConst.secret_key);//verifying the session token
 
-      let details = await DB.userDetails( decodedId.xb_id );//Getting user details based on id from db
+      let details = await DB.userDetails( decodedId.db_id );//Getting user details based on id from db
 
       if(!details)
       {
@@ -272,7 +285,7 @@ module.exports  = {
 
       if(details.token == token)
       {
-        _.set(req, ['body','xb_id'], decodedId.xb_id );//token verified via db
+        _.set(req, ['body','db_id'], decodedId.db_id );//token verified via db
         return next();
 
       }
@@ -329,9 +342,9 @@ module.exports  = {
         return next();
       }
 
-      const xb_id  = _.get(req, ['body', 'db_id'], '');
+      const db_id  = _.get(req, ['body', 'db_id'], '');
+      let user_data = await DB.userDetails(db_id);
       _.set(req, ['body','user_details'], user_data );
-      _.set(req, ['body','config'], (_.get(appConst, ['config'],'')) );
       return next();
 
     }
@@ -353,7 +366,7 @@ module.exports  = {
   },
 
 
-//--------api to get user details via xb_id------------------
+//--------api to get user details via db_id------------------
   getDetailsById: async (req, res, next) => {
 
     try {
@@ -417,18 +430,25 @@ module.exports  = {
       }
 
       const new_details = {
-        bio                  :    _.get(req,['body','bio'],''),
-        education_details    :    _.get(req,['body','education_details'],''),
-        relationship         :    _.get(req,['body','relationship'],''),
-        occupation_details   :    _.get(req, ['body','occupation_details',''])
-
+        bio                  :    _.get(req,['body','bio'],'')
       };
 
       const db_id            =   _.get(req,['body','db_id'],'');
 
-      _.set(new_details,['db_id'], db_id);
 
-      
+      let details = await DB.updateUserDetails(db_id,new_details);
+      if(details.nModified==0){
+        // error: "Error while adding session token in db"
+        let dbError = {
+          status: true,
+          error: _.get(errorCode, 603, ''),
+          statusCode: 603
+        };
+
+        LOG.console.info("ERROR : " + dbError.error); //Adding error in the log file
+        _.set(req, ['error'], dbError);
+        return next();
+      }
       _.set(req, ['body'], {});
       _.set(req, ['body'], { profile_updated: true});
       return next();
@@ -458,10 +478,10 @@ module.exports  = {
       return next();
     }
 
-    const xb_id = _.get(req, ['body', 'xb_id'], '');
+    const db_id = _.get(req, ['body', 'db_id'], '');
 
-    let path  = './public/images/uploads/'+xb_id;
-    let result  = await DB.addProfilePath(xb_id, path);
+    let path  = './public/images/uploads/'+db_id;
+    let result  = await DB.addProfilePath(db_id, path);
 
     if(!result)
     {
