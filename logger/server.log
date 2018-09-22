@@ -1,0 +1,63 @@
+20-09-2018 13:54:41.173 INFO  server started at port 9000 
+20-09-2018 13:54:54.336 INFO  POST: /v1/registerUser 
+20-09-2018 13:54:54.336 INFO  Params: {} 
+20-09-2018 13:56:21.155 INFO  POST: /v1/registerUser 
+20-09-2018 13:56:21.155 INFO  Params: {} 
+20-09-2018 13:56:41.062 INFO  POST: /v1/login 
+20-09-2018 13:56:41.062 INFO  Params: {"phone":"null","password":"","isd_code":"null"} 
+20-09-2018 13:56:41.062 INFO  ERROR : phone or password or isd code missing 
+20-09-2018 13:59:31.962 INFO  server started at port 9000 
+20-09-2018 13:59:33.833 INFO  POST: /v1/registerUser 
+20-09-2018 13:59:33.834 INFO  Params: {} 
+20-09-2018 13:59:56.434 INFO  server started at port 9000 
+20-09-2018 13:59:58.291 INFO  POST: /v1/registerUser 
+20-09-2018 13:59:58.292 INFO  Params: {} 
+20-09-2018 13:59:59.238 INFO  POST: /v1/registerUser 
+20-09-2018 13:59:59.238 INFO  Params: {} 
+20-09-2018 14:01:38.126 INFO  server started at port 9000 
+20-09-2018 14:01:45.285 INFO  POST: /v1/registerUser 
+20-09-2018 14:01:45.286 INFO  Params: {} 
+20-09-2018 14:01:45.286 INFO  ERROR : Information missing can't register 
+20-09-2018 14:02:18.014 INFO  POST: /v1/login 
+20-09-2018 14:02:18.014 INFO  Params: {"phone":"1234","password":"1234","isd_code":"91"} 
+20-09-2018 15:15:02.203 INFO  server started at port 9000 
+20-09-2018 15:15:17.376 INFO  GET: /v1/getUserDetails 
+20-09-2018 15:15:17.376 INFO  Params: {} 
+20-09-2018 15:15:17.392 INFO  ERROR : Error while getting user details 
+20-09-2018 15:15:31.550 INFO  GET: /v1/getUserDetails 
+20-09-2018 15:15:31.550 INFO  Params: {} 
+20-09-2018 15:15:47.605 INFO  ERROR : Error while getting user details 
+20-09-2018 15:17:30.878 INFO  server started at port 9000 
+20-09-2018 15:17:35.203 INFO  POST: /v1/login 
+20-09-2018 15:17:35.204 INFO  Params: {"phone":"1234","password":"1234","isd_code":"91"} 
+20-09-2018 15:17:51.015 INFO  GET: /v1/getUserDetails 
+20-09-2018 15:17:51.015 INFO  Params: {} 
+20-09-2018 15:18:03.287 INFO  ERROR : Error while getting user details 
+20-09-2018 15:18:12.247 INFO  GET: /v1/getUserDetails 
+20-09-2018 15:18:12.247 INFO  Params: {} 
+20-09-2018 15:18:44.607 INFO  server started at port 9000 
+20-09-2018 15:18:46.521 INFO  GET: /v1/getUserDetails 
+20-09-2018 15:18:46.521 INFO  Params: {} 
+20-09-2018 16:22:35.418 INFO  PUT: /v1/updateUserDetails 
+20-09-2018 16:22:35.418 INFO  Params: {"gender":"2"} 
+20-09-2018 16:23:09.888 INFO  PUT: /v1/updateUserDetails 
+20-09-2018 16:23:09.888 INFO  Params: {"bio":" hello world hello fraands"} 
+20-09-2018 16:30:43.506 INFO  server started at port 9000 
+20-09-2018 16:30:45.467 INFO  PUT: /v1/updateUserDetails 
+20-09-2018 16:30:45.468 INFO  Params: {"bio":" hello world hello fraands"} 
+20-09-2018 16:32:14.631 INFO  server started at port 9000 
+20-09-2018 16:32:18.850 INFO  PUT: /v1/updateUserDetails 
+20-09-2018 16:32:18.850 INFO  Params: {"bio":" hello world hello fraands"} 
+20-09-2018 16:33:06.571 INFO  PUT: /v1/updateUserDetails 
+20-09-2018 16:33:06.571 INFO  Params: {"bio":" hello world hello fraands"} 
+20-09-2018 16:34:09.038 INFO  server started at port 9000 
+20-09-2018 16:34:10.590 INFO  PUT: /v1/updateUserDetails 
+20-09-2018 16:34:10.590 INFO  Params: {"bio":" hello world hello fraands"} 
+20-09-2018 16:34:14.982 INFO  ERROR : db error 
+20-09-2018 18:06:49.864 INFO  PUT: /v1/updateUserDetails 
+20-09-2018 18:06:49.865 INFO  Params: {"bio":" hello world hello fraands"} 
+20-09-2018 18:07:00.187 INFO  ERROR : db error 
+20-09-2018 18:09:40.661 INFO  server started at port 9000 
+20-09-2018 18:09:42.519 INFO  PUT: /v1/updateUserDetails 
+20-09-2018 18:09:42.519 INFO  Params: {"bio":" hello world hello fraands"} 
+20-09-2018 18:09:46.684 INFO  ERROR : db error 
