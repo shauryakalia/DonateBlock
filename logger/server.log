@@ -61,3 +61,16 @@
 20-09-2018 18:09:42.519 INFO  PUT: /v1/updateUserDetails 
 20-09-2018 18:09:42.519 INFO  Params: {"bio":" hello world hello fraands"} 
 20-09-2018 18:09:46.684 INFO  ERROR : db error 
+24-09-2018 19:40:58.703 INFO  server started at port 9000 
+24-09-2018 19:54:43.191 INFO  server started at port 9000 
+24-09-2018 20:06:45.896 INFO  server started at port 9000 
+24-09-2018 20:13:43.401 INFO  server started at port 9000 
+24-09-2018 20:13:54.963 INFO  POST: /v1/registerOrganisation 
+24-09-2018 20:13:54.963 INFO  Params: {"orgName":"C.R.Y","orgEmail":"cry@gmail.com","orgPhone":9874563210,"isd_code":91,"orgPassword":"cry123","orgRegId":"cry123","orgAddress":"new delhi","orgOwnerName":"Gov"} 
+24-09-2018 20:13:54.963 INFO  ERROR : Information missing can't register 
+24-09-2018 20:15:16.058 INFO  server started at port 9000 
+24-09-2018 20:15:18.255 INFO  POST: /v1/registerOrganisation 
+24-09-2018 20:15:18.256 INFO  Params: {"orgName":"C.R.Y","orgEmail":"cry@gmail.com","orgPhone":9874563210,"isd_code":91,"orgPassword":"cry123","orgRegId":"cry123","orgAddress":"new delhi","orgOwnerName":"Gov"} 
+24-09-2018 20:16:25.182 INFO  server started at port 9000 
+24-09-2018 20:16:29.376 INFO  POST: /v1/registerOrganisation 
+24-09-2018 20:16:29.376 INFO  Params: {"orgName":"C.R.Y","orgEmail":"cry@gmail.com","orgPhone":9874563210,"isd_code":91,"orgPassword":"cry123","orgRegId":"cry123","orgAddress":"new delhi","orgOwnerName":"Gov"} 
