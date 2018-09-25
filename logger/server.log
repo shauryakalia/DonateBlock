@@ -74,3 +74,44 @@
 24-09-2018 20:16:25.182 INFO  server started at port 9000 
 24-09-2018 20:16:29.376 INFO  POST: /v1/registerOrganisation 
 24-09-2018 20:16:29.376 INFO  Params: {"orgName":"C.R.Y","orgEmail":"cry@gmail.com","orgPhone":9874563210,"isd_code":91,"orgPassword":"cry123","orgRegId":"cry123","orgAddress":"new delhi","orgOwnerName":"Gov"} 
+25-09-2018 20:07:06.579 INFO  server started at port 9000 
+25-09-2018 20:07:09.239 INFO  POST: /v1/organisationLogin 
+25-09-2018 20:07:09.239 INFO  Params: {"orgPhone":"9874563210.0","orgPassword":"cry123","isd_code":"91"} 
+25-09-2018 20:07:09.241 INFO  ERROR : Error while login in 
+25-09-2018 20:07:14.579 INFO  POST: /v1/organisationLogin 
+25-09-2018 20:07:14.579 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+25-09-2018 20:07:14.580 INFO  ERROR : Error while login in 
+25-09-2018 20:08:33.282 INFO  server started at port 9000 
+25-09-2018 20:08:34.744 INFO  POST: /v1/organisationLogin 
+25-09-2018 20:08:34.744 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+25-09-2018 20:09:16.043 INFO  server started at port 9000 
+25-09-2018 20:09:21.729 INFO  POST: /v1/organisationLogin 
+25-09-2018 20:09:21.729 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+25-09-2018 20:10:06.406 INFO  server started at port 9000 
+25-09-2018 20:10:10.307 INFO  POST: /v1/organisationLogin 
+25-09-2018 20:10:10.308 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+25-09-2018 20:11:10.228 INFO  server started at port 9000 
+25-09-2018 20:11:13.621 INFO  POST: /v1/organisationLogin 
+25-09-2018 20:11:13.621 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+25-09-2018 20:14:03.152 INFO  server started at port 9000 
+25-09-2018 20:14:04.923 INFO  GET: /v1/getOrganisationDetails 
+25-09-2018 20:14:04.923 INFO  Params: {} 
+25-09-2018 20:14:04.936 INFO  ERROR : Error in getting user details from the db 
+25-09-2018 20:14:59.172 INFO  server started at port 9000 
+25-09-2018 20:15:00.380 INFO  GET: /v1/getOrganisationDetails 
+25-09-2018 20:15:34.069 INFO  server started at port 9000 
+25-09-2018 20:15:36.885 INFO  GET: /v1/getOrganisationDetails 
+25-09-2018 20:15:51.237 INFO  server started at port 9000 
+25-09-2018 20:15:52.850 INFO  GET: /v1/getOrganisationDetails 
+25-09-2018 20:15:52.850 INFO  Params: {} 
+25-09-2018 20:15:55.239 INFO  ERROR : Error while getting user details 
+25-09-2018 20:16:46.351 INFO  GET: /v1/getOrganisationDetails 
+25-09-2018 20:16:46.351 INFO  Params: {} 
+25-09-2018 20:17:44.797 INFO  ERROR : Error while getting user details 
+25-09-2018 20:17:51.097 INFO  server started at port 9000 
+25-09-2018 20:17:53.865 INFO  GET: /v1/getOrganisationDetails 
+25-09-2018 20:17:53.866 INFO  Params: {} 
+25-09-2018 20:19:51.170 INFO  server started at port 9000 
+25-09-2018 20:19:53.596 INFO  GET: /v1/getOrganisationDetails 
+25-09-2018 20:19:53.596 INFO  Params: {} 
+25-09-2018 20:25:31.271 INFO  server started at port 9000 

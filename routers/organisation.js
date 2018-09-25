@@ -100,11 +100,11 @@ module.exports  = {
         return next();
       }
 
-      const phone                 = _.get(req, ['body', 'phone'], 0),
+      const orgPhone                 = _.get(req, ['body', 'orgPhone'], 0),
             isd_code              = _.get(req, ['body', 'isd_code'], 0),
-            password              = _.get(req, ['body', 'password'], '');
+            orgPassword              = _.get(req, ['body', 'orgPassword'], '');
 
-      if(!phone || !password || !isd_code)//phone, password and isd code are compulsory
+      if(!orgPhone || !orgPassword || !isd_code)//phone, password and isd code are compulsory
       {
         let organisationError = {
           status: true,
@@ -119,7 +119,7 @@ module.exports  = {
       }
 
     //Checking the Organisation in db, based on the credentials
-      let details = await organisationDB.checkLogin( phone , password );
+      let details = await organisationDB.checkOrganisationLogin( orgPhone , orgPassword );
 
       if (!details)
       {
@@ -151,7 +151,7 @@ module.exports  = {
 
       }
 
-      let token = await jwt.sign({ db_id: details._id, time: new Date().getTime() }, appConst.secret_key);//generating token
+      let token = await jwt.sign({ organisation_id: details._id, time: new Date().getTime() }, appConst.secret_key);//generating token
 
       let updatedDetails = await organisationDB.addTokenForVerifiedOrganisation( details._id, token);//adding session token for the Organisation in db
 
@@ -173,9 +173,8 @@ module.exports  = {
       _.set(req, ['body'], {});
       _.set(req, ['body', 'auth'], true);
       _.set(req, ['body', 'access_token'], token);
-      _.set(req, ['body', 'db_id'], details._id);
-      _.set(req, ['body', 'first_name'], details.first_name);
-      _.set(req, ['body', 'last_name'], details.last_name);
+      _.set(req, ['body', 'organisation_id'], details._id);
+      _.set(req, ['body', 'orgName'], details.orgName);
 
       return next();
 
@@ -226,7 +225,7 @@ module.exports  = {
 
       let decodedId = await jwt.verify(token, appConst.secret_key);//verifying the session token
 
-      let details = await organisationDB.organisationDetails( decodedId.db_id );//Getting Organisation details based on id from db
+      let details = await organisationDB.organisationDetails( decodedId.organisation_id );//Getting Organisation details based on id from db
 
       if(!details)
       {
@@ -245,7 +244,7 @@ module.exports  = {
 
       if(details.token == token)
       {
-        _.set(req, ['body','db_id'], decodedId.db_id );//token verified via db
+        _.set(req, ['body','organisation_id'], decodedId.organisation_id );//token verified via db
         return next();
 
       }
@@ -302,8 +301,8 @@ module.exports  = {
         return next();
       }
 
-      const db_id  = _.get(req, ['body', 'db_id'], '');
-      let organisation_data = await organisationDB.organisationDetails(db_id);
+      const organisation_id  = _.get(req, ['body', 'organisation_id'], '');
+      let organisation_data = await organisationDB.organisationDetails(organisation_id);
       _.set(req, ['body','organisation_details'], organisation_data );
       return next();
 
@@ -326,7 +325,7 @@ module.exports  = {
   },
 
 
-//--------api to get Organisation details via db_id------------------
+//--------api to get Organisation details via organisation_id------------------
   getDetailsById: async (req, res, next) => {
 
     try {
@@ -336,10 +335,10 @@ module.exports  = {
         return next();
       }
 
-      const db_id  = _.get(req, ['body', 'db_id'], '');
-      const organisation_id  = _.get(req, ['query', 'organisation_id'], '');
+      const organisation_id  = _.get(req, ['body', 'organisation_id'], '');
+     // const organisation_id  = _.get(req, ['query', 'organisation_id'], '');
 
-      if(!db_id || !organisation_id)
+      if(!organisation_id || !organisation_id)
       {
         // 'id missing!',
         let organisationError = {
@@ -380,68 +379,68 @@ module.exports  = {
 
 
   //--------api to update Organisation profile------------------
-  updateOrganisationDetails: async (req, res, next) => {
+  // updateOrganisationDetails: async (req, res, next) => {
 
-    try {
+  //   try {
 
-      if(_.get(req,['error', 'status'], false) )
-      {
-        return next();
-      }
+  //     if(_.get(req,['error', 'status'], false) )
+  //     {
+  //       return next();
+  //     }
 
-      const new_details = {
-        bio                  :    _.get(req,['body','bio'],'')
-      };
+  //     const new_details = {
+  //       bio                  :    _.get(req,['body','bio'],'')
+  //     };
 
-      const db_id            =   _.get(req,['body','db_id'],'');
+  //     const organisation_id    =   _.get(req,['body','organisation_id'],'');
 
 
-      let details = await organisationDB.updateOrganisationDetails(db_id,new_details);
-      if(details.nModified==0){
-        // error: "Error while adding session token in db"
-        let dbError = {
-          status: true,
-          error: _.get(errorCode, 603, ''),
-          statusCode: 603
-        };
+  //     let details = await organisationDB.updateOrganisationDetails(organisation_id,new_details);
+  //     if(details.nModified==0){
+  //       // error: "Error while adding session token in db"
+  //       let dbError = {
+  //         status: true,
+  //         error: _.get(errorCode, 603, ''),
+  //         statusCode: 603
+  //       };
 
-        LOG.console.info("ERROR : " + dbError.error); //Adding error in the log file
-        _.set(req, ['error'], dbError);
-        return next();
-      }
-      _.set(req, ['body'], {});
-      _.set(req, ['body'], { profile_updated: true});
-      return next();
+  //       LOG.console.info("ERROR : " + dbError.error); //Adding error in the log file
+  //       _.set(req, ['error'], dbError);
+  //       return next();
+  //     }
+  //     _.set(req, ['body'], {});
+  //     _.set(req, ['body'], { profile_updated: true});
+  //     return next();
 
-    } catch(error) {
+  //   } catch(error) {
 
-      //"Unable to update Organisation details"
-      let updateError = {
-        status: true,
-        error: _.get(errorCode, 633, ''),
-        statusCode: 633
-      };
+  //     //"Unable to update Organisation details"
+  //     let updateError = {
+  //       status: true,
+  //       error: _.get(errorCode, 633, ''),
+  //       statusCode: 633
+  //     };
 
-      LOG.console.info("ERROR : " + updateError.error); //Adding error in the log file
-      _.set(req, ['error'], updateError);
-      return next();
+  //     LOG.console.info("ERROR : " + updateError.error); //Adding error in the log file
+  //     _.set(req, ['error'], updateError);
+  //     return next();
 
-    }
+  //   }
 
-  },
+  // },
 
 
 //--------api to upload profile picture------------------
-  profilePicUpload: async (req,res,next) => {
+organisationProfilePicUpload: async (req,res,next) => {
 
     if( _.get(req, ['error', 'status'], false) ){
       return next();
     }
 
-    const db_id = _.get(req, ['body', 'db_id'], '');
+    const organisation_id = _.get(req, ['body', 'organisation_id'], '');
 
-    let path  = './public/images/uploads/'+db_id;
-    let result  = await organisationDB.addProfilePath(db_id, path);
+    let path  = './public/images/uploads/'+organisation_id;
+    let result  = await organisationDB.addProfilePath(organisation_id, path);
 
     if(!result)
     {
@@ -478,7 +477,7 @@ module.exports  = {
           profile_pic       :   path
     };
 
-    _.set(new_details,['db_id'], db_id);
+    _.set(new_details,['organisation_id'], organisation_id);
 
     var details    =    {file_uploaded: true};
 
