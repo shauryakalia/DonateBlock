@@ -4,9 +4,6 @@
 
 // NPM Modules
 const _                   =   require('lodash'),
-      multer              =   require('multer'),
-      request             =   require('request'),
-      jwt                 =   require('jsonwebtoken'),
 // Internal Modules
       config              =   require('../config'),
       lib                 =   require('../lib'),

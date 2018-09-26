@@ -14,7 +14,7 @@ const multer                  = require('multer'),
 module.exports  =  app => {
 
 
-
+      //user--------------------------------------------
   app.post('/v1/registerUser', donateBlock.apiInfo, user.registerUser, response, error);
 
   app.post('/v1/userLogin', donateBlock.apiInfo, user.checkUserLogin, response, error);
@@ -34,10 +34,6 @@ module.exports  =  app => {
   app.post('/v1/organisationLogin', donateBlock.apiInfo, organisation.checkOrganisationLogin, response, error);
 
   app.get('/v1/getOrganisationDetails', donateBlock.apiInfo, organisation.verifyOrganisationToken, organisation.getOrganisationDetails, response, error);
-
-  //app.put('/v1/updateOrganisationDetails', donateBlock.apiInfo, organisation.verifyOrganisationToken, organisation.updateOrganisationDetails, response, error);
-
-  // app.get('/v1/getDetailsById', donateBlock.apiInfo, user.verifyUserToken, user.getDetailsById, response, error);
 
    app.post('/v1/organisationProfilePicUpload', donateBlock.apiInfo, organisation.verifyOrganisationToken, organisation.organisationProfilePicUpload,response,error);
 
