@@ -13,6 +13,7 @@ var userSchema = mongoose.Schema({
 	last_name: { type: String },
 	password: { type: String },
 	phone : { type: Number },
+	email : { type: String},
 	profile_pic: { type: String },
 	token: { type: String },
 	isd_code: {type: Number},
