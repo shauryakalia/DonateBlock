@@ -7,7 +7,7 @@ const _                 = require('lodash'),
       async             = require("async"),
 //Internal Modules
       Organisation      = require('../model/Organisation'),
-      util                = require('../util');
+      util              = require('../util');
 
 
 module.exports = {
