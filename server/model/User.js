@@ -26,9 +26,7 @@ var userSchema = mongoose.Schema({
 		state             :   { type: String },
 		country           :   { type: String },
 		zip               :   { type: String }
-	},
-	aadhaar: { type: String }
-
+	}
 }
 );
 
