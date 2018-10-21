@@ -3,14 +3,17 @@
 "use strict";
 
 //Internal Modules
-const userDB      = require('./userDB'),
+const userDB          = require('./userDB'),
       organisationDB  = require('./organisationDB'),
-      service = require('./service');
+      service         = require('./service'),
+      vendorDB        = require('./vendorDB');
+
 
 module.exports = {
 
   userDB:         userDB,
   service:        service,
-  organisationDB: organisationDB
+  organisationDB: organisationDB,
+  vendorDB:       vendorDB
 
 };

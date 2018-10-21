@@ -9,7 +9,8 @@ const multer                  = require('multer'),
       response                = require('./response'),
       donateBlock             = require('./donateBlock'),
       user                    = require('./user'),
-      organisation            = require('./organisation');
+      organisation            = require('./organisation'),
+      vendor                  = require('./vendor');
 
 module.exports  =  app => {
 
@@ -35,6 +36,15 @@ module.exports  =  app => {
 
   app.get('/v1/getOrganisationDetails', donateBlock.apiInfo, organisation.verifyOrganisationToken, organisation.getOrganisationDetails, response, error);
 
-   app.post('/v1/organisationProfilePicUpload', donateBlock.apiInfo, organisation.verifyOrganisationToken, organisation.organisationProfilePicUpload,response,error);
+  app.post('/v1/organisationProfilePicUpload', donateBlock.apiInfo, organisation.verifyOrganisationToken, organisation.organisationProfilePicUpload,response,error);
 
+    
+  //vendor----------------------------------------
+  app.post('/v1/registerVendor', donateBlock.apiInfo, vendor.registerVendor, response, error);
+
+  app.post('/v1/vendorLogin', donateBlock.apiInfo, vendor.checkVendorLogin, response, error);
+
+  app.get('/v1/getVendorDetails', donateBlock.apiInfo, vendor.verifyVendorToken, vendor.getVendorDetails, response, error);
+
+  app.post('/v1/vendorProfilePicUpload', donateBlock.apiInfo, vendor.verifyVendorToken, vendor.vendorProfilePicUpload,response,error);
 };
