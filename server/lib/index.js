@@ -6,7 +6,8 @@
 const userDB          = require('./userDB'),
       organisationDB  = require('./organisationDB'),
       service         = require('./service'),
-      vendorDB        = require('./vendorDB');
+      vendorDB        = require('./vendorDB'),
+      campaignDB      = require('./campaignDB');
 
 
 module.exports = {
@@ -14,6 +15,7 @@ module.exports = {
   userDB:         userDB,
   service:        service,
   organisationDB: organisationDB,
-  vendorDB:       vendorDB
+  vendorDB:       vendorDB,
+  campaignDB:     campaignDB
 
 };

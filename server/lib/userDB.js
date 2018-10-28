@@ -9,6 +9,7 @@ const mongoose          = require('mongoose'),
       async             = require("async"),
 //Internal Modules
       User              = require('../model/User'),
+      Campaign          = require('../model/Campaign'),
       util              = require('../util'),
       config            = require('../config');
 

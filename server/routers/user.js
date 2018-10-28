@@ -11,6 +11,7 @@ const _                   =   require('lodash'),
       config              =   require('../config'),
       lib                 =   require('../lib'),
       userDB              =   lib.userDB,
+      campaignDB          =   lib.campaignDB,
       service             =   lib.service,
       LOG                 =   config.LOG,
       util                =   require('../util'),
@@ -45,7 +46,7 @@ module.exports  = {
           country           :   _.get(req,['body','country'],''),
           zip               :   _.get(req,['body','zip'],'')
         },
-        aadhaar           :   _.get(req,['body','Aadhaar'],'')
+        aadhaar           :     _.get(req,['body','aadhaar'],'')
       };
 
       if(!db_details.first_name || !db_details.phone || !db_details.password || !db_details.last_name || !db_details.aadhaar){
@@ -361,14 +362,11 @@ module.exports  = {
         return next();
       }
 
-
-
-
+      let user_data = await userDB.userDetails(user_id);
       _.set(req, ['body'], {});
-      _.set(req, ['body','user_details'], getUser_result.result.message[0] );
-      _.set(req, ['body','config'], (_.get(appConst, ['config'],'')) );
-
+      _.set(req, ['body','user_details'], user_data );
       return next();
+
 
     } catch(error) {
      //Error while getting user details
@@ -495,5 +493,54 @@ module.exports  = {
     return next();
 
   },
+
+  getAllCampaign: async (req,res,next)=>{
+
+    try {
+
+      if ( _.get(req, ['error', 'status'], false) )
+      {
+        return next();
+      }
+
+      const db_id  = _.get(req, ['body', 'db_id'], '');
+
+      if(!db_id)
+      {
+        // 'id missing!',
+        let userError = {
+          status: true,
+          error: _.get(errorCode, 610, ''),
+          statusCode: 610
+        };
+
+        LOG.console.info("ERROR : " + userError.error); //Adding error in the log file
+        _.set(req, ['error'], userError);
+        return next();
+      }
+
+      let details = await campaignDB.getAllCampaign();
+
+
+      _.set(req, ['body'], {});
+      _.set(req, ['body', 'campaign'], details);
+     
+
+      return next();
+
+    } catch(error) {
+     //Error while getting user details
+      let userError = {
+        status: true,
+        error: _. get(errorCode, 642, ''),
+        statusCode: 642
+      };
+
+      LOG.console.info("ERROR : " + userError.result.error.message); //Adding error in the log file
+      _.set(req, 'error', userError);
+      return next();
+
+    }
+  }
 
 };
