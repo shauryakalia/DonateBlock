@@ -12,6 +12,7 @@ const _                   =   require('lodash'),
       lib                 =   require('../lib'),
       util                =   require('../util'),
       organisationDB      =   lib.organisationDB,
+      campaignDB          =   lib.campaignDB,
       service             =   lib.service,
       LOG                 =   config.LOG,
       appConst            =   util.appConst,
@@ -383,5 +384,128 @@ organisationProfilePicUpload: async (req,res,next) => {
     return next();
 
   },
+
+
+  createCampaign: async (req,res,next)=>{
+    try{
+
+      if ( _.get(req, ['error', 'status'], false) )
+      {
+        return next();
+      }
+
+      const organisation_id  = _.get(req, ['body', 'organisation_id'], '');
+
+      const db_details = {
+
+        campaignName         :   _.get(req,['body','campaignName'],''),
+        campaignCause        :   _.get(req,['body','campaignCause'],''),
+        campaignOrganisation :   organisation_id,
+        campaignDiscription  :   _.get(req,['body','campaignDiscription'],''),
+        amount_required      :   _.get(req,['body','amount_required'],''),
+        campaignRequirement :  _.get(req,['body','campaignRequirement'],''),
+        quantity:              _.get(req,['body','quantity'],''),
+
+
+      };
+
+      if(!db_details.campaignName || !db_details.campaignCause || !db_details.campaignDiscription  || !db_details.amount_required){
+        
+        let invalidDetailError = {
+          status: true,
+          error: _.get(errorCode, 601, ''),
+          statusCode: 601
+        };
+
+        LOG.console.info("ERROR : " + invalidDetailError.error); //Adding error in the log file
+        _.set(req, 'error', invalidDetailError);
+        return next();
+      }
+
+    
+      let details  = await campaignDB.createCampaign(db_details);//Adding a new verified campaign for an organisationDB
+
+      if(!details)
+      {          // error: "Error in adding new campaign for an Organisation to the db",
+        let invalidOrganisationError = {
+          status: true,
+          error: _.get(errorCode, 628, ''),
+          statusCode: 628
+        };
+
+        LOG.console.info("ERROR : " + invalidOrganisationError.error); //Adding error in the log file
+        _.set(req, 'error', invalidOrganisationError);
+        return next();
+
+      }
+
+      _.set(req, ['body'], {});
+      _.set(req, ['body'], details);
+     
+      return next();
+
+    }
+    catch(error) {
+        // error:"organisationDB Error" ,
+      let hlError =   {
+        status: true,
+        error: _.get(errorCode, 603, ''),
+        statusCode: 603
+      };
+
+      _.set(req, ['error'], hlError);
+      return next();
+
+    }
+  },
+
+  getSelfCampaign: async (req,res,next)=>{
+
+    try {
+
+      if ( _.get(req, ['error', 'status'], false) )
+      {
+        return next();
+      }
+
+      const organisation_id  = _.get(req, ['body', 'organisation_id'], '');
+
+      if(!organisation_id)
+      {
+        // 'id missing!',
+        let userError = {
+          status: true,
+          error: _.get(errorCode, 610, ''),
+          statusCode: 610
+        };
+
+        LOG.console.info("ERROR : " + userError.error); //Adding error in the log file
+        _.set(req, ['error'], userError);
+        return next();
+      }
+
+      let details = await campaignDB.getSelfCampaign(organisation_id);
+
+
+      _.set(req, ['body'], {});
+      _.set(req, ['body', 'campaign'], details);
+     
+
+      return next();
+
+    } catch(error) {
+     //Error while getting user details
+      let userError = {
+        status: true,
+        error: _. get(errorCode, 642, ''),
+        statusCode: 642
+      };
+
+      LOG.console.info("ERROR : " + userError.result.error.message); //Adding error in the log file
+      _.set(req, 'error', userError);
+      return next();
+
+    }
+  }
 
 };

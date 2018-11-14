@@ -49,8 +49,9 @@ module.exports = {
   641 : "Error while login in",
   642 : "Error while getting user details",
   643 : "Error in adding view details in the db",
-  644 : "Error while bi-hourly updation",
-  645 : "Mobile number already registered in xbook",
+  644 : "Error while updating inventory",
+  645 : "error while fetching inventory items",
   646 : "Error while monthly updation",
   647 : "Error while updating click/view price",
+  648 : "Error while selecting vendor"
 };

@@ -33,7 +33,7 @@ module.exports  = {
             vendorName        :   _.get(req,['body','vendorName'],''),
             vendorEmail       :   _.get(req,['body','vendorEmail'],''),
             vendorPhone       :   _.get(req,['body','vendorPhone'],''),
-            isd_code       :   _.get(req,['body','isd_code'],''),
+            isd_code          :   _.get(req,['body','isd_code'],''),
             vendorPassword    : /*service.encrypt(*/_.get(req, ['body', 'vendorPassword'], '')/*)*/,
             vendorRegId       :   _.get(req,['body','vendorRegId'],''),
             vendorAddress     :   _.get(req,['body','vendorAddress'],'')
@@ -378,5 +378,68 @@ vendorProfilePicUpload: async (req,res,next) => {
     return next();
 
   },
+
+  //--------api to update Inventory------------------
+  updateInventory: async (req, res, next) => {
+    try {
+
+      if ( _.get(req, ['error', 'status'], false) )
+      {
+        return next();
+      }
+
+      const vendor_id  = _.get(req, ['body', 'vendor_id'], '');
+      const item_data = _.get(req, ['body', 'inventory'], {});
+      let vendor_data = await vendorDB.updateInventory(vendor_id, item_data);
+      _.set(req, ['body','updated Inventory'], true );
+      return next();
+
+    }
+    catch(error)
+    {
+      // 'Error while getting vendor inventory',
+      let vendorError = {
+        status: true,
+        error: _.get(errorCode, 644, ''),
+        statusCode: 644
+      };
+
+      LOG.console.info("ERROR : " + vendorError.error); //Adding error in the log file
+      _.set(req, ['error'], vendorError);
+      return next();
+
+    }
+  },
+
+  //--------api to get Inventory------------------
+  getInventory: async (req, res, next) => {
+    try {
+
+      if ( _.get(req, ['error', 'status'], false) )
+      {
+        return next();
+      }
+
+      const vendor_id  = _.get(req, ['body', 'vendor_id'], '');
+      let vendor_data = await vendorDB.getInventory(vendor_id);
+      _.set(req, ['body','inventory'], vendor_data );
+      return next();
+
+    }
+    catch(error)
+    {
+      // 'Error while getting vendor inventory',
+      let vendorError = {
+        status: true,
+        error: _.get(errorCode, 645, ''),
+        statusCode: 645
+      };
+
+      LOG.console.info("ERROR : " + vendorError.error); //Adding error in the log file
+      _.set(req, ['error'], vendorError);
+      return next();
+
+    }
+  }
 
 };

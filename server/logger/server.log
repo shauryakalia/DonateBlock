@@ -1,117 +1,82 @@
-20-09-2018 13:54:41.173 INFO  server started at port 9000 
-20-09-2018 13:54:54.336 INFO  POST: /v1/registerUser 
-20-09-2018 13:54:54.336 INFO  Params: {} 
-20-09-2018 13:56:21.155 INFO  POST: /v1/registerUser 
-20-09-2018 13:56:21.155 INFO  Params: {} 
-20-09-2018 13:56:41.062 INFO  POST: /v1/login 
-20-09-2018 13:56:41.062 INFO  Params: {"phone":"null","password":"","isd_code":"null"} 
-20-09-2018 13:56:41.062 INFO  ERROR : phone or password or isd code missing 
-20-09-2018 13:59:31.962 INFO  server started at port 9000 
-20-09-2018 13:59:33.833 INFO  POST: /v1/registerUser 
-20-09-2018 13:59:33.834 INFO  Params: {} 
-20-09-2018 13:59:56.434 INFO  server started at port 9000 
-20-09-2018 13:59:58.291 INFO  POST: /v1/registerUser 
-20-09-2018 13:59:58.292 INFO  Params: {} 
-20-09-2018 13:59:59.238 INFO  POST: /v1/registerUser 
-20-09-2018 13:59:59.238 INFO  Params: {} 
-20-09-2018 14:01:38.126 INFO  server started at port 9000 
-20-09-2018 14:01:45.285 INFO  POST: /v1/registerUser 
-20-09-2018 14:01:45.286 INFO  Params: {} 
-20-09-2018 14:01:45.286 INFO  ERROR : Information missing can't register 
-20-09-2018 14:02:18.014 INFO  POST: /v1/login 
-20-09-2018 14:02:18.014 INFO  Params: {"phone":"1234","password":"1234","isd_code":"91"} 
-20-09-2018 15:15:02.203 INFO  server started at port 9000 
-20-09-2018 15:15:17.376 INFO  GET: /v1/getUserDetails 
-20-09-2018 15:15:17.376 INFO  Params: {} 
-20-09-2018 15:15:17.392 INFO  ERROR : Error while getting user details 
-20-09-2018 15:15:31.550 INFO  GET: /v1/getUserDetails 
-20-09-2018 15:15:31.550 INFO  Params: {} 
-20-09-2018 15:15:47.605 INFO  ERROR : Error while getting user details 
-20-09-2018 15:17:30.878 INFO  server started at port 9000 
-20-09-2018 15:17:35.203 INFO  POST: /v1/login 
-20-09-2018 15:17:35.204 INFO  Params: {"phone":"1234","password":"1234","isd_code":"91"} 
-20-09-2018 15:17:51.015 INFO  GET: /v1/getUserDetails 
-20-09-2018 15:17:51.015 INFO  Params: {} 
-20-09-2018 15:18:03.287 INFO  ERROR : Error while getting user details 
-20-09-2018 15:18:12.247 INFO  GET: /v1/getUserDetails 
-20-09-2018 15:18:12.247 INFO  Params: {} 
-20-09-2018 15:18:44.607 INFO  server started at port 9000 
-20-09-2018 15:18:46.521 INFO  GET: /v1/getUserDetails 
-20-09-2018 15:18:46.521 INFO  Params: {} 
-20-09-2018 16:22:35.418 INFO  PUT: /v1/updateUserDetails 
-20-09-2018 16:22:35.418 INFO  Params: {"gender":"2"} 
-20-09-2018 16:23:09.888 INFO  PUT: /v1/updateUserDetails 
-20-09-2018 16:23:09.888 INFO  Params: {"bio":" hello world hello fraands"} 
-20-09-2018 16:30:43.506 INFO  server started at port 9000 
-20-09-2018 16:30:45.467 INFO  PUT: /v1/updateUserDetails 
-20-09-2018 16:30:45.468 INFO  Params: {"bio":" hello world hello fraands"} 
-20-09-2018 16:32:14.631 INFO  server started at port 9000 
-20-09-2018 16:32:18.850 INFO  PUT: /v1/updateUserDetails 
-20-09-2018 16:32:18.850 INFO  Params: {"bio":" hello world hello fraands"} 
-20-09-2018 16:33:06.571 INFO  PUT: /v1/updateUserDetails 
-20-09-2018 16:33:06.571 INFO  Params: {"bio":" hello world hello fraands"} 
-20-09-2018 16:34:09.038 INFO  server started at port 9000 
-20-09-2018 16:34:10.590 INFO  PUT: /v1/updateUserDetails 
-20-09-2018 16:34:10.590 INFO  Params: {"bio":" hello world hello fraands"} 
-20-09-2018 16:34:14.982 INFO  ERROR : db error 
-20-09-2018 18:06:49.864 INFO  PUT: /v1/updateUserDetails 
-20-09-2018 18:06:49.865 INFO  Params: {"bio":" hello world hello fraands"} 
-20-09-2018 18:07:00.187 INFO  ERROR : db error 
-20-09-2018 18:09:40.661 INFO  server started at port 9000 
-20-09-2018 18:09:42.519 INFO  PUT: /v1/updateUserDetails 
-20-09-2018 18:09:42.519 INFO  Params: {"bio":" hello world hello fraands"} 
-20-09-2018 18:09:46.684 INFO  ERROR : db error 
-24-09-2018 19:40:58.703 INFO  server started at port 9000 
-24-09-2018 19:54:43.191 INFO  server started at port 9000 
-24-09-2018 20:06:45.896 INFO  server started at port 9000 
-24-09-2018 20:13:43.401 INFO  server started at port 9000 
-24-09-2018 20:13:54.963 INFO  POST: /v1/registerOrganisation 
-24-09-2018 20:13:54.963 INFO  Params: {"orgName":"C.R.Y","orgEmail":"cry@gmail.com","orgPhone":9874563210,"isd_code":91,"orgPassword":"cry123","orgRegId":"cry123","orgAddress":"new delhi","orgOwnerName":"Gov"} 
-24-09-2018 20:13:54.963 INFO  ERROR : Information missing can't register 
-24-09-2018 20:15:16.058 INFO  server started at port 9000 
-24-09-2018 20:15:18.255 INFO  POST: /v1/registerOrganisation 
-24-09-2018 20:15:18.256 INFO  Params: {"orgName":"C.R.Y","orgEmail":"cry@gmail.com","orgPhone":9874563210,"isd_code":91,"orgPassword":"cry123","orgRegId":"cry123","orgAddress":"new delhi","orgOwnerName":"Gov"} 
-24-09-2018 20:16:25.182 INFO  server started at port 9000 
-24-09-2018 20:16:29.376 INFO  POST: /v1/registerOrganisation 
-24-09-2018 20:16:29.376 INFO  Params: {"orgName":"C.R.Y","orgEmail":"cry@gmail.com","orgPhone":9874563210,"isd_code":91,"orgPassword":"cry123","orgRegId":"cry123","orgAddress":"new delhi","orgOwnerName":"Gov"} 
-25-09-2018 20:07:06.579 INFO  server started at port 9000 
-25-09-2018 20:07:09.239 INFO  POST: /v1/organisationLogin 
-25-09-2018 20:07:09.239 INFO  Params: {"orgPhone":"9874563210.0","orgPassword":"cry123","isd_code":"91"} 
-25-09-2018 20:07:09.241 INFO  ERROR : Error while login in 
-25-09-2018 20:07:14.579 INFO  POST: /v1/organisationLogin 
-25-09-2018 20:07:14.579 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
-25-09-2018 20:07:14.580 INFO  ERROR : Error while login in 
-25-09-2018 20:08:33.282 INFO  server started at port 9000 
-25-09-2018 20:08:34.744 INFO  POST: /v1/organisationLogin 
-25-09-2018 20:08:34.744 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
-25-09-2018 20:09:16.043 INFO  server started at port 9000 
-25-09-2018 20:09:21.729 INFO  POST: /v1/organisationLogin 
-25-09-2018 20:09:21.729 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
-25-09-2018 20:10:06.406 INFO  server started at port 9000 
-25-09-2018 20:10:10.307 INFO  POST: /v1/organisationLogin 
-25-09-2018 20:10:10.308 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
-25-09-2018 20:11:10.228 INFO  server started at port 9000 
-25-09-2018 20:11:13.621 INFO  POST: /v1/organisationLogin 
-25-09-2018 20:11:13.621 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
-25-09-2018 20:14:03.152 INFO  server started at port 9000 
-25-09-2018 20:14:04.923 INFO  GET: /v1/getOrganisationDetails 
-25-09-2018 20:14:04.923 INFO  Params: {} 
-25-09-2018 20:14:04.936 INFO  ERROR : Error in getting user details from the db 
-25-09-2018 20:14:59.172 INFO  server started at port 9000 
-25-09-2018 20:15:00.380 INFO  GET: /v1/getOrganisationDetails 
-25-09-2018 20:15:34.069 INFO  server started at port 9000 
-25-09-2018 20:15:36.885 INFO  GET: /v1/getOrganisationDetails 
-25-09-2018 20:15:51.237 INFO  server started at port 9000 
-25-09-2018 20:15:52.850 INFO  GET: /v1/getOrganisationDetails 
-25-09-2018 20:15:52.850 INFO  Params: {} 
-25-09-2018 20:15:55.239 INFO  ERROR : Error while getting user details 
-25-09-2018 20:16:46.351 INFO  GET: /v1/getOrganisationDetails 
-25-09-2018 20:16:46.351 INFO  Params: {} 
-25-09-2018 20:17:44.797 INFO  ERROR : Error while getting user details 
-25-09-2018 20:17:51.097 INFO  server started at port 9000 
-25-09-2018 20:17:53.865 INFO  GET: /v1/getOrganisationDetails 
-25-09-2018 20:17:53.866 INFO  Params: {} 
-25-09-2018 20:19:51.170 INFO  server started at port 9000 
-25-09-2018 20:19:53.596 INFO  GET: /v1/getOrganisationDetails 
-25-09-2018 20:19:53.596 INFO  Params: {} 
-25-09-2018 20:25:31.271 INFO  server started at port 9000 
+28-10-2018 23:20:31.075 INFO  server started at port 9000 
+28-10-2018 23:21:19.159 INFO  server started at port 9000 
+28-10-2018 23:34:53.812 INFO  POST: /v1/registerOrganisation 
+28-10-2018 23:34:53.813 INFO  [32mParams: [39m[32m{"orgName":"C.R.Y","orgEmail":"cry@gmail.com","orgPhone":9874563210,"isd_code":91,"orgPassword":"cry123","orgRegId":"cry123","orgAddress":"new delhi","orgOwnerName":"Gov"}[39m 
+28-10-2018 23:35:28.677 INFO  POST: /v1/organisationLogin 
+28-10-2018 23:35:28.677 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+28-10-2018 23:36:12.003 INFO  server started at port 9000 
+28-10-2018 23:38:02.638 INFO  server started at port 9000 
+28-10-2018 23:38:06.818 INFO  POST: /v1/createCampaign 
+28-10-2018 23:38:06.818 INFO  [32mParams: [39m[32m{"campaignName":"\"food4all\"","campaignCause":"\"food\"","campaignDiscription":"\"khana peena \"","amount_required":"\"15000\""}[39m 
+28-10-2018 23:38:33.471 INFO  POST: /v1/createCampaign 
+28-10-2018 23:38:33.471 INFO  [32mParams: [39m[32m{"campaignName":"food4all","campaignCause":"food","campaignDiscription":"khana peena ","amount_required":"15000"}[39m 
+28-10-2018 23:40:04.275 INFO  server started at port 9000 
+28-10-2018 23:42:20.187 INFO  POST: /v1/createCampaign 
+28-10-2018 23:42:20.187 INFO  [32mParams: [39m[32m{"campaignName":"food4all","campaignCause":"food","campaignDiscription":"khana peena ","amount_required":"15000"}[39m 
+28-10-2018 23:43:41.521 INFO  server started at port 9000 
+28-10-2018 23:43:45.128 INFO  POST: /v1/createCampaign 
+28-10-2018 23:43:45.128 INFO  [32mParams: [39m[32m{"campaignName":"food4all","campaignCause":"food","campaignDiscription":"khana peena ","amount_required":"15000"}[39m 
+28-10-2018 23:46:04.030 INFO  server started at port 9000 
+28-10-2018 23:46:07.588 INFO  POST: /v1/createCampaign 
+28-10-2018 23:46:07.589 INFO  [32mParams: [39m[32m{"campaignName":"food4all","campaignCause":"food","campaignDiscription":"khana peena ","amount_required":"15000"}[39m 
+28-10-2018 23:47:25.152 INFO  GET: /v1/getSelfCampaign 
+28-10-2018 23:47:25.153 INFO  [32mParams: [39m[32m{}[39m 
+28-10-2018 23:48:22.645 INFO  GET: /v1/getSelfCampaign 
+28-10-2018 23:48:22.645 INFO  [32mParams: [39m[32m{}[39m 
+28-10-2018 23:49:06.625 INFO  server started at port 9000 
+28-10-2018 23:49:10.158 INFO  GET: /v1/getSelfCampaign 
+28-10-2018 23:49:10.158 INFO  [32mParams: [39m[32m{}[39m 
+28-10-2018 23:50:39.978 INFO  GET: /v1/getAllCampaign 
+28-10-2018 23:50:39.978 INFO  [32mParams: [39m[32m{}[39m 
+13-11-2018 09:46:34.302 INFO  server started at port 9000 
+13-11-2018 09:48:47.752 INFO  POST: /v1/registerUser 
+13-11-2018 09:48:47.752 INFO  [32mParams: [39m[32m{"first_name":"Rohit","last_name":"Patel","phone":1234567890,"email":"qwerty@werty.c","isd_code":91,"password":"file","gender":1,"date_of_birth":"11-01-1998","street":"qwer","address":"asdfghj","city":"asdfgh","state":"asd","country":"asdf","zip":"1234567","aadhaar":"123456789012"}[39m 
+13-11-2018 09:51:04.830 INFO  POST: /v1/registerOrganisation 
+13-11-2018 09:51:04.830 INFO  [32mParams: [39m[32m{"orgName":"C.R.Y","orgEmail":"cry@gmail.com","orgPhone":9874563210,"isd_code":91,"orgPassword":"cry123","orgRegId":"cry123","orgAddress":"new delhi","orgOwnerName":"Gov"}[39m 
+13-11-2018 09:55:59.792 INFO  POST: /v1/registerVendor 
+13-11-2018 09:55:59.792 INFO  [32mParams: [39m[32m{"vendorName":"Vendor 1","vendorEmail":"vendor1@gmail.com","vendorPhone":"9874568521","isd_code":"91","vendorPassword":"vendor1","vendorRegId":"vendor123","vendorAddress":"delhi"}[39m 
+13-11-2018 09:58:16.091 INFO  POST: /v1/vendorLogin 
+13-11-2018 09:58:16.091 INFO  [32mParams: [39m[32m{"vendorPhone":"9874568521","isd_code":"91","vendorPassword":"vendor1"}[39m 
+13-11-2018 09:58:16.094 INFO  ERROR : Error while login in 
+13-11-2018 10:00:31.718 INFO  server started at port 9000 
+13-11-2018 10:00:36.438 INFO  POST: /v1/vendorLogin 
+13-11-2018 10:00:36.439 INFO  [32mParams: [39m[32m{"vendorPhone":"9874568521","isd_code":"91","vendorPassword":"vendor1"}[39m 
+13-11-2018 10:01:05.225 INFO  GET: /v1/getInventory 
+13-11-2018 10:01:05.225 INFO  [32mParams: [39m[32m{}[39m 
+13-11-2018 10:02:47.567 INFO  POST: /v1/updateInventory 
+13-11-2018 10:02:47.567 INFO  [32mParams: [39m[32m{"inventory":{"clothes":0,"books":0,"food":0}}[39m 
+13-11-2018 10:02:55.724 INFO  POST: /v1/updateInventory 
+13-11-2018 10:02:55.724 INFO  [32mParams: [39m[32m{"inventory":{"clothes":5,"books":6,"food":2}}[39m 
+14-11-2018 00:06:43.100 INFO  server started at port 9000 
+14-11-2018 00:08:17.401 INFO  POST: /v1/organisationLogin 
+14-11-2018 00:08:17.401 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+14-11-2018 00:08:33.355 INFO  GET: /v1/getAllCampaign 
+14-11-2018 00:08:33.355 INFO  [32mParams: [39m[32m{}[39m 
+14-11-2018 00:08:33.366 INFO  ERROR : Error in getting user details from the db 
+14-11-2018 00:10:16.428 INFO  POST: /v1/createCampaign 
+14-11-2018 00:10:16.429 INFO  [32mParams: [39m[32m{"campaignName":"food4all","campaignCause":"food","campaignDiscription":"Need to raise food for children.","amount_required":"5000"}[39m 
+14-11-2018 00:10:21.886 INFO  GET: /v1/getAllCampaign 
+14-11-2018 00:10:21.886 INFO  [32mParams: [39m[32m{}[39m 
+14-11-2018 00:10:21.888 INFO  ERROR : Error in getting user details from the db 
+14-11-2018 00:10:44.989 INFO  GET: /v1/getSelfCampaign 
+14-11-2018 00:10:44.989 INFO  [32mParams: [39m[32m{}[39m 
+14-11-2018 00:12:29.376 INFO  POST: /v1/createCampaign 
+14-11-2018 00:12:29.376 INFO  [32mParams: [39m[32m{"campaignName":"clothes4all","campaignCause":"cloth","campaignDiscription":"Need to raise money for buying clothes for children.","amount_required":"6000"}[39m 
+14-11-2018 00:12:32.257 INFO  GET: /v1/getSelfCampaign 
+14-11-2018 00:12:32.257 INFO  [32mParams: [39m[32m{}[39m 
+14-11-2018 00:20:54.709 INFO  POST: /v1/updateInventory 
+14-11-2018 00:20:54.709 INFO  [32mParams: [39m[32m{"inventory":{"clothes":5,"books":6,"food":2}}[39m 
+14-11-2018 00:25:10.592 INFO  server started at port 9000 
+14-11-2018 00:25:31.582 INFO  POST: /v1/updateInventory 
+14-11-2018 00:25:31.583 INFO  [32mParams: [39m[32m{"inventory":{"clothes":5,"books":6,"food":2}}[39m 
+14-11-2018 00:26:59.582 INFO  server started at port 9000 
+14-11-2018 00:27:03.890 INFO  POST: /v1/updateInventory 
+14-11-2018 00:27:03.890 INFO  [32mParams: [39m[32m{"inventory":{"clothes":5,"books":6,"food":2}}[39m 
+14-11-2018 01:11:33.316 INFO  POST: /v1/createCampaign 
+14-11-2018 01:11:33.316 INFO  [32mParams: [39m[32m{"campaignName":"books4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"6000","campaignRequirement":"books","quantity":"300"}[39m 
+14-11-2018 01:12:05.613 INFO  server started at port 9000 
+14-11-2018 01:12:19.349 INFO  POST: /v1/createCampaign 
+14-11-2018 01:12:19.349 INFO  [32mParams: [39m[32m{"campaignName":"books4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"6000","campaignRequirement":"books","quantity":"300"}[39m 
+14-11-2018 01:41:57.418 INFO  server started at port 9000 
+14-11-2018 01:42:13.190 INFO  POST: /v1/updateInventory 
+14-11-2018 01:42:13.191 INFO  [32mParams: [39m[32m{"inventory":{"clothes":{"quantity":5,"price":300},"books":{"quantity":10,"price":20},"food":{"quantity":50,"price":30}}}[39m 

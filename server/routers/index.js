@@ -15,7 +15,7 @@ const multer                  = require('multer'),
 module.exports  =  app => {
 
 
-      //user--------------------------------------------
+  //user--------------------------------------------
   app.post('/v1/registerUser', donateBlock.apiInfo, user.registerUser, response, error);
 
   app.post('/v1/userLogin', donateBlock.apiInfo, user.checkUserLogin, response, error);
@@ -28,6 +28,7 @@ module.exports  =  app => {
 
   app.post('/v1/userProfilePicUpload', donateBlock.apiInfo, user.verifyUserToken, user.profilePicUpload,response,error);
 
+  app.get('/v1/getAllCampaign', donateBlock.apiInfo, user.verifyUserToken, user.getAllCampaign, response, error);
   
   //organisation----------------------------------------
   app.post('/v1/registerOrganisation', donateBlock.apiInfo, organisation.registerOrganisation, response, error);
@@ -38,6 +39,9 @@ module.exports  =  app => {
 
   app.post('/v1/organisationProfilePicUpload', donateBlock.apiInfo, organisation.verifyOrganisationToken, organisation.organisationProfilePicUpload,response,error);
 
+  app.post('/v1/createCampaign', donateBlock.apiInfo, organisation.verifyOrganisationToken, organisation.createCampaign, response, error);
+
+  app.get('/v1/getSelfCampaign', donateBlock.apiInfo, organisation.verifyOrganisationToken, organisation.getSelfCampaign, response, error);
     
   //vendor----------------------------------------
   app.post('/v1/registerVendor', donateBlock.apiInfo, vendor.registerVendor, response, error);
@@ -46,5 +50,9 @@ module.exports  =  app => {
 
   app.get('/v1/getVendorDetails', donateBlock.apiInfo, vendor.verifyVendorToken, vendor.getVendorDetails, response, error);
 
-  app.post('/v1/vendorProfilePicUpload', donateBlock.apiInfo, vendor.verifyVendorToken, vendor.vendorProfilePicUpload,response,error);
+  app.post('/v1/vendorProfilePicUpload', donateBlock.apiInfo, vendor.verifyVendorToken, vendor.vendorProfilePicUpload, response, error);
+
+  app.post('/v1/updateInventory', donateBlock.apiInfo, vendor.verifyVendorToken, vendor.updateInventory, response, error);
+
+  app.get('/v1/getInventory', donateBlock.apiInfo, vendor.verifyVendorToken, vendor.getInventory, response, error);
 };
