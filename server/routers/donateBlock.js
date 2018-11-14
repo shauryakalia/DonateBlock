@@ -34,19 +34,34 @@ module.exports = {
   },
 
   selectVendor: async (campaign) => {
-    try{
-    const campaign_id = campaign._id,
-      campaignRequirement = campaign.campaignRequirement,
-      quantity = campaign.quantity;
+    try {
+      const campaign_data ={ id :campaign._id,
+        campaignRequirement : "books" ,//campaign.campaignRequirement,
+        quantity : 10,//campaign.quantity,
+        amount : 30//campaign.amount_raised;,
+      };
+      //let vendor = await vendorDB.selectVendor(campaignRequirement, quantity, amount);
+      let vendor = await vendorDB.allVendor();
+      console.log(vendor);
+      var final_vendor_id,i_price=1000000000;
+      let v_o = vendor.filter(v => {
+        let obj = v.inventory.filter(o => {
+          if( o.item == campaign_data.campaignRequirement && o.quantity >= campaign_data.quantity && (o.price * campaign_data.quantity) <= campaign_data.amount){
+            return o;
+          }
+        });
+        if((obj[0].price * campaign_data.quantity)<i_price){
+          final_vendor_id = v._id;
+          i_price = (obj[0].price * campaign_data.quantity);
+        }
+      })
 
-    let vendor = await vendorDB.selectVendor(campaignRequirement, quantity);
+      await vendorDB.putConsignment(final_vendor_id, campaign_data);
 
-    await vendorDB.putConsignment(campaign);
-
-    await campaignDB.addSelectedVendorDetail(vendor._id);
-    return true;
+      await campaignDB.addSelectedVendorDetail(campaign_data.id, final_vendor_id);
+      return true;
     }
-    catch(err){
+    catch (err) {
       let selectVendorError = {
         status: true,
         error: _.get(errorCode, 648, ''),

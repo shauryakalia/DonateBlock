@@ -80,3 +80,124 @@
 14-11-2018 01:41:57.418 INFO  server started at port 9000 
 14-11-2018 01:42:13.190 INFO  POST: /v1/updateInventory 
 14-11-2018 01:42:13.191 INFO  [32mParams: [39m[32m{"inventory":{"clothes":{"quantity":5,"price":300},"books":{"quantity":10,"price":20},"food":{"quantity":50,"price":30}}}[39m 
+14-11-2018 22:43:42.880 INFO  server started at port 9000 
+14-11-2018 23:11:48.295 INFO  server started at port 9000 
+14-11-2018 23:12:02.323 INFO  POST: /v1/organisationLogin 
+14-11-2018 23:12:02.324 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+14-11-2018 23:13:04.891 INFO  server started at port 9000 
+14-11-2018 23:13:07.217 INFO  POST: /v1/organisationLogin 
+14-11-2018 23:13:07.217 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+14-11-2018 23:29:04.467 INFO  server started at port 9000 
+14-11-2018 23:29:10.570 INFO  POST: /v1/organisationLogin 
+14-11-2018 23:29:10.571 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+14-11-2018 23:44:25.299 INFO  POST: /v1/organisationLogin 
+14-11-2018 23:44:25.299 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+14-11-2018 23:45:04.096 INFO  server started at port 9000 
+14-11-2018 23:45:04.874 INFO  POST: /v1/organisationLogin 
+14-11-2018 23:45:04.875 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+14-11-2018 23:45:44.436 INFO  server started at port 9000 
+14-11-2018 23:45:49.896 INFO  POST: /v1/organisationLogin 
+14-11-2018 23:45:49.897 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+14-11-2018 23:46:09.659 INFO  server started at port 9000 
+14-11-2018 23:46:13.989 INFO  POST: /v1/organisationLogin 
+14-11-2018 23:46:13.989 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+14-11-2018 23:58:57.845 INFO  server started at port 9000 
+14-11-2018 23:59:03.973 INFO  POST: /v1/createCampaign 
+14-11-2018 23:59:03.974 INFO  Params: {"campaignName":"bo4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3000","campaignRequirement":"books","quantity":"300"} 
+15-11-2018 00:01:28.653 INFO  POST: /v1/createCampaign 
+15-11-2018 00:01:28.653 INFO  Params: {"campaignName":"bo4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3000","campaignRequirement":"books","quantity":"300"} 
+15-11-2018 00:01:36.599 INFO  server started at port 9000 
+15-11-2018 00:01:47.361 INFO  POST: /v1/createCampaign 
+15-11-2018 00:01:47.362 INFO  Params: {"campaignName":"bo4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3000","campaignRequirement":"books","quantity":"300"} 
+15-11-2018 00:05:12.981 INFO  server started at port 9000 
+15-11-2018 00:05:15.578 INFO  POST: /v1/createCampaign 
+15-11-2018 00:05:15.578 INFO  Params: {"campaignName":"bo4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3000","campaignRequirement":"books","quantity":"300"} 
+15-11-2018 00:06:29.616 INFO  server started at port 9000 
+15-11-2018 00:06:39.200 INFO  POST: /v1/registerVendor 
+15-11-2018 00:06:39.200 INFO  Params: {"vendorName":"Vendor 1","vendorEmail":"vendor1@gmail.com","vendorPhone":"9874568521","isd_code":"91","vendorPassword":"vendor1","vendorRegId":"vendor123","vendorAddress":"delhi"} 
+15-11-2018 00:07:16.098 INFO  POST: /v1/updateInventory 
+15-11-2018 00:07:16.098 INFO  Params: {"inventory":[{"item":"clothes","quantity":5,"price":300},{"item":"books","quantity":10,"price":20},{"item":"food","quantity":50,"price":30}]} 
+15-11-2018 00:08:16.460 INFO  GET: /v1/getInventory 
+15-11-2018 00:08:16.461 INFO  Params: {} 
+15-11-2018 00:09:01.969 INFO  server started at port 9000 
+15-11-2018 00:09:04.089 INFO  GET: /v1/getInventory 
+15-11-2018 00:09:04.089 INFO  Params: {} 
+15-11-2018 00:16:14.953 INFO  POST: /v1/updateInventory 
+15-11-2018 00:16:14.954 INFO  Params: {"inventory":[{"item":"clothes","quantity":5,"price":300},{"item":"books","quantity":10,"price":20},{"item":"food","quantity":50,"price":30}]} 
+15-11-2018 00:17:33.494 INFO  POST: /v1/updateInventory 
+15-11-2018 00:17:33.494 INFO  Params: {"inventory":[{"item":"clothes","quantity":5,"price":300},{"item":"books","quantity":10,"price":20},{"item":"food","quantity":50,"price":30}]} 
+15-11-2018 00:17:33.495 INFO  ERROR : Failed to authenticate token 
+15-11-2018 00:17:39.860 INFO  POST: /v1/organisationLogin 
+15-11-2018 00:17:39.861 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+15-11-2018 00:19:40.536 INFO  server started at port 9000 
+15-11-2018 00:19:44.145 INFO  POST: /v1/organisationLogin 
+15-11-2018 00:19:44.145 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+15-11-2018 00:23:15.303 INFO  POST: /v1/registerVendor 
+15-11-2018 00:23:15.304 INFO  Params: {"vendorName":"Vendor 1","vendorEmail":"vendor1@gmail.com","vendorPhone":"9874568521","isd_code":"91","vendorPassword":"vendor1","vendorRegId":"vendor123","vendorAddress":"delhi"} 
+15-11-2018 00:23:33.767 INFO  POST: /v1/registerVendor 
+15-11-2018 00:23:33.767 INFO  Params: {"vendorName":"Vendor 2","vendorEmail":"vendor2@gmail.com","vendorPhone":"9874568551","isd_code":"91","vendorPassword":"vendor2","vendorRegId":"vendor123","vendorAddress":"delhi"} 
+15-11-2018 00:23:46.211 INFO  POST: /v1/registerVendor 
+15-11-2018 00:23:46.211 INFO  Params: {"vendorName":"Vendor 3","vendorEmail":"vendor3@gmail.com","vendorPhone":"9874538551","isd_code":"91","vendorPassword":"vendor3","vendorRegId":"vendor123","vendorAddress":"delhi"} 
+15-11-2018 00:24:21.863 INFO  POST: /v1/vendorLogin 
+15-11-2018 00:24:21.863 INFO  Params: {"vendorPhone":"9874568521","isd_code":"91","vendorPassword":"vendor1"} 
+15-11-2018 00:24:38.731 INFO  POST: /v1/updateInventory 
+15-11-2018 00:24:38.731 INFO  Params: {"inventory":[{"item":"clothes","quantity":5,"price":300},{"item":"books","quantity":10,"price":20},{"item":"food","quantity":50,"price":30}]} 
+15-11-2018 00:25:18.105 INFO  POST: /v1/vendorLogin 
+15-11-2018 00:25:18.105 INFO  Params: {"vendorPhone":"9874568551","isd_code":"91","vendorPassword":"vendor2"} 
+15-11-2018 00:25:26.187 INFO  POST: /v1/updateInventory 
+15-11-2018 00:25:26.187 INFO  Params: {"inventory":[{"item":"clothes","quantity":5,"price":300},{"item":"books","quantity":50,"price":2},{"item":"food","quantity":50,"price":30}]} 
+15-11-2018 00:25:57.352 INFO  POST: /v1/vendorLogin 
+15-11-2018 00:25:57.352 INFO  Params: {"vendorPhone":"9874538551","isd_code":"91","vendorPassword":"vendor3"} 
+15-11-2018 00:26:08.954 INFO  POST: /v1/updateInventory 
+15-11-2018 00:26:08.955 INFO  Params: {"inventory":[{"item":"clothes","quantity":5,"price":300},{"item":"books","quantity":40,"price":1.5},{"item":"food","quantity":50,"price":30}]} 
+15-11-2018 00:28:16.646 INFO  POST: /v1/organisationLogin 
+15-11-2018 00:28:16.646 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+15-11-2018 01:29:47.846 INFO  server started at port 9000 
+15-11-2018 01:29:50.649 INFO  POST: /v1/organisationLogin 
+15-11-2018 01:29:50.649 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+15-11-2018 01:30:38.044 INFO  ERROR : Error while selecting vendor 
+15-11-2018 01:30:50.065 INFO  POST: /v1/organisationLogin 
+15-11-2018 01:30:50.065 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+15-11-2018 01:31:52.047 INFO  ERROR : Error while selecting vendor 
+15-11-2018 01:32:32.551 INFO  server started at port 9000 
+15-11-2018 01:32:33.290 INFO  POST: /v1/organisationLogin 
+15-11-2018 01:32:33.291 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+15-11-2018 01:35:01.135 INFO  server started at port 9000 
+15-11-2018 01:35:04.551 INFO  POST: /v1/organisationLogin 
+15-11-2018 01:35:04.551 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+15-11-2018 01:35:25.032 INFO  server started at port 9000 
+15-11-2018 01:35:27.595 INFO  POST: /v1/organisationLogin 
+15-11-2018 01:35:27.595 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+15-11-2018 01:36:19.298 INFO  server started at port 9000 
+15-11-2018 01:36:28.099 INFO  POST: /v1/organisationLogin 
+15-11-2018 01:36:28.100 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+15-11-2018 01:36:44.788 INFO  ERROR : Error while selecting vendor 
+15-11-2018 01:37:22.289 INFO  server started at port 9000 
+15-11-2018 01:37:50.642 INFO  server started at port 9000 
+15-11-2018 01:37:52.547 INFO  POST: /v1/organisationLogin 
+15-11-2018 01:37:52.547 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+15-11-2018 01:38:04.580 INFO  ERROR : Error while selecting vendor 
+15-11-2018 01:38:25.413 INFO  server started at port 9000 
+15-11-2018 01:38:26.390 INFO  POST: /v1/organisationLogin 
+15-11-2018 01:38:26.390 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+15-11-2018 01:38:31.396 INFO  ERROR : Error while selecting vendor 
+15-11-2018 01:38:43.855 INFO  POST: /v1/organisationLogin 
+15-11-2018 01:38:43.855 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+15-11-2018 01:39:46.606 INFO  server started at port 9000 
+15-11-2018 01:39:47.325 INFO  POST: /v1/organisationLogin 
+15-11-2018 01:39:47.325 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+15-11-2018 01:42:06.130 INFO  server started at port 9000 
+15-11-2018 01:42:14.973 INFO  POST: /v1/organisationLogin 
+15-11-2018 01:42:14.974 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+15-11-2018 01:51:34.869 INFO  server started at port 9000 
+15-11-2018 01:51:39.306 INFO  POST: /v1/organisationLogin 
+15-11-2018 01:51:39.307 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+15-11-2018 01:52:05.055 INFO  ERROR : Error while selecting vendor 
+15-11-2018 01:59:38.670 INFO  POST: /v1/organisationLogin 
+15-11-2018 01:59:38.670 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+15-11-2018 02:04:26.686 INFO  server started at port 9000 
+15-11-2018 02:04:28.305 INFO  POST: /v1/organisationLogin 
+15-11-2018 02:04:28.305 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+15-11-2018 02:04:58.773 INFO  server started at port 9000 
+15-11-2018 02:05:01.352 INFO  POST: /v1/organisationLogin 
+15-11-2018 02:05:01.353 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
