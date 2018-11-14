@@ -17,24 +17,27 @@ var vendorSchema = mongoose.Schema({
   vendorPassword: { type: String },
   vendorAddress: { type: String },
   token: { type: String },
-  inventory: {
-    clothes: {
+  inventory: [
+    {
+      item: {type: String, default: "clothes"}, 
       quantity: { type: Number, default: 0 },
       price: { type: Number, default: 0 }
     },
-    books: {
+   {
+      item: {type: String, default: "books"} ,
       quantity: { type: Number, default: 0 },
       price: { type: Number, default: 0 }
     },
-    food: {
+    {
+      item: {type: String, default: "food"} ,
       quantity: { type: Number, default: 0 },
       price: { type: Number, default: 0 }
     }
-  },
-  consignment: {
+  ],
+  consignment: [{
     campaign_data: { type: Object },
     sent: { type: Boolean }
-  }
+  }]
 });
 
 vendorSchema.index({ vendorName: 'text' });//,{weights: {first_name: 3, last_name: 2, middle_name: 1}});

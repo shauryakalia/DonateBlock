@@ -389,7 +389,7 @@ vendorProfilePicUpload: async (req,res,next) => {
       }
 
       const vendor_id  = _.get(req, ['body', 'vendor_id'], '');
-      const item_data = _.get(req, ['body', 'inventory'], {});
+      const item_data = _.get(req, ['body', 'inventory'], []);
       let vendor_data = await vendorDB.updateInventory(vendor_id, item_data);
       _.set(req, ['body','updated Inventory'], true );
       return next();
@@ -422,7 +422,7 @@ vendorProfilePicUpload: async (req,res,next) => {
 
       const vendor_id  = _.get(req, ['body', 'vendor_id'], '');
       let vendor_data = await vendorDB.getInventory(vendor_id);
-      _.set(req, ['body','inventory'], vendor_data );
+      _.set(req, ['body'], vendor_data );
       return next();
 
     }

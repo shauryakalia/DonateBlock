@@ -38,7 +38,15 @@ module.exports = {
     let queryRes = await Campaign.find({campaignOrganisation: org_id});
     return queryRes;
     
-    l
+  },
+
+  addSelectedVendorDetail: async(campaign_id, final_vendor_id) => {
+    let selectedVendorDetail = {
+      vendorId: final_vendor_id,
+    consignment_sent: false
+    };
+    let queryRes = await Campaign.update({_id: campaign_id},{$push: {selectedVendorDetail:selectedVendorDetail}});
+    return queryRes;
   }
 
 };

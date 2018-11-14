@@ -18,11 +18,10 @@ var campaignSchema = mongoose.Schema({
   amount_raised: { type: Number, default: 0 },
   amount_required: { type: Number },
   status: { type: Boolean, default: true },
-  deliverable: { type: Boolean, default: false },
-  selectedVendorDetail: {
+  selectedVendorDetail: [{
     vendorId: { type: String },
     consignment_sent: { type: Boolean }
-  }
+  }]
 });
 
 campaignSchema.index({ campaignName: 'text' });//,{weights: {first_name: 3, last_name: 2, middle_name: 1}});
