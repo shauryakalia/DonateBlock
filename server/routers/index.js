@@ -50,6 +50,9 @@ module.exports  =  app => {
 
   app.get('/v1/getVendorDetails', donateBlock.apiInfo, vendor.verifyVendorToken, vendor.getVendorDetails, response, error);
 
-  app.post('/v1/vendorProfilePicUpload', donateBlock.apiInfo, vendor.verifyVendorToken, vendor.vendorProfilePicUpload,response,error);
+  app.post('/v1/vendorProfilePicUpload', donateBlock.apiInfo, vendor.verifyVendorToken, vendor.vendorProfilePicUpload, response, error);
 
+  app.post('/v1/updateInventory', donateBlock.apiInfo, vendor.verifyVendorToken, vendor.updateInventory, response, error);
+
+  app.get('/v1/getInventory', donateBlock.apiInfo, vendor.verifyVendorToken, vendor.getInventory, response, error);
 };

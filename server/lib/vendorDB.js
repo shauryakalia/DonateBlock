@@ -18,7 +18,7 @@ module.exports = {
         return queryRes;
       },
 
-    checkVendorLogin: async (orgPhone, orgPassword) => {
+    checkVendorLogin: async (vendorPhone, vendorPassword) => {
 
         let queryRes = await Vendor.find({ "vendorPhone": vendorPhone , "vendorPassword": vendorPassword }).lean();
         return queryRes[0];
@@ -34,7 +34,7 @@ module.exports = {
 
     addTokenForVerifiedVendor: async (vendor_id, jwt_token) => {
 
-        let queryRes = await Vendor.update({_id : vendror_id}, { $set: { token: jwt_token}});
+        let queryRes = await Vendor.update({_id : vendor_id}, { $set: { token: jwt_token}});
         return queryRes;
     },
 
@@ -56,5 +56,17 @@ module.exports = {
     // let path  = './public/images/uploads/'+db_id;
       let queryRes  = await Vendor.update({_id: vendor_id}, { $set: { profile_pic: pa0th}});
       return queryRes;
+  },
+
+  updateInventory: async (vendor_id, item_data) => {
+
+    let queryRes = await Vendor.update({_id:vendor_id},{ $set: { inventory: item_data}});
+    return queryRes;
+  },
+
+  getInventory: async (vendor_id) => {
+
+    let queryRes = await Vendor.find({_id: vendor_id}, {inventory:1, _id:0});
+    return queryRes;
   },
 };

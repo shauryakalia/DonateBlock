@@ -12,11 +12,11 @@ var userSchema = mongoose.Schema({
 	first_name: { type: String },
 	last_name: { type: String },
 	password: { type: String },
-	phone : { type: Number },
+	phone : { type: String },
 	email : { type: String},
 	profile_pic: { type: String },
 	token: { type: String },
-	isd_code: {type: Number},
+	isd_code: {type: String},
 	gender: { type: Number },
 	date_of_birth: { type: String },
 	address: {

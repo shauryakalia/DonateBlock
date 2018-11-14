@@ -10,7 +10,7 @@ const	mongoose 						= require('mongoose'),
 
 var organisationSchema = mongoose.Schema({
 	orgName         :   { type: String },
-  orgPhone        :   { type: Number },
+  orgPhone        :   { type: String },
   orgEmail        :   { type: String },
   isd_code        :   { type: String },
   orgPassword     : { type: String },
