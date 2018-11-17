@@ -201,3 +201,13 @@
 15-11-2018 02:04:58.773 INFO  server started at port 9000 
 15-11-2018 02:05:01.352 INFO  POST: /v1/organisationLogin 
 15-11-2018 02:05:01.353 INFO  Params: {"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"} 
+18-11-2018 00:53:36.431 INFO  server started at port 9000 
+18-11-2018 00:54:29.973 INFO  POST: /v1/userLogin 
+18-11-2018 00:54:29.973 INFO  [32mParams: [39m[32m{"phone":"1234567890","password":"file","isd_code":"91"}[39m 
+18-11-2018 00:54:40.641 INFO  GET: /v1/getUserDetails 
+18-11-2018 00:54:40.641 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 00:57:07.980 INFO  GET: /v1/getVendorDetails 
+18-11-2018 00:57:07.980 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 00:57:08.027 INFO  ERROR : Error in getting user details from the db 
+18-11-2018 00:57:22.885 INFO  GET: /v1/getVendorDetails 
+18-11-2018 00:57:22.885 INFO  [32mParams: [39m[32m{}[39m 
