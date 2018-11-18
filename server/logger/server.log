@@ -320,3 +320,74 @@
 18-11-2018 16:32:28.715 INFO  POST: /v1/userLogin 
 18-11-2018 16:32:28.715 INFO  [32mParams: [39m[32m{"phone":"1234567890","password":"user123","isd_code":"91"}[39m 
 18-11-2018 16:32:28.716 INFO  ERROR : invalid username or password 
+18-11-2018 16:33:55.790 INFO  POST: /v1/registerUser 
+18-11-2018 16:33:55.790 INFO  [32mParams: [39m[32m{"first_name":"Kartikeya","last_name":"Misra","phone":"7054529012","email":"abc@xyz.com","isd_code":"91","password":"user123","gender":"1","date_of_birth":"11/01/1998","street":"asdfgf lkjhj","address":"qwertyasdfg","city":"oiuytrjhgf","state":"sdgf","country":"sdgf","zip":"342354","aadhaar":"1234 5678 9098"}[39m 
+18-11-2018 16:34:22.842 INFO  POST: /v1/userLogin 
+18-11-2018 16:34:22.842 INFO  [32mParams: [39m[32m{"phone":"7054529012","password":"user123","isd_code":"91"}[39m 
+18-11-2018 16:34:22.881 INFO  GET: /v1/getAllCampaign 
+18-11-2018 16:34:22.881 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:34:26.752 INFO  GET: /v1/getUserDetails 
+18-11-2018 16:34:26.752 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:34:30.044 INFO  GET: /v1/getAllCampaign 
+18-11-2018 16:34:30.044 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:35:20.271 INFO  GET: /v1/getAllCampaign 
+18-11-2018 16:35:20.271 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:35:20.272 INFO  ERROR : Error in getting user details from the db 
+18-11-2018 16:36:30.973 INFO  GET: /v1/getAllCampaign 
+18-11-2018 16:36:30.973 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:39:50.758 INFO  GET: /v1/getAllCampaign 
+18-11-2018 16:39:50.758 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:41:03.903 INFO  GET: /v1/getAllCampaign 
+18-11-2018 16:41:03.903 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:41:13.895 INFO  GET: /v1/getUserDetails 
+18-11-2018 16:41:13.896 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:41:15.876 INFO  GET: /v1/getAllCampaign 
+18-11-2018 16:41:15.876 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:41:41.650 INFO  POST: /v1/organisationLogin 
+18-11-2018 16:41:41.650 INFO  [32mParams: [39m[32m{"orgPhone":"1234567890","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 16:41:41.652 INFO  ERROR : invalid username or password 
+18-11-2018 16:42:12.412 INFO  POST: /v1/organisationLogin 
+18-11-2018 16:42:12.413 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 16:42:14.960 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:42:14.960 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:44:25.743 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:44:25.744 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:47:10.626 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:47:10.626 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:50:07.259 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:50:07.259 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:50:44.984 INFO  POST: /v1/organisationLogin 
+18-11-2018 16:50:44.984 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 16:50:45.027 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:50:45.027 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:53:29.369 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:53:29.370 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:57:04.789 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:57:04.789 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:57:48.304 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:57:48.304 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 17:07:26.214 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 17:07:26.214 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 17:16:28.426 INFO  server started at port 9000 
+18-11-2018 17:16:35.620 INFO  POST: /v1/campaignCompleted 
+18-11-2018 17:16:35.620 INFO  [32mParams: [39m[32m{"campaign_id":"5bec6ae3bd83901116bdfe2e"}[39m 
+18-11-2018 17:16:35.620 INFO  ERROR : Token missing 
+18-11-2018 17:16:52.219 INFO  POST: /v1/campaignCompleted 
+18-11-2018 17:16:52.219 INFO  [32mParams: [39m[32m{"campaign_id":"5bec6ae3bd83901116bdfe2e"}[39m 
+18-11-2018 17:17:38.362 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 17:17:38.362 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 17:20:42.577 INFO  POST: /v1/organisationLogin 
+18-11-2018 17:20:42.577 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":" 91"}[39m 
+18-11-2018 17:20:42.579 INFO  ERROR : invalid isd code 
+18-11-2018 17:20:45.566 INFO  POST: /v1/organisationLogin 
+18-11-2018 17:20:45.566 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":" 91"}[39m 
+18-11-2018 17:20:45.571 INFO  ERROR : invalid isd code 
+18-11-2018 17:20:50.835 INFO  POST: /v1/organisationLogin 
+18-11-2018 17:20:50.835 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 17:20:50.876 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 17:20:50.876 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 17:25:20.944 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 17:25:20.944 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 17:27:05.057 INFO  POST: /v1/createCampaign 
+18-11-2018 17:27:05.057 INFO  [32mParams: [39m[32m{"campaignName":"lund4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"2123","campaignRequirement":"books","quantity":"55"}[39m 
+18-11-2018 17:27:32.592 INFO  server started at port 9000 

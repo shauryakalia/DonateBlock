@@ -40,9 +40,17 @@ module.exports = {
     
   },
 
-  addSelectedVendorDetail: async(campaign_id, final_vendor_id) => {
+  campaignCompleted: async (campaign_id) => {
+
+    let queryRes = await Campaign.findByIdAndUpdate({_id:campaign_id}, {$set: {deliverable: true}})
+    return queryRes;
+  },
+
+  addSelectedVendorDetail: async(campaign_id, final_vendor) => {
     let selectedVendorDetail = {
-      vendorId: final_vendor_id,
+      vendorId: final_vendor._id,
+      vendorName: final_vendor.vendorName,
+      vendorPhone: final_vendor.vendorPhone,
     consignment_sent: false
     };
     let queryRes = await Campaign.update({_id: campaign_id},{$push: {selectedVendorDetail:selectedVendorDetail}});

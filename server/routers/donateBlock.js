@@ -51,14 +51,14 @@ module.exports = {
           }
         });
         if((obj[0].price * campaign_data.quantity)<i_price){
-          final_vendor_id = v._id;
+          final_vendor = v;
           i_price = (obj[0].price * campaign_data.quantity);
         }
       })
 
-      await vendorDB.putConsignment(final_vendor_id, campaign_data);
+      await vendorDB.putConsignment(final_vendor, campaign_data);
 
-      await campaignDB.addSelectedVendorDetail(campaign_data.id, final_vendor_id);
+      await campaignDB.addSelectedVendorDetail(campaign_data.id, final_vendor);
       return true;
     }
     catch (err) {
