@@ -405,6 +405,7 @@ organisationProfilePicUpload: async (req,res,next) => {
         amount_required      :   _.get(req,['body','amount_required'],''),
         campaignRequirement :  _.get(req,['body','campaignRequirement'],''),
         quantity:              _.get(req,['body','quantity'],''),
+        campaignAddress     : _.get(req, ['body', 'campaignAddress'], '')
 
 
       };
