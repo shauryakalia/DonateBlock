@@ -33,7 +33,7 @@ module.exports  =  app => {
   //organisation----------------------------------------
   app.post('/v1/registerOrganisation', donateBlock.apiInfo, organisation.registerOrganisation, response, error);
 
-  app.post('/v1/organisationLogin', donateBlock.apiInfo, donateBlock.selectVendor, organisation.checkOrganisationLogin, response, error);
+  app.post('/v1/organisationLogin', donateBlock.apiInfo, organisation.checkOrganisationLogin, response, error);
 
   app.get('/v1/getOrganisationDetails', donateBlock.apiInfo, organisation.verifyOrganisationToken, organisation.getOrganisationDetails, response, error);
 
