@@ -508,3 +508,17 @@
 18-11-2018 18:50:09.832 INFO  [32mParams: [39m[32m{"phone":"7054529012","password":"user123","isd_code":"91"}[39m 
 18-11-2018 18:50:09.879 INFO  GET: /v1/getAllCampaign 
 18-11-2018 18:50:09.879 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:52:17.444 INFO  server started at port 9000 
+18-11-2018 18:53:04.772 INFO  GET: /v1/getAllCampaign 
+18-11-2018 18:53:04.772 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:55:14.322 INFO  POST: /v1/organisationLogin 
+18-11-2018 18:55:14.322 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 18:55:14.384 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 18:55:14.384 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:55:25.498 INFO  POST: /v1/createCampaign 
+18-11-2018 18:55:25.498 INFO  [32mParams: [39m[32m{"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"}[39m 
+18-11-2018 18:57:01.174 INFO  POST: /v1/createCampaign 
+18-11-2018 18:57:01.174 INFO  [32mParams: [39m[32m{"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"}[39m 
+18-11-2018 18:57:14.607 INFO  server started at port 9000 
+18-11-2018 18:57:17.080 INFO  POST: /v1/createCampaign 
+18-11-2018 18:57:17.080 INFO  [32mParams: [39m[32m{"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"}[39m 
