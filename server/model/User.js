@@ -27,10 +27,10 @@ var userSchema = mongoose.Schema({
 		country           :   { type: String },
 		zip               :   { type: String }
 	},
-campaign : [{
-campaignID: {type: String},
-amount: {type: Number }
-}]
+	campaign : [{
+		campaignID: {type: String},
+		amount: {type: Number }
+	}]
 }
 );
 

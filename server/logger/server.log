@@ -211,3 +211,20 @@
 18-11-2018 00:57:08.027 INFO  ERROR : Error in getting user details from the db 
 18-11-2018 00:57:22.885 INFO  GET: /v1/getVendorDetails 
 18-11-2018 00:57:22.885 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 14:46:32.376 INFO  server started at port 9000 
+18-11-2018 14:47:16.538 INFO  GET: /v1/getAllCampaign 
+18-11-2018 14:47:16.538 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 14:47:16.538 INFO  ERROR : Token missing 
+18-11-2018 14:48:52.521 INFO  POST: /v1/userLogin 
+18-11-2018 14:48:52.521 INFO  [32mParams: [39m[32m{"phone":"1234567890","password":"file","isd_code":"91"}[39m 
+18-11-2018 15:30:34.632 INFO  server started at port 9000 
+18-11-2018 15:31:44.545 INFO  POST: /v1/organisationLogin 
+18-11-2018 15:31:44.545 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 15:32:25.590 INFO  POST: /v1/organisationLogin 
+18-11-2018 15:32:25.590 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 15:32:33.259 INFO  server started at port 9000 
+18-11-2018 15:32:36.491 INFO  POST: /v1/organisationLogin 
+18-11-2018 15:32:36.491 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 15:34:07.557 INFO  POST: /v1/organisationLogin 
+18-11-2018 15:34:07.557 INFO  [32mParams: [39m[32m{"orgPhone":"1234567890","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 15:34:07.559 INFO  ERROR : invalid username or password 
