@@ -17,7 +17,8 @@ var organisationSchema = mongoose.Schema({
   orgRegId        :   { type: String },
   orgAddress      :  { type: String },
   orgOwnerName    :   { type: String },
-  token           :   { type: String }
+  token           :   { type: String },
+  orgWalletAddress: { type: String}
 }
 );
 

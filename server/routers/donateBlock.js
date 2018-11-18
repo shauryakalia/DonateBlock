@@ -36,9 +36,9 @@ module.exports = {
   selectVendor: async (campaign) => {
     try {
       const campaign_data ={ id :campaign._id,
-        campaignRequirement : "books" ,//campaign.campaignRequirement,
-        quantity : 10,//campaign.quantity,
-        amount : 30//campaign.amount_raised;,
+        campaignRequirement : campaign.campaignRequirement,
+        quantity : campaign.quantity,
+        amount : campaign.amount_raised
       };
       //let vendor = await vendorDB.selectVendor(campaignRequirement, quantity, amount);
       let vendor = await vendorDB.allVendor();
