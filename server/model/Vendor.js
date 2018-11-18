@@ -20,18 +20,21 @@ var vendorSchema = mongoose.Schema({
   token: { type: String },
   inventory: [
     {
+      id: {type: Number},
       item: {type: String, default: "clothes"}, 
       quantity: { type: Number, default: 0 },
       price: { type: Number, default: 0 },
       _id : false 
     },
    {
+    id: {type: Number},
       item: {type: String, default: "books"} ,
       quantity: { type: Number, default: 0 },
       price: { type: Number, default: 0 },
       _id : false 
     },
     {
+      id: {type: Number},
       item: {type: String, default: "food"} ,
       quantity: { type: Number, default: 0 },
       price: { type: Number, default: 0 },

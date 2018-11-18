@@ -36,7 +36,29 @@ module.exports  = {
             isd_code          :   _.get(req,['body','isd_code'],''),
             vendorPassword    : /*service.encrypt(*/_.get(req, ['body', 'vendorPassword'], '')/*)*/,
             vendorRegId       :   _.get(req,['body','vendorRegId'],''),
-            vendorAddress     :   _.get(req,['body','vendorAddress'],'')
+            vendorAddress     :   _.get(req,['body','vendorAddress'],''),
+            inventory         :   
+              [
+                {
+                  id: 1,
+                  item: "clothes", 
+                  quantity: 0,
+                  price: 0,
+
+                },
+               {
+                id: 2,
+                  item: "books",
+                  quantity: 0,
+                  price: 0,
+                },
+                {
+                  id: 3,
+                  item: "food" ,
+                  quantity: 0,
+                  price: 0,
+                }
+              ]
           };
     
           if(!db_details.vendorName || !db_details.vendorPhone || !db_details.vendorPassword  || !db_details.vendorRegId){

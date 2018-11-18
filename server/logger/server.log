@@ -522,3 +522,67 @@
 18-11-2018 18:57:14.607 INFO  server started at port 9000 
 18-11-2018 18:57:17.080 INFO  POST: /v1/createCampaign 
 18-11-2018 18:57:17.080 INFO  [32mParams: [39m[32m{"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"}[39m 
+18-11-2018 23:44:47.305 INFO  server started at port 9000 
+19-11-2018 00:05:15.844 INFO  GET: /v1/getVendorDetails 
+19-11-2018 00:05:15.844 INFO  [32mParams: [39m[32m{}[39m 
+19-11-2018 00:30:43.830 INFO  GET: /v1/getInventory 
+19-11-2018 00:30:43.830 INFO  [32mParams: [39m[32m{}[39m 
+19-11-2018 00:33:28.303 INFO  POST: /v1/registerVendor 
+19-11-2018 00:33:28.303 INFO  [32mParams: [39m[32m{"vendorName":"Vendor 4","vendorEmail":"vendor4@gmail.com","vendorPhone":"9874538550","isd_code":"91","vendorPassword":"vendor4","vendorRegId":"vendor4","vendorAddress":"delhi"}[39m 
+19-11-2018 00:34:00.928 INFO  POST: /v1/vendorLogin 
+19-11-2018 00:34:00.928 INFO  [32mParams: [39m[32m{"vendorPhone":"9874538550","isd_code":"91","vendorPassword":"vendor4"}[39m 
+19-11-2018 00:34:10.054 INFO  GET: /v1/getInventory 
+19-11-2018 00:34:10.054 INFO  [32mParams: [39m[32m{}[39m 
+19-11-2018 00:34:57.236 INFO  POST: /v1/updateInventory 
+19-11-2018 00:34:57.236 INFO  [32mParams: [39m[32m{"inventory":[{"id":1,"item":"clothes","quantity":5,"price":300},{"id":2,"item":"books","quantity":40,"price":1.5},{"id":3,"item":"food","quantity":50,"price":30}]}[39m 
+19-11-2018 00:35:02.780 INFO  GET: /v1/getInventory 
+19-11-2018 00:35:02.780 INFO  [32mParams: [39m[32m{}[39m 
+19-11-2018 00:35:52.235 INFO  POST: /v1/updateInventory 
+19-11-2018 00:35:52.235 INFO  [32mParams: [39m[32m{"inventory":[{"id":1,"item":"clothes","quantity":5,"price":300},{"id":2,"item":"books","quantity":40,"price":1.5},{"id":3,"item":"food","quantity":60,"price":7}]}[39m 
+19-11-2018 00:35:55.828 INFO  GET: /v1/getInventory 
+19-11-2018 00:35:55.828 INFO  [32mParams: [39m[32m{}[39m 
+19-11-2018 00:36:33.755 INFO  POST: /v1/registerVendor 
+19-11-2018 00:36:33.755 INFO  [32mParams: [39m[32m{"vendorName":"Vendor 5","vendorEmail":"vendor3@gmail.com","vendorPhone":"9874538001","isd_code":"91","vendorPassword":"vendor5","vendorRegId":"vendor","vendorAddress":"delhi"}[39m 
+19-11-2018 00:36:42.855 INFO  POST: /v1/vendorLogin 
+19-11-2018 00:36:42.855 INFO  [32mParams: [39m[32m{"vendorPhone":"9874538001","isd_code":"91","vendorPassword":"vendor5"}[39m 
+19-11-2018 00:37:06.506 INFO  POST: /v1/updateInventory 
+19-11-2018 00:37:06.506 INFO  [32mParams: [39m[32m{"inventory":[{"item":"clothes","quantity":5,"price":300},{"item":"books","quantity":40,"price":1.5},{"item":"food","quantity":60,"price":7}]}[39m 
+19-11-2018 00:37:10.573 INFO  GET: /v1/getInventory 
+19-11-2018 00:37:10.573 INFO  [32mParams: [39m[32m{}[39m 
+19-11-2018 00:37:18.797 INFO  server started at port 9000 
+19-11-2018 00:37:54.109 INFO  GET: /v1/getInventory 
+19-11-2018 00:37:54.109 INFO  [32mParams: [39m[32m{}[39m 
+19-11-2018 00:38:02.863 INFO  POST: /v1/updateInventory 
+19-11-2018 00:38:02.863 INFO  [32mParams: [39m[32m{"inventory":[{"item":"clothes","quantity":5,"price":300},{"item":"books","quantity":40,"price":1.5},{"item":"food","quantity":60,"price":7}]}[39m 
+19-11-2018 00:38:05.928 INFO  GET: /v1/getInventory 
+19-11-2018 00:38:05.928 INFO  [32mParams: [39m[32m{}[39m 
+19-11-2018 00:55:13.146 INFO  POST: /v1/organisationLogin 
+19-11-2018 00:55:13.146 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":""}[39m 
+19-11-2018 00:55:13.146 INFO  ERROR : phone or password or isd code missing 
+19-11-2018 00:55:19.377 INFO  POST: /v1/organisationLogin 
+19-11-2018 00:55:19.377 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+19-11-2018 00:55:22.658 INFO  GET: /v1/getSelfCampaign 
+19-11-2018 00:55:22.658 INFO  [32mParams: [39m[32m{}[39m 
+19-11-2018 00:55:26.700 INFO  GET: /v1/getOrganisationDetails 
+19-11-2018 00:55:26.700 INFO  [32mParams: [39m[32m{}[39m 
+19-11-2018 00:56:50.342 INFO  POST: /v1/vendorLogin 
+19-11-2018 00:56:50.342 INFO  [32mParams: [39m[32m{"vendorPhone":"9998887770","vendorPassword":"vendor1","isd_code":"91"}[39m 
+19-11-2018 00:56:52.278 INFO  GET: /v1/getVendorDetails 
+19-11-2018 00:56:52.279 INFO  [32mParams: [39m[32m{}[39m 
+19-11-2018 00:56:54.341 INFO  GET: /v1/getVendorDetails 
+19-11-2018 00:56:54.341 INFO  [32mParams: [39m[32m{}[39m 
+19-11-2018 00:57:00.466 INFO  GET: /v1/getVendorDetails 
+19-11-2018 00:57:00.467 INFO  [32mParams: [39m[32m{}[39m 
+19-11-2018 00:57:02.576 INFO  GET: /v1/getVendorDetails 
+19-11-2018 00:57:02.576 INFO  [32mParams: [39m[32m{}[39m 
+19-11-2018 00:57:10.789 INFO  server started at port 9000 
+19-11-2018 00:57:52.650 INFO  POST: /v1/registerVendor 
+19-11-2018 00:57:52.650 INFO  [32mParams: [39m[32m{"vendorName":"Vendor 6","vendorEmail":"vendor3@gmail.com","vendorPhone":"984538000","isd_code":"91","vendorPassword":"vendor6","vendorRegId":"vendor","vendorAddress":"delhi"}[39m 
+19-11-2018 00:58:18.130 INFO  POST: /v1/vendorLogin 
+19-11-2018 00:58:18.130 INFO  [32mParams: [39m[32m{"vendorPhone":"984538000","isd_code":"91","vendorPassword":"vendor6"}[39m 
+19-11-2018 00:58:56.645 INFO  GET: /v1/getInventory 
+19-11-2018 00:58:56.645 INFO  [32mParams: [39m[32m{}[39m 
+19-11-2018 00:59:54.046 INFO  POST: /v1/updateInventory 
+19-11-2018 00:59:54.046 INFO  [32mParams: [39m[32m{"inventory":[{"item":"clothes","quantity":5,"price":2,"id":1},{"item":"books","quantity":7,"price":5,"id":2},{"item":"food","quantity":8,"price":3,"id":3}]}[39m 
+19-11-2018 00:59:59.685 INFO  GET: /v1/getInventory 
+19-11-2018 00:59:59.685 INFO  [32mParams: [39m[32m{}[39m 
