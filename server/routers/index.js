@@ -42,7 +42,9 @@ module.exports  =  app => {
   app.post('/v1/createCampaign', donateBlock.apiInfo, organisation.verifyOrganisationToken, organisation.createCampaign, response, error);
 
   app.get('/v1/getSelfCampaign', donateBlock.apiInfo, organisation.verifyOrganisationToken, organisation.getSelfCampaign, response, error);
-    
+  
+  app.post('/v1/campaignCompleted', donateBlock.apiInfo, organisation.verifyOrganisationToken, organisation.campaignCompleted, response , error);
+  
   //vendor----------------------------------------
   app.post('/v1/registerVendor', donateBlock.apiInfo, vendor.registerVendor, response, error);
 

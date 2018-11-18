@@ -506,6 +506,53 @@ organisationProfilePicUpload: async (req,res,next) => {
       return next();
 
     }
+  },
+
+  campaignCompleted: async(req, res, next) => {
+    try{
+
+      if ( _.get(req, ['error', 'status'], false) )
+      {
+        return next();
+      }
+
+      const organisation_id  = _.get(req, ['body', 'organisation_id'], ''),
+            campaignId = _.get(req, ['body','campaign_id'], '');
+
+      let details  = await campaignDB.campaignCompleted(campaignId);//Adding a new verified campaign for an organisationDB
+
+      if(!details)
+      {          // error: "Error in adding new campaign for an Organisation to the db",
+        let invalidCampaignError = {
+          status: true,
+          error: _.get(errorCode, 649, ''),
+          statusCode: 649
+        };
+
+        LOG.console.info("ERROR : " + invalidCampaignError.error); //Adding error in the log file
+        _.set(req, 'error', invalidCampaignError);
+        return next();
+
+      }
+
+      _.set(req, ['body'], {});
+      _.set(req, ['body', 'campaign_completed'], true);
+     
+      return next();
+
+    }
+    catch(error) {
+        // error:"organisationDB Error" ,
+      let hlError =   {
+        status: true,
+        error: _.get(errorCode, 603, ''),
+        statusCode: 603
+      };
+
+      _.set(req, ['error'], hlError);
+      return next();
+
+    }
   }
 
 };
