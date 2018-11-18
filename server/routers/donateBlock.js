@@ -35,15 +35,16 @@ module.exports = {
 
   selectVendor: async (campaign) => {
     try {
-      const campaign_data ={ id :campaign._id,
+      const campaign_data ={ campaign_id :campaign._id,
         campaignRequirement : campaign.campaignRequirement,
         quantity : campaign.quantity,
-        amount : campaign.amount_raised
+        amount : campaign.amount_raised,
+        address: campaign.campaignAddress
       };
       //let vendor = await vendorDB.selectVendor(campaignRequirement, quantity, amount);
       let vendor = await vendorDB.allVendor();
       console.log(vendor);
-      var final_vendor_id,i_price=1000000000;
+      var final_vendor,i_price=1000000000;
       let v_o = vendor.filter(v => {
         let obj = v.inventory.filter(o => {
           if( o.item == campaign_data.campaignRequirement && o.quantity >= campaign_data.quantity && (o.price * campaign_data.quantity) <= campaign_data.amount){

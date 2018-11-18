@@ -54,5 +54,6 @@ module.exports = {
   646 : "Error while monthly updation",
   647 : "Error while updating click/view price",
   648 : "Error while selecting vendor",
-  649 : "Campaign not found"
+  649 : "Campaign not found",
+  650 : "error while sending item"
 };

@@ -57,4 +57,6 @@ module.exports  =  app => {
   app.post('/v1/updateInventory', donateBlock.apiInfo, vendor.verifyVendorToken, vendor.updateInventory, response, error);
 
   app.get('/v1/getInventory', donateBlock.apiInfo, vendor.verifyVendorToken, vendor.getInventory, response, error);
+
+  app.post('/v1/itemDelivered', donateBlock.apiInfo, vendor.verifyVendorToken, vendor.itemDelivered, response, error);
 };
