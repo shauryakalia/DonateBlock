@@ -13,6 +13,7 @@ var vendorSchema = mongoose.Schema({
   vendorPhone: { type: String },
   vendorEmail: { type: String },
   vendorRegId: { type: String },
+  vendorWalletAddress: { type: String},
   isd_code: { type: String },
   vendorPassword: { type: String },
   vendorAddress: { type: String },

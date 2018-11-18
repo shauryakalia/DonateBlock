@@ -21,7 +21,8 @@ var campaignSchema = mongoose.Schema({
   selectedVendorDetail: [{
     vendorId: { type: String },
     consignment_sent: { type: Boolean }
-  }]
+  }],
+  campaignWalletAddress: { type: String}
 });
 
 campaignSchema.index({ campaignName: 'text' });//,{weights: {first_name: 3, last_name: 2, middle_name: 1}});

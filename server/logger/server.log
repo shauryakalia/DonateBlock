@@ -228,3 +228,95 @@
 18-11-2018 15:34:07.557 INFO  POST: /v1/organisationLogin 
 18-11-2018 15:34:07.557 INFO  [32mParams: [39m[32m{"orgPhone":"1234567890","orgPassword":"cry123","isd_code":"91"}[39m 
 18-11-2018 15:34:07.559 INFO  ERROR : invalid username or password 
+18-11-2018 15:53:17.770 INFO  server started at port 9000 
+18-11-2018 15:53:22.172 INFO  POST: /v1/organisationLogin 
+18-11-2018 15:53:22.172 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 15:53:28.314 INFO  POST: /v1/vendorLogin 
+18-11-2018 15:53:28.315 INFO  [32mParams: [39m[32m{"vendorPhone":"9874538551","isd_code":"91","vendorPassword":"vendor3"}[39m 
+18-11-2018 16:06:20.676 INFO  POST: /v1/organisationLogin 
+18-11-2018 16:06:20.676 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 16:06:53.287 INFO  POST: /v1/organisationLogin 
+18-11-2018 16:06:53.287 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 16:06:54.430 INFO  POST: /v1/organisationLogin 
+18-11-2018 16:06:54.430 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 16:06:55.014 INFO  POST: /v1/organisationLogin 
+18-11-2018 16:06:55.014 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 16:06:55.223 INFO  POST: /v1/organisationLogin 
+18-11-2018 16:06:55.223 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 16:06:55.408 INFO  POST: /v1/organisationLogin 
+18-11-2018 16:06:55.408 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 16:06:55.599 INFO  POST: /v1/organisationLogin 
+18-11-2018 16:06:55.599 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 16:06:55.726 INFO  POST: /v1/organisationLogin 
+18-11-2018 16:06:55.726 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 16:06:57.921 INFO  POST: /v1/vendorLogin 
+18-11-2018 16:06:57.921 INFO  [32mParams: [39m[32m{"vendorPhone":"9874538551","isd_code":"91","vendorPassword":"vendor3"}[39m 
+18-11-2018 16:06:58.116 INFO  POST: /v1/vendorLogin 
+18-11-2018 16:06:58.116 INFO  [32mParams: [39m[32m{"vendorPhone":"9874538551","isd_code":"91","vendorPassword":"vendor3"}[39m 
+18-11-2018 16:06:58.258 INFO  POST: /v1/vendorLogin 
+18-11-2018 16:06:58.258 INFO  [32mParams: [39m[32m{"vendorPhone":"9874538551","isd_code":"91","vendorPassword":"vendor3"}[39m 
+18-11-2018 16:13:49.629 INFO  POST: /v1/organisationLogin 
+18-11-2018 16:13:49.629 INFO  [32mParams: [39m[32m{"orgPhone":"1234567890","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 16:13:49.630 INFO  ERROR : invalid username or password 
+18-11-2018 16:14:04.467 INFO  POST: /v1/organisationLogin 
+18-11-2018 16:14:04.467 INFO  [32mParams: [39m[32m{"orgPhone":"1234567890","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 16:14:04.469 INFO  ERROR : invalid username or password 
+18-11-2018 16:14:35.742 INFO  POST: /v1/organisationLogin 
+18-11-2018 16:14:35.742 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 16:14:58.739 INFO  POST: /v1/organisationLogin 
+18-11-2018 16:14:58.739 INFO  [32mParams: [39m[32m{"orgPhone":"9876543210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 16:14:58.742 INFO  ERROR : invalid username or password 
+18-11-2018 16:15:35.691 INFO  POST: /v1/organisationLogin 
+18-11-2018 16:15:35.691 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 16:15:41.377 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:15:41.377 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:16:08.216 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:16:08.216 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:16:08.221 INFO  ERROR : User logged in on another device-Token mismatch 
+18-11-2018 16:16:15.083 INFO  POST: /v1/organisationLogin 
+18-11-2018 16:16:15.084 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 16:16:24.129 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:16:24.129 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:17:12.269 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:17:12.269 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:17:12.273 INFO  ERROR : User logged in on another device-Token mismatch 
+18-11-2018 16:17:34.630 INFO  POST: /v1/organisationLogin 
+18-11-2018 16:17:34.630 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 16:18:18.862 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:18:18.862 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:19:06.848 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:19:06.849 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:19:06.850 INFO  ERROR : User logged in on another device-Token mismatch 
+18-11-2018 16:21:01.442 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:21:01.442 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:21:01.444 INFO  ERROR : User logged in on another device-Token mismatch 
+18-11-2018 16:21:32.552 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:21:32.552 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:21:32.554 INFO  ERROR : User logged in on another device-Token mismatch 
+18-11-2018 16:21:53.670 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:21:53.670 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:21:53.672 INFO  ERROR : User logged in on another device-Token mismatch 
+18-11-2018 16:22:01.884 INFO  POST: /v1/organisationLogin 
+18-11-2018 16:22:01.884 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 16:22:01.925 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:22:01.926 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:22:20.022 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:22:20.022 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:27:57.221 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:27:57.221 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:28:52.730 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:28:52.730 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:29:47.905 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:29:47.905 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:30:03.766 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:30:03.766 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:31:01.590 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:31:01.590 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:31:21.776 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 16:31:21.776 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 16:32:16.304 INFO  POST: /v1/userLogin 
+18-11-2018 16:32:16.304 INFO  [32mParams: [39m[32m{"phone":"7054529012","password":"user123","isd_code":"91"}[39m 
+18-11-2018 16:32:16.306 INFO  ERROR : invalid username or password 
+18-11-2018 16:32:28.715 INFO  POST: /v1/userLogin 
+18-11-2018 16:32:28.715 INFO  [32mParams: [39m[32m{"phone":"1234567890","password":"user123","isd_code":"91"}[39m 
+18-11-2018 16:32:28.716 INFO  ERROR : invalid username or password 
