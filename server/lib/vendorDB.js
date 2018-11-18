@@ -70,6 +70,11 @@ module.exports = {
         return queryRes;
     },
 
+    itemDelivered: async (vendor_id, campaignId)=> {
+        let queryRes = await Vendor.update({'_id' :vendor_id, 'consignment.id':campaignId }, {$set: {'consignment.$.sent':true}});
+        return queryRes;
+    },
+
     allVendor: async () => {
         let queryRes = await Vendor.find({},{inventory:1,_id:1}).lean();
         return queryRes;
@@ -81,12 +86,13 @@ module.exports = {
     //     return queryRes;
 
     // }
-    putConsignment: async (final_vendor_id, campaign) => {
+    putConsignment: async (final_vendor, campaign) => {
         let consignment = {
+            campaign_id: campaign._id,
             campaign_data: campaign,
             sent: false
         };
-        let queryRes = await Vendor.update({_id: final_vendor_id},{$push:{ consignment : consignment}});
+        let queryRes = await Vendor.update({_id: final_vendor._id},{$push:{ consignment : consignment}});
         return queryRes;
     }
 };

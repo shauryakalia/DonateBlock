@@ -30,7 +30,8 @@ var userSchema = mongoose.Schema({
 	},
 	campaign : [{
 		campaignID: {type: String},
-		amount: {type: Number }
+		amount: {type: Number },
+		_id : false 
 	}]
 }
 );

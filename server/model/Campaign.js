@@ -13,6 +13,7 @@ var campaignSchema = mongoose.Schema({
   campaignCause: { type: String },
   campaignOrganisation: { type: String },
   campaignDiscription: { type: String },
+  campaignAddress: {type: String},
   campaignRequirement: { type: String, enum: ["clothes", "books", "food"] },
   quantity: { type: Number, default: 0 },
   amount_raised: { type: Number, default: 0 },
@@ -23,7 +24,8 @@ var campaignSchema = mongoose.Schema({
     vendorId: { type: String },
     vendorName: {type: String},
     vendorPhone: {type: String},
-    consignment_sent: { type: Boolean }
+    consignment_sent: { type: Boolean },
+    _id : false 
   }],
   campaignWalletAddress: { type: String}
 });

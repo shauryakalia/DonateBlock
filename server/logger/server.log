@@ -391,3 +391,120 @@
 18-11-2018 17:27:05.057 INFO  POST: /v1/createCampaign 
 18-11-2018 17:27:05.057 INFO  [32mParams: [39m[32m{"campaignName":"lund4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"2123","campaignRequirement":"books","quantity":"55"}[39m 
 18-11-2018 17:27:32.592 INFO  server started at port 9000 
+18-11-2018 17:31:07.733 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 17:31:07.733 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 17:33:32.204 INFO  POST: /v1/createCampaign 
+18-11-2018 17:33:32.204 INFO  [32mParams: [39m[32m{"campaignName":"Ajanta","campaignCause":"Tourism","campaignDiscription":"For repairment and care of Historical Monuments","amount_required":"100000","campaignRequirement":"Labour, Engineers, Historians, Architects","quantity":"49"}[39m 
+18-11-2018 17:35:12.049 INFO  POST: /v1/createCampaign 
+18-11-2018 17:35:12.050 INFO  [32mParams: [39m[32m{"campaignName":"Ajanta","campaignCause":"Tourism","campaignDiscription":"Repairment and ressurection of Historica Monuments.","amount_required":"1000000","campaignRequirement":"Civil Engineers, Architects, Historians","quantity":"45"}[39m 
+18-11-2018 17:37:20.361 INFO  POST: /v1/createCampaign 
+18-11-2018 17:37:20.361 INFO  [32mParams: [39m[32m{"campaignName":"Ellora","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3000","campaignRequirement":"books","quantity":"300"}[39m 
+18-11-2018 17:38:02.940 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 17:38:02.940 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 17:41:59.681 INFO  POST: /v1/createCampaign 
+18-11-2018 17:41:59.681 INFO  [32mParams: [39m[32m{"campaignName":"","campaignCause":"","campaignDiscription":"","amount_required":"","campaignRequirement":"","quantity":"0"}[39m 
+18-11-2018 17:41:59.683 INFO  ERROR : Information missing can't register 
+18-11-2018 17:43:04.520 INFO  POST: /v1/createCampaign 
+18-11-2018 17:43:04.520 INFO  [32mParams: [39m[32m{"campaignName":"Ajanta","campaignCause":"Flood Relief","campaignDiscription":"For floods in Kerala","amount_required":"100000","campaignRequirement":"Clothes and Food","quantity":"1000"}[39m 
+18-11-2018 17:50:54.715 INFO  POST: /v1/organisationLogin 
+18-11-2018 17:50:54.715 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 17:50:57.569 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 17:50:57.569 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 17:53:12.110 INFO  POST: /v1/organisationLogin 
+18-11-2018 17:53:12.110 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 17:53:12.152 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 17:53:12.152 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 17:54:09.828 INFO  GET: /v1/getOrganisationDetails 
+18-11-2018 17:54:09.828 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:01:21.305 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 18:01:21.305 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:01:40.814 INFO  GET: /v1/getOrganisationDetails 
+18-11-2018 18:01:40.814 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:08:37.460 INFO  GET: /v1/getOrganisationDetails 
+18-11-2018 18:08:37.461 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:09:20.015 INFO  POST: /v1/organisationLogin 
+18-11-2018 18:09:20.015 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 18:09:20.191 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 18:09:20.191 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:09:22.011 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 18:09:22.011 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:09:22.013 INFO  ERROR : User logged in on another device-Token mismatch 
+18-11-2018 18:09:22.153 INFO  GET: /v1/getOrganisationDetails 
+18-11-2018 18:09:22.153 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:09:23.637 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 18:09:23.637 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:09:32.106 INFO  POST: /v1/createCampaign 
+18-11-2018 18:09:32.106 INFO  [32mParams: [39m[32m{"campaignName":"","campaignCause":"","campaignDiscription":"","amount_required":"","campaignRequirement":"","quantity":"0"}[39m 
+18-11-2018 18:09:32.107 INFO  ERROR : Information missing can't register 
+18-11-2018 18:09:37.055 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 18:09:37.055 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:09:54.399 INFO  POST: /v1/createCampaign 
+18-11-2018 18:09:54.399 INFO  [32mParams: [39m[32m{"campaignName":"qwer","campaignCause":"asdf","campaignDiscription":"qwert","amount_required":"1345636","campaignRequirement":"ewtwe","quantity":"45"}[39m 
+18-11-2018 18:10:10.106 INFO  server started at port 9000 
+18-11-2018 18:11:21.134 INFO  POST: /v1/createCampaign 
+18-11-2018 18:11:21.134 INFO  Params: {"campaignName":"qwer","campaignCause":"asdf","campaignDiscription":"qwert","amount_required":"1345636","campaignRequirement":"ewtwe","quantity":"45"} 
+18-11-2018 18:13:25.035 INFO  server started at port 9000 
+18-11-2018 18:14:14.926 INFO  POST: /v1/createCampaign 
+18-11-2018 18:14:14.926 INFO  [32mParams: [39m[32m{"campaignName":"qwer","campaignCause":"asdf","campaignDiscription":"qwert","amount_required":"1345636","campaignRequirement":"food","quantity":"45"}[39m 
+18-11-2018 18:18:41.822 INFO  POST: /v1/createCampaign 
+18-11-2018 18:18:41.822 INFO  [32mParams: [39m[32m{"campaignName":"asfsdg","campaignCause":"fshgsfg","campaignDiscription":"srrgrgt","amount_required":"34234","campaignRequirement":"clothes","quantity":"9"}[39m 
+18-11-2018 18:18:49.029 INFO  GET: /v1/getOrganisationDetails 
+18-11-2018 18:18:49.029 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:19:03.706 INFO  POST: /v1/userLogin 
+18-11-2018 18:19:03.706 INFO  [32mParams: [39m[32m{"phone":"1234567890","password":"user123","isd_code":"91"}[39m 
+18-11-2018 18:19:03.709 INFO  ERROR : invalid username or password 
+18-11-2018 18:19:14.182 INFO  POST: /v1/userLogin 
+18-11-2018 18:19:14.182 INFO  [32mParams: [39m[32m{"phone":"9874563210","password":"cry123","isd_code":"91"}[39m 
+18-11-2018 18:19:14.184 INFO  ERROR : invalid username or password 
+18-11-2018 18:19:23.789 INFO  POST: /v1/registerUser 
+18-11-2018 18:19:23.789 INFO  [32mParams: [39m[32m{"first_name":"","last_name":"","phone":"","email":"","isd_code":"","password":"","gender":"1","date_of_birth":"11/01/1998","street":"asdfgf lkjhj","address":"","city":"","state":"","country":"","zip":"","aadhaar":"1234 5678 9098"}[39m 
+18-11-2018 18:19:23.789 INFO  ERROR : Information missing can't register 
+18-11-2018 18:19:33.465 INFO  POST: /v1/userLogin 
+18-11-2018 18:19:33.465 INFO  [32mParams: [39m[32m{"phone":"7054529012","password":"user123","isd_code":"91"}[39m 
+18-11-2018 18:19:33.511 INFO  GET: /v1/getAllCampaign 
+18-11-2018 18:19:33.511 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:19:49.773 INFO  GET: /v1/getUserDetails 
+18-11-2018 18:19:49.773 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:19:51.656 INFO  GET: /v1/getAllCampaign 
+18-11-2018 18:19:51.656 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:20:13.030 INFO  POST: /v1/vendorLogin 
+18-11-2018 18:20:13.030 INFO  [32mParams: [39m[32m{"vendorPhone":"9874563210","vendorPassword":"vendor","isd_code":"91"}[39m 
+18-11-2018 18:20:13.032 INFO  ERROR : invalid username or password 
+18-11-2018 18:21:00.882 INFO  POST: /v1/vendorLogin 
+18-11-2018 18:21:00.882 INFO  [32mParams: [39m[32m{"vendorPhone":"9998887770","vendorPassword":"vendor1","isd_code":"91"}[39m 
+18-11-2018 18:21:00.923 INFO  GET: /v1/getAllCampaign 
+18-11-2018 18:21:00.923 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:21:00.925 INFO  ERROR : Error in getting user details from the db 
+18-11-2018 18:24:12.698 INFO  GET: /v1/getAllCampaign 
+18-11-2018 18:24:12.698 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:24:12.699 INFO  ERROR : Error in getting user details from the db 
+18-11-2018 18:24:39.239 INFO  POST: /v1/vendorLogin 
+18-11-2018 18:24:39.239 INFO  [32mParams: [39m[32m{"vendorPhone":"9998887770","vendorPassword":"vendor1","isd_code":"91"}[39m 
+18-11-2018 18:24:39.287 INFO  GET: /v1/getAllCampaign 
+18-11-2018 18:24:39.287 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:24:39.287 INFO  ERROR : Failed to authenticate token 
+18-11-2018 18:35:25.262 INFO  POST: /v1/vendorLogin 
+18-11-2018 18:35:25.262 INFO  [32mParams: [39m[32m{"vendorPhone":"9998887770","vendorPassword":"vendor1","isd_code":"91"}[39m 
+18-11-2018 18:37:38.769 INFO  POST: /v1/organisationLogin 
+18-11-2018 18:37:38.769 INFO  [32mParams: [39m[32m{"orgPhone":"9874563210","orgPassword":"cry123","isd_code":"91"}[39m 
+18-11-2018 18:38:53.112 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 18:38:53.112 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:40:01.571 INFO  GET: /v1/getSelfCampaign 
+18-11-2018 18:40:01.571 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:40:33.336 INFO  POST: /v1/vendorLogin 
+18-11-2018 18:40:33.336 INFO  [32mParams: [39m[32m{"vendorPhone":"9998887770","vendorPassword":"vendor1","isd_code":"91"}[39m 
+18-11-2018 18:40:33.371 INFO  GET: /v1/getAllCampaign 
+18-11-2018 18:40:33.371 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:40:33.371 INFO  ERROR : Failed to authenticate token 
+18-11-2018 18:43:59.972 INFO  POST: /v1/vendorLogin 
+18-11-2018 18:43:59.972 INFO  [32mParams: [39m[32m{"vendorPhone":"9998887770","vendorPassword":"vendor1","isd_code":"91"}[39m 
+18-11-2018 18:44:28.596 INFO  GET: /v1/getAllCampaign 
+18-11-2018 18:44:28.596 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:44:28.598 INFO  ERROR : Error in getting user details from the db 
+18-11-2018 18:49:48.483 INFO  GET: /v1/getAllCampaign 
+18-11-2018 18:49:48.483 INFO  [32mParams: [39m[32m{}[39m 
+18-11-2018 18:49:48.485 INFO  ERROR : Error in getting user details from the db 
+18-11-2018 18:50:09.832 INFO  POST: /v1/userLogin 
+18-11-2018 18:50:09.832 INFO  [32mParams: [39m[32m{"phone":"7054529012","password":"user123","isd_code":"91"}[39m 
+18-11-2018 18:50:09.879 INFO  GET: /v1/getAllCampaign 
+18-11-2018 18:50:09.879 INFO  [32mParams: [39m[32m{}[39m 

@@ -440,6 +440,48 @@ vendorProfilePicUpload: async (req,res,next) => {
       return next();
 
     }
-  }
+  },
 
+  itemDelivered: async (req, res, next) => {
+    try {
+
+      if ( _.get(req, ['error', 'status'], false) )
+      {
+        return next();
+      }
+
+      const vendor_id  = _.get(req, ['body', 'vendor_id'], ''),
+            campaignId = _.get(req, ['body','campaign_id'],'');
+
+      let details = await vendorDB.itemDelivered(vendor_id, campaignId);
+      if(!details){
+        let vendorError = {
+          status: true,
+          error: _.get(errorCode, 650, ''),
+          statusCode: 650
+        };
+  
+        LOG.console.info("ERROR : " + vendorError.error); //Adding error in the log file
+        _.set(req, ['error'], vendorError);
+        return next();
+      }
+      _.set(req, ['body', 'item_sent'], true );
+      return next();
+
+    }
+    catch(error)
+    {
+      // 'Error while getting vendor inventory',
+      let vendorError = {
+        status: true,
+        error: _.get(errorCode, 645, ''),
+        statusCode: 645
+      };
+
+      LOG.console.info("ERROR : " + vendorError.error); //Adding error in the log file
+      _.set(req, ['error'], vendorError);
+      return next();
+
+    }
+  }
 };

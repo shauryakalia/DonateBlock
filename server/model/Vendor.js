@@ -22,22 +22,27 @@ var vendorSchema = mongoose.Schema({
     {
       item: {type: String, default: "clothes"}, 
       quantity: { type: Number, default: 0 },
-      price: { type: Number, default: 0 }
+      price: { type: Number, default: 0 },
+      _id : false 
     },
    {
       item: {type: String, default: "books"} ,
       quantity: { type: Number, default: 0 },
-      price: { type: Number, default: 0 }
+      price: { type: Number, default: 0 },
+      _id : false 
     },
     {
       item: {type: String, default: "food"} ,
       quantity: { type: Number, default: 0 },
-      price: { type: Number, default: 0 }
+      price: { type: Number, default: 0 },
+      _id : false 
     }
   ],
   consignment: [{
+    campaign_id: {type: String},
     campaign_data: { type: Object },
-    sent: { type: Boolean }
+    sent: { type: Boolean },
+    _id : false 
   }]
 });
 
