@@ -19,6 +19,8 @@ var userSchema = mongoose.Schema({
 	isd_code: {type: String},
 	gender: { type: Number },
 	walletAddress: { type: String},
+	privateKey : {type: String},
+  publicKey : {type : String},
 	date_of_birth: { type: String },
 	address: {
 		street            :   { type: String },

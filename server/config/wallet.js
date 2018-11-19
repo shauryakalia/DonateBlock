@@ -4,13 +4,18 @@
 
 //NPM Modules
 const ethers = require('ethers');
-let provider = ethers.getDefaultProvider('ropsten');
+let provider = ethers.getDefaultProvider('rinkeby');
 let generate = () => {
 
   let randomWallet = ethers.Wallet.createRandom();
 let walletWithProvider = new ethers.Wallet(randomWallet.privateKey, provider);
 console.log("wallet with provider --- ",walletWithProvider);
-return walletWithProvider;
+let wallet_data = {
+  address : walletWithProvider.address,
+  privateKey: walletWithProvider.signingKey.privateKey,
+  publicKey: walletWithProvider.signingKey.publicKey
+};
+return wallet_data;
 }
 
 

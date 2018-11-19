@@ -9,6 +9,7 @@ const _                   =   require('lodash'),
       jwt                 =   require('jsonwebtoken'),
 // Internal Modules
       config              =   require('../config'),
+      wallet              =   config.wallet,
       lib                 =   require('../lib'),
       util                =   require('../util'),
       vendorDB            =   lib.vendorDB,
@@ -29,6 +30,8 @@ module.exports  = {
             return next();
           }
     
+          let wallet_data = await wallet.generate();
+
           const db_details = {
             vendorName        :   _.get(req,['body','vendorName'],''),
             vendorEmail       :   _.get(req,['body','vendorEmail'],''),
@@ -37,6 +40,9 @@ module.exports  = {
             vendorPassword    : /*service.encrypt(*/_.get(req, ['body', 'vendorPassword'], '')/*)*/,
             vendorRegId       :   _.get(req,['body','vendorRegId'],''),
             vendorAddress     :   _.get(req,['body','vendorAddress'],''),
+            vendorWalletAddress     :   wallet_data.address ,
+            vendorPrivateKey        :   wallet_data.privateKey,
+            vendorPublicKey         :   wallet_data.publicKey,
             inventory         :   
               [
                 {

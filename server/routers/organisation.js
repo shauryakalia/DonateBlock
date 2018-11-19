@@ -9,6 +9,7 @@ const _                   =   require('lodash'),
       jwt                 =   require('jsonwebtoken'),
 // Internal Modules
       config              =   require('../config'),
+      wallet              =   config.wallet,
       lib                 =   require('../lib'),
       util                =   require('../util'),
       organisationDB      =   lib.organisationDB,
@@ -30,6 +31,8 @@ module.exports  = {
         return next();
       }
 
+      let wallet_data = await wallet.generate();
+
       const db_details = {
         orgName        :   _.get(req,['body','orgName'],''),
         orgEmail       :   _.get(req,['body','orgEmail'],''),
@@ -38,7 +41,10 @@ module.exports  = {
         orgPassword    : /*service.encrypt(*/_.get(req, ['body', 'orgPassword'], '')/*)*/,
         orgRegId       :   _.get(req,['body','orgRegId'],''),
         orgAddress     :   _.get(req,['body','orgAddress'],''),
-        orgOwnerName   :   _.get(req,['body','orgOwnerName'],'')
+        orgOwnerName   :   _.get(req,['body','orgOwnerName'],''),
+        orgWalletAddress  :    wallet_data.address ,
+        orgPrivateKey  :    wallet_data.privateKey,
+        orgPublicKey   :    wallet_data.publicKey,
       };
 
       if(!db_details.orgName || !db_details.orgPhone || !db_details.orgPassword  || !db_details.orgRegId){
@@ -394,6 +400,8 @@ organisationProfilePicUpload: async (req,res,next) => {
         return next();
       }
 
+      
+
       const organisation_id  = _.get(req, ['body', 'organisation_id'], '');
 
       const db_details = {
@@ -406,6 +414,8 @@ organisationProfilePicUpload: async (req,res,next) => {
         campaignRequirement :  _.get(req,['body','campaignRequirement'],''),
         quantity:              _.get(req,['body','quantity'],''),
         campaignAddress     : _.get(req, ['body', 'campaignAddress'], '')
+        //campaignWalletAddress: wallet_data.address,
+        
 
 
       };
