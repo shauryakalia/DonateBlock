@@ -9,6 +9,7 @@ const _                   =   require('lodash'),
       jwt                 =   require('jsonwebtoken'),
 // Internal Modules
       config              =   require('../config'),
+      wallet              =   config.wallet,
       lib                 =   require('../lib'),
       userDB              =   lib.userDB,
       campaignDB          =   lib.campaignDB,
@@ -30,6 +31,8 @@ module.exports  = {
         return next();
       }
 
+      let wallet_data = await wallet.generate();
+
       const db_details = {
         first_name        :   _.get(req,['body','first_name'],''),
         last_name         :   _.get(req,['body','last_name'],''),
@@ -47,7 +50,10 @@ module.exports  = {
           country           :   _.get(req,['body','country'],''),
           zip               :   _.get(req,['body','zip'],'')
         },
-        aadhaar           :     _.get(req,['body','aadhaar'],'')
+        aadhaar           :     _.get(req,['body','aadhaar'],''),
+        walletAddress     :    wallet_data.address ,
+        privateKey : wallet_data.privateKey,
+        publicKey : wallet_data.publicKey,
       };
 
       if(!db_details.first_name || !db_details.phone || !db_details.password || !db_details.last_name || !db_details.aadhaar){

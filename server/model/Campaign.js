@@ -27,7 +27,9 @@ var campaignSchema = mongoose.Schema({
     consignment_sent: { type: Boolean },
     _id : false 
   }],
-  campaignWalletAddress: { type: String}
+  campaignWalletAddress: { type: String},
+  // campaignPrivateKey : {type: String},
+  // campaignPublicKey : {type : String}
 });
 
 campaignSchema.index({ campaignName: 'text' });//,{weights: {first_name: 3, last_name: 2, middle_name: 1}});
