@@ -9,6 +9,7 @@ const _                   =   require('lodash'),
       jwt                 =   require('jsonwebtoken'),
 // Internal Modules
       config              =   require('../config'),
+      wallet              =   config.wallet,
       lib                 =   require('../lib'),
       userDB              =   lib.userDB,
       campaignDB          =   lib.campaignDB,
@@ -310,6 +311,8 @@ module.exports  = {
       {
         return next();
       }
+
+      wallet.generate();
 
       const db_id  = _.get(req, ['body', 'db_id'], '');
       let user_data = await userDB.userDetails(db_id);
