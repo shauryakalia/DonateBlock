@@ -79,7 +79,7 @@ const abi = [
   ];
 const ethers = require('ethers');
 let provider = ethers.getDefaultProvider('rinkeby');
-let CampaignFactoryAddress = '0x169FE2EE864770CE7fc11c5EE1642531Ed703F90';
+let CampaignFactoryAddress = '0x827a8C777dFC31e8Fb423019634e36b5076BF509';
 
 
 
@@ -511,7 +511,6 @@ organisationProfilePicUpload: async (req,res,next) => {
       {
         return next();
       }
-
       const organisation_id  = _.get(req, ['body', 'organisation_id'], '');
       let organisation_details = await organisationDB.organisationDetails(organisation_id);
       let wallet = new ethers.Wallet(organisation_details.orgPrivateKey,provider);

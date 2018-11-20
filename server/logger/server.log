@@ -784,3 +784,102 @@
 21-11-2018 00:19:43.492 INFO  server started at port 9000 
 21-11-2018 00:19:49.970 INFO  POST: /v1/donateToCampaign 
 21-11-2018 00:19:49.970 INFO  Params: {"campaign_id":"5bf44f9b3a664d270bbb603b","donation_amount":1} 
+21-11-2018 01:18:19.213 INFO  server started at port 9000 
+21-11-2018 01:18:23.630 INFO  POST: /v1/donateToCampaign 
+21-11-2018 01:18:23.630 INFO  Params: {"campaign_id":"5bf44f9b3a664d270bbb603b","donation_amount":1} 
+21-11-2018 01:19:41.962 INFO  server started at port 9000 
+21-11-2018 01:19:43.043 INFO  POST: /v1/donateToCampaign 
+21-11-2018 01:19:43.044 INFO  Params: {"campaign_id":"5bf44f9b3a664d270bbb603b","donation_amount":1} 
+21-11-2018 01:20:24.587 INFO  server started at port 9000 
+21-11-2018 01:20:25.258 INFO  POST: /v1/donateToCampaign 
+21-11-2018 01:20:25.259 INFO  Params: {"campaign_id":"5bf44f9b3a664d270bbb603b","donation_amount":1} 
+21-11-2018 01:21:34.355 INFO  server started at port 9000 
+21-11-2018 01:21:36.472 INFO  POST: /v1/donateToCampaign 
+21-11-2018 01:21:36.472 INFO  Params: {"campaign_id":"5bf44f9b3a664d270bbb603b","donation_amount":1} 
+21-11-2018 01:23:44.353 INFO  server started at port 9000 
+21-11-2018 01:23:48.331 INFO  POST: /v1/donateToCampaign 
+21-11-2018 01:23:48.332 INFO  Params: {"campaign_id":"5bf44f9b3a664d270bbb603b","donation_amount":"1.0"} 
+21-11-2018 01:42:05.060 INFO  server started at port 9000 
+21-11-2018 01:42:14.391 INFO  POST: /v1/createCampaign 
+21-11-2018 01:42:14.391 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+21-11-2018 01:43:08.624 INFO  server started at port 9000 
+21-11-2018 01:43:09.579 INFO  POST: /v1/createCampaign 
+21-11-2018 01:43:09.579 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+21-11-2018 01:44:32.408 INFO  server started at port 9000 
+21-11-2018 01:44:33.332 INFO  POST: /v1/createCampaign 
+21-11-2018 01:44:33.332 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+21-11-2018 01:52:46.477 INFO  server started at port 9000 
+21-11-2018 01:52:58.670 INFO  POST: /v1/donateToCampaign 
+21-11-2018 01:52:58.671 INFO  Params: {"campaign_id":"5bf44f9b3a664d270bbb603b","donation_amount":"1.0"} 
+21-11-2018 01:53:31.925 INFO  server started at port 9000 
+21-11-2018 01:53:35.379 INFO  POST: /v1/donateToCampaign 
+21-11-2018 01:53:35.379 INFO  Params: {"campaign_id":"5bf44f9b3a664d270bbb603b","donation_amount":"1.0"} 
+21-11-2018 02:18:02.286 INFO  server started at port 9000 
+21-11-2018 02:18:07.162 INFO  POST: /v1/registerOrganisation 
+21-11-2018 02:18:07.162 INFO  [32mParams: [39m[32m{"orgName":"C.R.Y","orgEmail":"cry10@gmail.com","orgPhone":1010101010,"isd_code":91,"orgPassword":"cry123","orgRegId":"cry123","orgAddress":"new delhi","orgOwnerName":"Gov"}[39m 
+21-11-2018 02:18:36.430 INFO  POST: /v1/organisationLogin 
+21-11-2018 02:18:36.430 INFO  [32mParams: [39m[32m{"orgPhone":"1010101010","orgPassword":"cry123","isd_code":"91"}[39m 
+21-11-2018 02:18:57.180 INFO  GET: /v1/getOrganisationWallet 
+21-11-2018 02:18:57.180 INFO  [32mParams: [39m[32m{}[39m 
+21-11-2018 02:22:01.828 INFO  POST: /v1/createCampaign 
+21-11-2018 02:22:01.828 INFO  [32mParams: [39m[32m{"campaignName":"book$all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"}[39m 
+21-11-2018 02:22:01.832 INFO  ERROR : Error in getting user details from the db 
+21-11-2018 02:23:25.864 INFO  server started at port 9000 
+21-11-2018 02:23:30.074 INFO  POST: /v1/createCampaign 
+21-11-2018 02:23:30.075 INFO  Params: {"campaignName":"book4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+21-11-2018 02:23:30.090 INFO  ERROR : Error in getting user details from the db 
+21-11-2018 02:24:01.664 INFO  POST: /v1/createCampaign 
+21-11-2018 02:24:01.665 INFO  Params: {"campaignName":"book4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+21-11-2018 02:26:07.699 INFO  POST: /v1/createCampaign 
+21-11-2018 02:26:07.699 INFO  Params: {"campaignName":"book4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+21-11-2018 02:33:52.699 INFO  server started at port 9000 
+21-11-2018 02:33:57.702 INFO  POST: /v1/registerUser 
+21-11-2018 02:33:57.703 INFO  [32mParams: [39m[32m{"first_name":"Dev","last_name":"Verma","phone":1212121212,"email":"qwerty@werty.c","isd_code":91,"password":"user123","gender":1,"date_of_birth":"11-01-1998","street":"qwer","address":"asdfghj","city":"asdfgh","state":"asd","country":"asdf","zip":"1234567","aadhaar":"123456789012"}[39m 
+21-11-2018 02:34:15.532 INFO  POST: /v1/userLogin 
+21-11-2018 02:34:15.532 INFO  [32mParams: [39m[32m{"phone":"1212121212","password":"user123","isd_code":"91"}[39m 
+21-11-2018 02:34:32.954 INFO  GET: /v1/getUserWallet 
+21-11-2018 02:34:32.954 INFO  [32mParams: [39m[32m{}[39m 
+21-11-2018 02:54:28.247 INFO  server started at port 9000 
+21-11-2018 02:55:37.290 INFO  GET: /v1/getSelfCampaign 
+21-11-2018 02:55:37.291 INFO  Params: {} 
+21-11-2018 02:56:32.905 INFO  POST: /v1/donateToCampaign 
+21-11-2018 02:56:32.905 INFO  Params: {"campaign_id":"5bf475a9dc3f05450f7a9cf2","donation_amount":"2"} 
+21-11-2018 02:57:44.893 INFO  server started at port 9000 
+21-11-2018 02:57:50.143 INFO  POST: /v1/donateToCampaign 
+21-11-2018 02:57:50.144 INFO  Params: {"campaign_id":"5bf475a9dc3f05450f7a9cf2","donation_amount":"1"} 
+21-11-2018 03:01:16.988 INFO  server started at port 9000 
+21-11-2018 03:01:20.407 INFO  POST: /v1/donateToCampaign 
+21-11-2018 03:01:20.408 INFO  Params: {"campaign_id":"5bf475a9dc3f05450f7a9cf2","donation_amount":"1"} 
+21-11-2018 03:02:18.356 INFO  server started at port 9000 
+21-11-2018 03:02:21.786 INFO  POST: /v1/donateToCampaign 
+21-11-2018 03:02:21.787 INFO  Params: {"campaign_id":"5bf475a9dc3f05450f7a9cf2","donation_amount":"0.5"} 
+21-11-2018 03:03:31.138 INFO  server started at port 9000 
+21-11-2018 03:03:57.900 INFO  POST: /v1/donateToCampaign 
+21-11-2018 03:03:57.901 INFO  Params: {"campaign_id":"5bf475a9dc3f05450f7a9cf2","donation_amount":"0.75"} 
+21-11-2018 03:07:30.471 INFO  server started at port 9000 
+21-11-2018 03:07:31.942 INFO  POST: /v1/donateToCampaign 
+21-11-2018 03:07:31.943 INFO  Params: {"campaign_id":"5bf475a9dc3f05450f7a9cf2","donation_amount":"0.75"} 
+21-11-2018 03:09:07.745 INFO  server started at port 9000 
+21-11-2018 03:09:29.420 INFO  POST: /v1/donateToCampaign 
+21-11-2018 03:09:29.423 INFO  Params: {"campaign_id":"5bf475a9dc3f05450f7a9cf2","donation_amount":"0.75"} 
+21-11-2018 03:13:10.628 INFO  server started at port 9000 
+21-11-2018 03:13:14.562 INFO  POST: /v1/donateToCampaign 
+21-11-2018 03:13:14.562 INFO  Params: {"campaign_id":"5bf475a9dc3f05450f7a9cf2","donation_amount":"0.75"} 
+21-11-2018 03:18:54.510 INFO  server started at port 9000 
+21-11-2018 03:19:08.202 INFO  POST: /v1/donateToCampaign 
+21-11-2018 03:19:08.202 INFO  Params: {"campaign_id":"5bf475a9dc3f05450f7a9cf2","donation_amount":"0.75"} 
+21-11-2018 03:26:01.258 INFO  server started at port 9000 
+21-11-2018 03:26:02.962 INFO  POST: /v1/donateToCampaign 
+21-11-2018 03:26:02.963 INFO  Params: {"campaign_id":"5bf475a9dc3f05450f7a9cf2","donation_amount":"0.75"} 
+21-11-2018 03:26:50.532 INFO  server started at port 9000 
+21-11-2018 03:26:56.319 INFO  POST: /v1/donateToCampaign 
+21-11-2018 03:26:56.319 INFO  Params: {"campaign_id":"5bf475a9dc3f05450f7a9cf2","donation_amount":"0.75"} 
+21-11-2018 03:27:37.503 INFO  server started at port 9000 
+21-11-2018 03:27:46.875 INFO  POST: /v1/donateToCampaign 
+21-11-2018 03:27:46.875 INFO  Params: {"campaign_id":"5bf475a9dc3f05450f7a9cf2","donation_amount":"0.75"} 
+21-11-2018 03:31:47.473 INFO  server started at port 9000 
+21-11-2018 03:31:50.809 INFO  POST: /v1/donateToCampaign 
+21-11-2018 03:31:50.809 INFO  Params: {"campaign_id":"5bf475a9dc3f05450f7a9cf2","donation_amount":"0.75"} 
+21-11-2018 04:17:10.735 INFO  server started at port 9000 
+21-11-2018 04:19:30.163 INFO  POST: /v1/donateToCampaign 
+21-11-2018 04:19:30.163 INFO  Params: {"campaign_id":"5bf475a9dc3f05450f7a9cf2","donation_amount":"0.75"} 

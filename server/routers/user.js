@@ -264,52 +264,32 @@ module.exports  = {
 
       const campaign_id = _.get(req, ['body', 'campaign_id'], '');
       let campaign_wallet_address = await campaignDB.getCampaignWallet(campaign_id);
-
-      let transaction = {
-        nonce: 2,
-        gasLimit: 3000000,
-        gasPrice: ethers.utils.bigNumberify("20000000000"),
+      let amount = ethers.utils.parseEther(donation_amount);
+      let tx = {
         to: campaign_wallet_address.campaignWalletAddress,
-        value: ethers.utils.parseEther(donation_amount+'.0'),
-        data: "0x",
-    
-        // This ensures the transaction cannot be replayed on different networks
-        chainId: ethers.utils.getNetwork('rinkeby').chainId
-    }
-    
-    let signPromise = user_wallet.sign(transaction).then((signedTransaction) => {
 
-      console.log(signedTransaction);
-      let findVendor = provider.sendTransaction(signedTransaction,provider).then((tx) => {
-          console.log(tx);
-          // {
-          //    // These will match the above values (excluded properties are zero)
-          //    "nonce", "gasLimit", "gasPrice", "to", "value", "data", "chainId"
-          //
-          //    // These will now be present
-          //    "from", "hash", "r", "s", "v"
-          //  }
-          // Hash:
+        // ... or supports ENS names
+        // to: "ricmoo.firefly.eth",
+    
+        // We must pass in the amount as wei (1 ether = 1e18 wei), so we
+        // use this convenience function to convert ether to wei.
+        gasLimit: 50000,        // the maximum gas this transaction may spend
+        gasPrice: 100000000,
+        value: amount
+      };
+      let sendPromise = user_wallet.sendTransaction(tx);
+      sendPromise.then(function(transactionHash) {
+        console.log(`Transaction successful!!! `);
+        console.log(`The transaction hash is: ${transactionHash.hash}`);
+        // go to this URL to check more details about the transaction 
+        //console.log(`Etherscan transaction URL for complete details: https://${network}.etherscan.io/tx/${transactionHash.hash}`); 
+     });
 
           _.set(req, ['body'], {});
           _.set(req, ['body','tx_hash'], tx);
           _.set(req, ['body', 'donation_completed'], true );
           return next();
-      }).catch((error) => {
-        console.log('error',error);
-        let hlError =   {
-          status: true,
-          error: error,
-          statusCode: 680
-        };
-
-      LOG.console.info("ERROR : " + hlError.error); //Adding error in the log file
-      _.set(req, ['error'], hlError);
-      return next();
-      });
-  });
-
-
+      
     }catch(error){
         // error:"userDB Error" ,
         let hlError =   {
