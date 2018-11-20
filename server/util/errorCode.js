@@ -15,7 +15,7 @@ module.exports = {
   607 : "User logged in on another device-Token mismatch" ,
   608 : "Error in getting user details from the db" ,
   609 : "Failed to authenticate token" ,
-  610 : "Xbook id missing" ,
+  610 : "user id missing" ,
   611 : "user doesn't exit" ,
   612 : "User not found" ,
   613 : "Unable to update user details" ,
@@ -55,5 +55,7 @@ module.exports = {
   647 : "Error while updating click/view price",
   648 : "Error while selecting vendor",
   649 : "Campaign not found",
-  650 : "error while sending item"
+  650 : "error while sending item",
+  651 : "Error while getting vendor details",
+  652 : "error while fetching wallet details"
 };

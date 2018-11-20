@@ -44,6 +44,11 @@ module.exports = {
         return queryRes;
     },
 
+    getUserWallet: async (vendor_id) => {
+        let queryRes = await Vendor.findById({_id: vendor_id},{vendorWalletAddress: 1, vendorPrivateKey : 1, vendorPublicKey : 1});
+        return queryRes;
+    },
+
     changePassword: async (db_id, new_password) => {
 
         let queryRes = await Vendor.update({ _id: db_id }, { $set: { password: new_password } });

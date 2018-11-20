@@ -72,6 +72,10 @@ module.exports = {
       return queryRes;
   },
 
+  getUserWallet: async (db_id) => {
+    let queryRes = await User.findById({_id: db_id},{walletAddress: 1, privateKey : 1, publicKey : 1});
+      return queryRes;
+  },
 
   //Adding a post
   createPost: async ( post_details ) => {
