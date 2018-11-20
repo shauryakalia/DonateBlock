@@ -12,6 +12,7 @@ const _                   =   require('lodash'),
       wallet              =   config.wallet,
       lib                 =   require('../lib'),
       util                =   require('../util'),
+      deployCon           =   require('./deploy'),
       organisationDB      =   lib.organisationDB,
       campaignDB          =   lib.campaignDB,
       service             =   lib.service,
@@ -20,12 +21,65 @@ const _                   =   require('lodash'),
       errorCode           =   util.errorCode,
       REQUEST             =   config.REQUEST;
 
-const compiledFactory = require('../../ethereum/build/CampaignFactory.json');
+// const compiledFactory = require('../../ethereum/build/CampaignFactory.json');
+//let abi = compiledFactory.interface;
+const abi = [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "deployedCampaigns",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getAllCampaigns",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "aim",
+          "type": "uint256"
+        }
+      ],
+      "name": "createCampaign",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ];
 const ethers = require('ethers');
-
-let abi = compiledFactory.interface;
 let provider = ethers.getDefaultProvider('rinkeby');
-let CampaignFactoryAddress = '0xDa70aB3EF28835a678A1Cf9979d58b5a4a431240';
+let CampaignFactoryAddress = '0x169FE2EE864770CE7fc11c5EE1642531Ed703F90';
 
 
 
@@ -411,19 +465,15 @@ organisationProfilePicUpload: async (req,res,next) => {
         return next();
       }
 
-      
-
       const organisation_id  = _.get(req, ['body', 'organisation_id'], '');
       let organisation_details = await organisationDB.organisationDetails(organisation_id);
       let wallet = new ethers.Wallet(organisation_details.orgPrivateKey);
       let contract = new ethers.Contract(CampaignFactoryAddress, abi, provider);
       let contractWithSigner = await contract.connect(wallet);
       //let contractWithSigner = new ethers.Contract(CampaignFactoryAddress, abi, wallet);
-      let aim = await _.get(req,['body','amount_required'],1000);
-      let tx = await contractWithSigner.createCampaign(aim);
-      //console.log(tx.hash);
-      //await tx.wait();
-
+      let aim = await parseInt(_.get(req,['body','amount_required'],100));
+      let campaign_address = await contractWithSigner.createCampaign(aim);
+      
       const db_details = {
 
         campaignName         :   _.get(req,['body','campaignName'],''),
@@ -433,8 +483,8 @@ organisationProfilePicUpload: async (req,res,next) => {
         amount_required      :   _.get(req,['body','amount_required'],1000),
         campaignRequirement :  _.get(req,['body','campaignRequirement'],''),
         quantity:              _.get(req,['body','quantity'],''),
-        campaignAddress     : _.get(req, ['body', 'campaignAddress'], '')
-        //campaignWalletAddress: campaignWalletAddress
+        campaignAddress     : _.get(req, ['body', 'campaignAddress'], ''),
+        campaignWalletAddress: campaign_address
       };
 
       if(!db_details.campaignName || !db_details.campaignCause || !db_details.campaignDiscription  || !db_details.amount_required){
