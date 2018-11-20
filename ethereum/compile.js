@@ -6,7 +6,7 @@ const fs = require('fs-extra');
 const buildPath = path.resolve(__dirname , 'build');
 fs.removeSync(buildPath);
 
-//read contents of the solidithy contract
+//read contents of the solidity contract
 const campaignPath = path.resolve(__dirname , 'contract', 'donateblock.sol');
 const source = fs.readFileSync(campaignPath , 'utf8');
 

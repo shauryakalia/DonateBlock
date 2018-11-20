@@ -20,6 +20,16 @@ const _                   =   require('lodash'),
       errorCode           =   util.errorCode,
       REQUEST             =   config.REQUEST;
 
+const compiledFactory = require('../../ethereum/build/CampaignFactory.json');
+const ethers = require('ethers');
+
+let abi = compiledFactory.interface;
+let provider = ethers.getDefaultProvider('rinkeby');
+let CampaignFactoryAddress = '0xDa70aB3EF28835a678A1Cf9979d58b5a4a431240';
+
+
+
+
 module.exports  = {
 
   registerOrganisation: async (req, res, next) => {
@@ -395,6 +405,7 @@ organisationProfilePicUpload: async (req,res,next) => {
   createCampaign: async (req,res,next)=>{
     try{
 
+
       if ( _.get(req, ['error', 'status'], false) )
       {
         return next();
@@ -403,6 +414,15 @@ organisationProfilePicUpload: async (req,res,next) => {
       
 
       const organisation_id  = _.get(req, ['body', 'organisation_id'], '');
+      let organisation_details = await organisationDB.organisationDetails(organisation_id);
+      let wallet = new ethers.Wallet(organisation_details.orgPrivateKey);
+      let contract = new ethers.Contract(CampaignFactoryAddress, abi, provider);
+      let contractWithSigner = await contract.connect(wallet);
+      //let contractWithSigner = new ethers.Contract(CampaignFactoryAddress, abi, wallet);
+      let aim = await _.get(req,['body','amount_required'],1000);
+      let tx = await contractWithSigner.createCampaign(aim);
+      //console.log(tx.hash);
+      //await tx.wait();
 
       const db_details = {
 
@@ -410,14 +430,11 @@ organisationProfilePicUpload: async (req,res,next) => {
         campaignCause        :   _.get(req,['body','campaignCause'],''),
         campaignOrganisation :   organisation_id,
         campaignDiscription  :   _.get(req,['body','campaignDiscription'],''),
-        amount_required      :   _.get(req,['body','amount_required'],''),
+        amount_required      :   _.get(req,['body','amount_required'],1000),
         campaignRequirement :  _.get(req,['body','campaignRequirement'],''),
         quantity:              _.get(req,['body','quantity'],''),
         campaignAddress     : _.get(req, ['body', 'campaignAddress'], '')
-        //campaignWalletAddress: wallet_data.address,
-        
-
-
+        //campaignWalletAddress: campaignWalletAddress
       };
 
       if(!db_details.campaignName || !db_details.campaignCause || !db_details.campaignDiscription  || !db_details.amount_required){
@@ -432,8 +449,8 @@ organisationProfilePicUpload: async (req,res,next) => {
         _.set(req, 'error', invalidDetailError);
         return next();
       }
+      
 
-    
       let details  = await campaignDB.createCampaign(db_details);//Adding a new verified campaign for an organisationDB
 
       if(!details)
@@ -452,7 +469,7 @@ organisationProfilePicUpload: async (req,res,next) => {
 
       _.set(req, ['body'], {});
       _.set(req, ['body'], details);
-     
+
       return next();
 
     }

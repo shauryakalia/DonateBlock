@@ -586,3 +586,84 @@
 19-11-2018 00:59:54.046 INFO  [32mParams: [39m[32m{"inventory":[{"item":"clothes","quantity":5,"price":2,"id":1},{"item":"books","quantity":7,"price":5,"id":2},{"item":"food","quantity":8,"price":3,"id":3}]}[39m 
 19-11-2018 00:59:59.685 INFO  GET: /v1/getInventory 
 19-11-2018 00:59:59.685 INFO  [32mParams: [39m[32m{}[39m 
+19-11-2018 23:29:02.074 INFO  server started at port 9000 
+19-11-2018 23:29:53.044 INFO  server started at port 9000 
+20-11-2018 01:08:39.521 INFO  server started at port 9000 
+20-11-2018 01:09:46.582 INFO  POST: /v1/registerOrganisation 
+20-11-2018 01:09:46.583 INFO  [32mParams: [39m[32m{"orgName":"C.R.Y","orgEmail":"cry@gmail.com","orgPhone":9000000000,"isd_code":91,"orgPassword":"123","orgRegId":"123","orgAddress":"new delhi","orgOwnerName":"Gov"}[39m 
+20-11-2018 01:10:23.578 INFO  POST: /v1/organisationLogin 
+20-11-2018 01:10:23.578 INFO  [32mParams: [39m[32m{"orgPhone":"9000000000","orgPassword":"123","isd_code":"91"}[39m 
+20-11-2018 01:10:58.478 INFO  POST: /v1/createCampaign 
+20-11-2018 01:10:58.478 INFO  [32mParams: [39m[32m{"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"}[39m 
+20-11-2018 01:26:24.092 INFO  server started at port 9000 
+20-11-2018 01:26:33.044 INFO  POST: /v1/createCampaign 
+20-11-2018 01:26:33.045 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 01:27:09.315 INFO  server started at port 9000 
+20-11-2018 01:27:15.977 INFO  POST: /v1/createCampaign 
+20-11-2018 01:27:15.978 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 01:55:01.919 INFO  server started at port 9000 
+20-11-2018 01:55:18.573 INFO  POST: /v1/createCampaign 
+20-11-2018 01:55:18.573 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 01:57:02.253 INFO  server started at port 9000 
+20-11-2018 01:57:05.578 INFO  POST: /v1/createCampaign 
+20-11-2018 01:57:05.578 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 01:59:45.651 INFO  server started at port 9000 
+20-11-2018 02:02:32.096 INFO  server started at port 9000 
+20-11-2018 02:04:01.905 INFO  server started at port 9000 
+20-11-2018 02:04:10.657 INFO  POST: /v1/createCampaign 
+20-11-2018 02:04:10.658 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 02:06:07.008 INFO  POST: /v1/createCampaign 
+20-11-2018 02:06:07.008 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 02:07:33.038 INFO  POST: /v1/createCampaign 
+20-11-2018 02:07:33.038 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 02:08:17.789 INFO  server started at port 9000 
+20-11-2018 02:08:35.519 INFO  POST: /v1/createCampaign 
+20-11-2018 02:08:35.519 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 02:10:31.906 INFO  server started at port 9000 
+20-11-2018 02:10:37.080 INFO  POST: /v1/createCampaign 
+20-11-2018 02:10:37.080 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 02:11:35.127 INFO  server started at port 9000 
+20-11-2018 02:11:39.023 INFO  POST: /v1/createCampaign 
+20-11-2018 02:11:39.023 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 02:12:16.649 INFO  server started at port 9000 
+20-11-2018 02:12:19.814 INFO  POST: /v1/createCampaign 
+20-11-2018 02:12:19.814 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 02:21:22.429 INFO  server started at port 9000 
+20-11-2018 02:21:25.896 INFO  POST: /v1/createCampaign 
+20-11-2018 02:21:25.897 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 02:22:09.872 INFO  server started at port 9000 
+20-11-2018 02:22:13.028 INFO  POST: /v1/createCampaign 
+20-11-2018 02:22:13.029 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 02:25:19.411 INFO  server started at port 9000 
+20-11-2018 02:25:23.007 INFO  POST: /v1/createCampaign 
+20-11-2018 02:25:23.008 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 02:30:06.271 INFO  server started at port 9000 
+20-11-2018 02:30:11.107 INFO  POST: /v1/createCampaign 
+20-11-2018 02:30:11.108 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 02:33:59.268 INFO  server started at port 9000 
+20-11-2018 02:34:02.544 INFO  POST: /v1/createCampaign 
+20-11-2018 02:34:02.544 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 02:40:53.701 INFO  server started at port 9000 
+20-11-2018 02:40:58.023 INFO  POST: /v1/createCampaign 
+20-11-2018 02:40:58.024 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 02:44:36.717 INFO  server started at port 9000 
+20-11-2018 02:44:44.504 INFO  POST: /v1/createCampaign 
+20-11-2018 02:44:44.504 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 02:50:19.095 INFO  server started at port 9000 
+20-11-2018 02:50:28.469 INFO  POST: /v1/createCampaign 
+20-11-2018 02:50:28.469 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 02:52:04.291 INFO  server started at port 9000 
+20-11-2018 02:52:13.299 INFO  POST: /v1/createCampaign 
+20-11-2018 02:52:13.299 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 02:56:47.411 INFO  server started at port 9000 
+20-11-2018 02:57:10.610 INFO  POST: /v1/createCampaign 
+20-11-2018 02:57:10.610 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 02:59:14.810 INFO  server started at port 9000 
+20-11-2018 02:59:22.748 INFO  POST: /v1/createCampaign 
+20-11-2018 02:59:22.749 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 03:06:22.687 INFO  server started at port 9000 
+20-11-2018 03:06:29.791 INFO  POST: /v1/createCampaign 
+20-11-2018 03:06:29.791 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 03:07:49.354 INFO  server started at port 9000 
+20-11-2018 03:07:55.306 INFO  POST: /v1/createCampaign 
+20-11-2018 03:07:55.306 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 

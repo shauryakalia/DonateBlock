@@ -5,7 +5,7 @@
 //NPM Modules
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://127.0.0.1:27017/DonateBlock', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost/DonateBlock', { useNewUrlParser: true });
 
 var db = mongoose.connection;
 

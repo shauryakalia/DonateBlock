@@ -40,7 +40,6 @@ contract DonateBlockCampaign {
     }
 
     function donate() public payable returns(uint) {
-        require(msg.value > 0.001 ether);
         //amountRaised = amountRaised + msg.value; use : this.balance
         donors.push(msg.sender);
         if (this.balance >= amountRequired) {
