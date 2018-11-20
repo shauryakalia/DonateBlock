@@ -467,12 +467,15 @@ organisationProfilePicUpload: async (req,res,next) => {
 
       const organisation_id  = _.get(req, ['body', 'organisation_id'], '');
       let organisation_details = await organisationDB.organisationDetails(organisation_id);
-      let wallet = new ethers.Wallet(organisation_details.orgPrivateKey);
+      let wallet = new ethers.Wallet(organisation_details.orgPrivateKey,provider);
       let contract = new ethers.Contract(CampaignFactoryAddress, abi, provider);
-      let contractWithSigner = await contract.connect(wallet);
+      let contractWithSigner = contract.connect(wallet);
       //let contractWithSigner = new ethers.Contract(CampaignFactoryAddress, abi, wallet);
-      let aim = await parseInt(_.get(req,['body','amount_required'],100));
-      let campaign_address = await contractWithSigner.createCampaign(aim);
+      let aim = parseInt(_.get(req,['body','amount_required'],100));
+      let campaign_address = await contractWithSigner.functions.createCampaign(aim);
+      let deployedCampaigns = await contract.functions.getAllCampaigns();
+      let len = deployedCampaigns.length;
+      let deployedCampaignAddress = deployedCampaigns[len-1];
       
       const db_details = {
 
@@ -484,7 +487,7 @@ organisationProfilePicUpload: async (req,res,next) => {
         campaignRequirement :  _.get(req,['body','campaignRequirement'],''),
         quantity:              _.get(req,['body','quantity'],''),
         campaignAddress     : _.get(req, ['body', 'campaignAddress'], ''),
-        campaignWalletAddress: campaign_address
+        campaignWalletAddress: deployedCampaignAddress
       };
 
       if(!db_details.campaignName || !db_details.campaignCause || !db_details.campaignDiscription  || !db_details.amount_required){
