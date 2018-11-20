@@ -57,5 +57,6 @@ module.exports = {
   649 : "Campaign not found",
   650 : "error while sending item",
   651 : "Error while getting vendor details",
-  652 : "error while fetching wallet details"
+  652 : "error while fetching wallet details",
+  653 : "error while donating"
 };

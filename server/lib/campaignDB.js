@@ -46,6 +46,11 @@ module.exports = {
     return queryRes;
   },
 
+  getCampaignWallet: async (campaign_id) => {
+    let queryRes =await Campaign.findById({_id: campaign_id}, {campaignWalletAddress:1} );
+    return queryRes;
+  },
+
   addSelectedVendorDetail: async(campaign_id, final_vendor) => {
     let selectedVendorDetail = {
       vendorId: final_vendor._id,

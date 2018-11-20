@@ -32,6 +32,8 @@ module.exports  =  app => {
   
   app.get('/v1/getUserWallet', donateBlock.apiInfo, user.verifyUserToken, user.getUserWallet, response, error);
 
+  app.post('/v1/donateToCampaign', donateBlock.apiInfo, user.verifyUserToken, user.donateToCampaign, response, error);
+
   //organisation----------------------------------------
   app.post('/v1/registerOrganisation', donateBlock.apiInfo, organisation.registerOrganisation, response, error);
 

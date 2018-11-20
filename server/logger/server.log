@@ -738,3 +738,49 @@
 20-11-2018 21:54:23.957 INFO  server started at port 9000 
 20-11-2018 21:54:27.589 INFO  POST: /v1/createCampaign 
 20-11-2018 21:54:27.590 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 23:36:24.692 INFO  server started at port 9000 
+20-11-2018 23:39:32.260 INFO  POST: /v1/registerUser 
+20-11-2018 23:39:32.260 INFO  Params: {"first_name":"Dev","last_name":"Verma","phone":1234567890,"email":"qwerty@werty.c","isd_code":91,"password":"user123","gender":1,"date_of_birth":"11-01-1998","street":"qwer","address":"asdfghj","city":"asdfgh","state":"asd","country":"asdf","zip":"1234567","aadhaar":"123456789012"} 
+20-11-2018 23:39:50.348 INFO  POST: /v1/userLogin 
+20-11-2018 23:39:50.348 INFO  Params: {"phone":"1234567890","password":"user123","isd_code":"91"} 
+20-11-2018 23:46:30.961 INFO  POST: /v1/createCampaign 
+20-11-2018 23:46:30.961 INFO  Params: {"campaignName":"choot4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"1245","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+20-11-2018 23:47:38.635 INFO  POST: /v1/donateToCampaign 
+20-11-2018 23:47:38.635 INFO  Params: {"campaign_id":"5bf44f9b3a664d270bbb603b","donation_amount":0.000089} 
+20-11-2018 23:48:24.220 INFO  POST: /v1/donateToCampaign 
+20-11-2018 23:48:24.220 INFO  Params: {"campaign_id":"5bf44f9b3a664d270bbb603b","donation_amount":0.000089} 
+20-11-2018 23:48:51.476 INFO  server started at port 9000 
+20-11-2018 23:48:52.452 INFO  POST: /v1/donateToCampaign 
+20-11-2018 23:48:52.453 INFO  Params: {"campaign_id":"5bf44f9b3a664d270bbb603b","donation_amount":0.000089} 
+20-11-2018 23:49:49.192 INFO  server started at port 9000 
+20-11-2018 23:49:50.013 INFO  POST: /v1/donateToCampaign 
+20-11-2018 23:49:50.014 INFO  Params: {"campaign_id":"5bf44f9b3a664d270bbb603b","donation_amount":0.000089} 
+20-11-2018 23:51:18.956 INFO  server started at port 9000 
+20-11-2018 23:51:20.940 INFO  POST: /v1/donateToCampaign 
+20-11-2018 23:51:20.941 INFO  Params: {"campaign_id":"5bf44f9b3a664d270bbb603b","donation_amount":0.000089} 
+20-11-2018 23:57:20.646 INFO  server started at port 9000 
+20-11-2018 23:57:24.076 INFO  POST: /v1/donateToCampaign 
+20-11-2018 23:57:24.076 INFO  Params: {"campaign_id":"5bf44f9b3a664d270bbb603b","donation_amount":0.000089} 
+20-11-2018 23:59:40.918 INFO  server started at port 9000 
+21-11-2018 00:00:09.771 INFO  POST: /v1/donateToCampaign 
+21-11-2018 00:00:09.771 INFO  Params: {"campaign_id":"5bf44f9b3a664d270bbb603b","donation_amount":1} 
+21-11-2018 00:00:50.816 INFO  POST: /v1/donateToCampaign 
+21-11-2018 00:00:50.816 INFO  Params: {"campaign_id":"5bf44f9b3a664d270bbb603b","donation_amount":1} 
+21-11-2018 00:01:31.405 INFO  server started at port 9000 
+21-11-2018 00:01:35.259 INFO  POST: /v1/donateToCampaign 
+21-11-2018 00:01:35.259 INFO  Params: {"campaign_id":"5bf44f9b3a664d270bbb603b","donation_amount":1} 
+21-11-2018 00:05:26.705 INFO  server started at port 9000 
+21-11-2018 00:05:29.748 INFO  POST: /v1/donateToCampaign 
+21-11-2018 00:05:29.749 INFO  Params: {"campaign_id":"5bf44f9b3a664d270bbb603b","donation_amount":1} 
+21-11-2018 00:08:04.195 INFO  server started at port 9000 
+21-11-2018 00:08:11.508 INFO  POST: /v1/donateToCampaign 
+21-11-2018 00:08:11.509 INFO  Params: {"campaign_id":"5bf44f9b3a664d270bbb603b","donation_amount":1} 
+21-11-2018 00:17:56.458 INFO  POST: /v1/donateToCampaign 
+21-11-2018 00:17:56.458 INFO  Params: {"campaign_id":"5bf44f9b3a664d270bbb603b","donation_amount":1} 
+21-11-2018 00:19:09.916 INFO  server started at port 9000 
+21-11-2018 00:19:12.166 INFO  POST: /v1/donateToCampaign 
+21-11-2018 00:19:12.167 INFO  Params: {"campaign_id":"5bf44f9b3a664d270bbb603b","donation_amount":1} 
+21-11-2018 00:19:35.382 INFO  ERROR : Error: nonce has already been used (version=4.0.12) 
+21-11-2018 00:19:43.492 INFO  server started at port 9000 
+21-11-2018 00:19:49.970 INFO  POST: /v1/donateToCampaign 
+21-11-2018 00:19:49.970 INFO  Params: {"campaign_id":"5bf44f9b3a664d270bbb603b","donation_amount":1} 

@@ -20,6 +20,147 @@ const _                   =   require('lodash'),
       errorCode           =   util.errorCode,
       REQUEST             =   config.REQUEST;
 
+const abi = [
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "organization",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "value",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "vendorAddress",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "donors",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "complete",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "recipient",
+				"type": "address"
+			},
+			{
+				"name": "val",
+				"type": "uint256"
+			}
+		],
+		"name": "payVendor",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "amountRequired",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "donate",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"name": "aim",
+				"type": "uint256"
+			},
+			{
+				"name": "org",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	}
+];
+const ethers = require('ethers');
+let provider = ethers.getDefaultProvider('rinkeby');
+let CampaignFactoryAddress = '0x169FE2EE864770CE7fc11c5EE1642531Ed703F90';
 
 module.exports  = {
   registerUser: async (req, res, next) => {
@@ -105,6 +246,83 @@ module.exports  = {
 
     }
   },
+  // donate to cmpaign
+  donateToCampaign : async (req,res,next) => {
+    try{
+
+      if ( _.get(req, ['error', 'status'], false) )
+      {
+        return next();
+      }
+
+      const db_id  = _.get(req, ['body', 'db_id'], '');
+      const donation_amount = _.get(req, ['body', 'donation_amount'], '');
+      let user_wallet_detail = await userDB.getUserWallet(db_id);
+      let user_wallet = new ethers.Wallet(user_wallet_detail.privateKey,provider);
+      let contract = new ethers.Contract(CampaignFactoryAddress, abi, provider);
+      let contractWithSigner = contract.connect(user_wallet);
+
+      const campaign_id = _.get(req, ['body', 'campaign_id'], '');
+      let campaign_wallet_address = await campaignDB.getCampaignWallet(campaign_id);
+
+      let transaction = {
+        nonce: 2,
+        gasLimit: 3000000,
+        gasPrice: ethers.utils.bigNumberify("20000000000"),
+        to: campaign_wallet_address.campaignWalletAddress,
+        value: ethers.utils.parseEther(donation_amount+'.0'),
+        data: "0x",
+    
+        // This ensures the transaction cannot be replayed on different networks
+        chainId: ethers.utils.getNetwork('rinkeby').chainId
+    }
+    
+    let signPromise = user_wallet.sign(transaction).then((signedTransaction) => {
+
+      console.log(signedTransaction);
+      let findVendor = provider.sendTransaction(signedTransaction,provider).then((tx) => {
+          console.log(tx);
+          // {
+          //    // These will match the above values (excluded properties are zero)
+          //    "nonce", "gasLimit", "gasPrice", "to", "value", "data", "chainId"
+          //
+          //    // These will now be present
+          //    "from", "hash", "r", "s", "v"
+          //  }
+          // Hash:
+
+          _.set(req, ['body'], {});
+          _.set(req, ['body','tx_hash'], tx);
+          _.set(req, ['body', 'donation_completed'], true );
+          return next();
+      }).catch((error) => {
+        console.log('error',error);
+        let hlError =   {
+          status: true,
+          error: error,
+          statusCode: 680
+        };
+
+      LOG.console.info("ERROR : " + hlError.error); //Adding error in the log file
+      _.set(req, ['error'], hlError);
+      return next();
+      });
+  });
+
+
+    }catch(error){
+        // error:"userDB Error" ,
+        let hlError =   {
+          status: true,
+          error: _.get(errorCode, 653, ''),
+          statusCode: 653
+        };
+  
+        _.set(req, ['error'], hlError);
+        return next();
+  
+    }
+  },  
 
 
   checkUserLogin: async (req, res, next) => {
