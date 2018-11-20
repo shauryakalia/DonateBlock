@@ -24,12 +24,14 @@ module.exports  =  app => {
 
   app.put('/v1/updateUserDetails', donateBlock.apiInfo, user.verifyUserToken, user.updateUserDetails, response, error);
 
-  app.get('/v1/getUserDetailsById', donateBlock.apiInfo, user.verifyUserToken, user.getDetailsById, response, error);
+  //app.get('/v1/getUserDetailsById', donateBlock.apiInfo, user.verifyUserToken, user.getDetailsById, response, error);
 
-  app.post('/v1/userProfilePicUpload', donateBlock.apiInfo, user.verifyUserToken, user.profilePicUpload,response,error);
+  //app.post('/v1/userProfilePicUpload', donateBlock.apiInfo, user.verifyUserToken, user.profilePicUpload,response,error);
 
   app.get('/v1/getAllCampaign', donateBlock.apiInfo, user.verifyUserToken, user.getAllCampaign, response, error);
   
+  app.get('/v1/getUserWallet', donateBlock.apiInfo, user.verifyUserToken, user.getUserWallet, response, error);
+
   //organisation----------------------------------------
   app.post('/v1/registerOrganisation', donateBlock.apiInfo, organisation.registerOrganisation, response, error);
 
@@ -37,7 +39,9 @@ module.exports  =  app => {
 
   app.get('/v1/getOrganisationDetails', donateBlock.apiInfo, organisation.verifyOrganisationToken, organisation.getOrganisationDetails, response, error);
 
-  app.post('/v1/organisationProfilePicUpload', donateBlock.apiInfo, organisation.verifyOrganisationToken, organisation.organisationProfilePicUpload,response,error);
+  app.get('/v1/getOrganisationWallet', donateBlock.apiInfo, organisation.verifyOrganisationToken, organisation.getOrganisationWallet, response, error);
+
+  //app.post('/v1/organisationProfilePicUpload', donateBlock.apiInfo, organisation.verifyOrganisationToken, organisation.organisationProfilePicUpload,response,error);
 
   app.post('/v1/createCampaign', donateBlock.apiInfo, organisation.verifyOrganisationToken, organisation.createCampaign, response, error);
 
@@ -52,7 +56,8 @@ module.exports  =  app => {
 
   app.get('/v1/getVendorDetails', donateBlock.apiInfo, vendor.verifyVendorToken, vendor.getVendorDetails, response, error);
 
-  app.post('/v1/vendorProfilePicUpload', donateBlock.apiInfo, vendor.verifyVendorToken, vendor.vendorProfilePicUpload, response, error);
+  app.get('/v1/getVendorWallet', donateBlock.apiInfo, vendor.verifyVendorToken, vendor.getVendorWallet, response, error);
+  //app.post('/v1/vendorProfilePicUpload', donateBlock.apiInfo, vendor.verifyVendorToken, vendor.vendorProfilePicUpload, response, error);
 
   app.post('/v1/updateInventory', donateBlock.apiInfo, vendor.verifyVendorToken, vendor.updateInventory, response, error);
 

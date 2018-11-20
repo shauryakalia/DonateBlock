@@ -548,6 +548,54 @@ module.exports  = {
       return next();
 
     }
+  },
+
+  getUserWallet: async (req,res,next)=>{
+    try {
+
+      if ( _.get(req, ['error', 'status'], false) )
+      {
+        return next();
+      }
+
+      const db_id  = _.get(req, ['body', 'db_id'], '');
+
+      if(!db_id)
+      {
+        // 'id missing!',
+        let userError = {
+          status: true,
+          error: _.get(errorCode, 610, ''),
+          statusCode: 610
+        };
+
+        LOG.console.info("ERROR : " + userError.error); //Adding error in the log file
+        _.set(req, ['error'], userError);
+        return next();
+      }
+
+      let details = await userDB.getUserWallet(db_id);
+
+
+      _.set(req, ['body'], {});
+      _.set(req, ['body', 'wallet'], details);
+     
+
+      return next();
+
+    } catch(error) {
+     //Error while getting user details
+      let userError = {
+        status: true,
+        error: _. get(errorCode, 652, ''),
+        statusCode: 652
+      };
+
+      LOG.console.info("ERROR : " + userError.result.error.message); //Adding error in the log file
+      _.set(req, 'error', userError);
+      return next();
+
+    }
   }
 
 };

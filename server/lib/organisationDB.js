@@ -46,6 +46,10 @@ module.exports = {
       return queryRes;
   },
 
+  getOrganisationWallet: async (organisation_id) => {
+    let queryRes = await Organisation.findById({_id: organisation_id},{orgWalletAddress: 1, orgPrivateKey : 1, orgPublicKey : 1});
+    return queryRes;
+  },
 
   changePassword: async (db_id, new_password) =>  {
 

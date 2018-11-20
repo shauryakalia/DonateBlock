@@ -5,6 +5,7 @@
 //NPM Modules
 const ethers = require('ethers');
 let provider = ethers.getDefaultProvider('rinkeby');
+
 let generate = () => {
 
   let randomWallet = ethers.Wallet.createRandom();

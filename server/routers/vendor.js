@@ -337,8 +337,8 @@ getVendorDetails: async (req, res, next) => {
       // 'Error while getting vendor details',
       let vendorError = {
         status: true,
-        error: _.get(errorCode, 642, ''),
-        statusCode: 642
+        error: _.get(errorCode, 651, ''),
+        statusCode: 651
       };
 
       LOG.console.info("ERROR : " + vendorError.error); //Adding error in the log file
@@ -349,6 +349,54 @@ getVendorDetails: async (req, res, next) => {
 
   },
 
+  
+  getVendorWallet: async (req, res, next) => {
+    try {
+
+      if ( _.get(req, ['error', 'status'], false) )
+      {
+        return next();
+      }
+
+      const vendor_id  = _.get(req, ['body', 'vendor_id'], '');
+
+      if(!vendor_id)
+      {
+        // 'id missing!',
+        let userError = {
+          status: true,
+          error: _.get(errorCode, 610, ''),
+          statusCode: 610
+        };
+
+        LOG.console.info("ERROR : " + userError.error); //Adding error in the log file
+        _.set(req, ['error'], userError);
+        return next();
+      }
+
+      let details = await vendorDB.getUserWallet(vendor_id);
+
+
+      _.set(req, ['body'], {});
+      _.set(req, ['body', 'wallet'], details);
+     
+
+      return next();
+
+    } catch(error) {
+     //Error while getting user details
+      let userError = {
+        status: true,
+        error: _. get(errorCode, 652, ''),
+        statusCode: 652
+      };
+
+      LOG.console.info("ERROR : " + userError.result.error.message); //Adding error in the log file
+      _.set(req, 'error', userError);
+      return next();
+
+    }
+  },
 
 //--------api to upload profile picture------------------
 vendorProfilePicUpload: async (req,res,next) => {
@@ -419,6 +467,7 @@ vendorProfilePicUpload: async (req,res,next) => {
       const vendor_id  = _.get(req, ['body', 'vendor_id'], '');
       const item_data = _.get(req, ['body', 'inventory'], []);
       let vendor_data = await vendorDB.updateInventory(vendor_id, item_data);
+      _.set(req, ['body'], {} );
       _.set(req, ['body','updated Inventory'], true );
       return next();
 
