@@ -20,13 +20,15 @@ var campaignSchema = mongoose.Schema({
   amount_required: { type: Number },
   status: { type: Boolean, default: true },
   deliverable: {type: Boolean, default : false},
-  selectedVendorDetail: [{
+  selectedVendorDetail: {
     vendorId: { type: String },
     vendorName: {type: String},
     vendorPhone: {type: String},
+    vendorWalletAddress: {type: String},
+    consignment_amount : {type: Number},
     consignment_sent: { type: Boolean },
     _id : false 
-  }],
+  },
   campaignWalletAddress: { type: String},
   // campaignPrivateKey : {type: String},
   // campaignPublicKey : {type : String}

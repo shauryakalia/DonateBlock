@@ -91,10 +91,11 @@ module.exports = {
     //     return queryRes;
 
     // }
-    putConsignment: async (final_vendor, campaign) => {
+    putConsignment: async (final_vendor, campaign,consignment_total_amount) => {
         let consignment = {
             campaign_id: campaign._id,
             campaign_data: campaign,
+            consignment_amount: consignment_total_amount,
             sent: false
         };
         let queryRes = await Vendor.update({_id: final_vendor._id},{$push:{ consignment : consignment}});

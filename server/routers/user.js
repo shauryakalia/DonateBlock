@@ -11,6 +11,7 @@ const _                   =   require('lodash'),
       config              =   require('../config'),
       wallet              =   config.wallet,
       lib                 =   require('../lib'),
+      donateBlock         =   require('./donateBlock'),
       userDB              =   lib.userDB,
       campaignDB          =   lib.campaignDB,
       service             =   lib.service,
@@ -261,7 +262,8 @@ module.exports  = {
       let user_wallet_detail = await userDB.getUserWallet(db_id);
       let user_wallet = new ethers.Wallet(user_wallet_detail.privateKey,provider);
       const campaign_id = _.get(req, ['body', 'campaign_id'], '');
-      let campaign_wallet_address = await campaignDB.getCampaignWallet(campaign_id);
+      let campaign_data = await campaignDB.getCampaignById(campaign_id);
+      let campaign_wallet_address = campaign_data.campaignWalletAddress;//await campaignDB.getCampaignWallet(campaign_id);
       let contract = new ethers.Contract(campaign_wallet_address.campaignWalletAddress, abi, provider);
       let contractWithSigner = contract.connect(user_wallet);
       let amount = ethers.utils.parseEther(donation_amount);
@@ -272,11 +274,16 @@ module.exports  = {
       if(findVendor === 1)
       {
         // call find vendor api 
+        let vendor_selected = await donateBlock.selectVendor(campaign_data);
+        console.log(vendor_selected);
+        //vendor_Selected is an obj which contains - consignment_total_amount and vendor_wallet //Shaurya
+
+
       }
 
-          // _.set(req, ['body'], {});
-          // _.set(req, ['body','tx_hash'], tx);
-          // _.set(req, ['body', 'donation_completed'], true );
+          _.set(req, ['body'], {});
+         // _.set(req, ['body','tx_hash'], tx);
+           _.set(req, ['body', 'donation_completed'], true );
           return next();
       
     }catch(error){

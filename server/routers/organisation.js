@@ -661,7 +661,9 @@ organisationProfilePicUpload: async (req,res,next) => {
         return next();
 
       }
-
+///-----------------------------------
+      //details has the campaign consignment total amount and vendorWalletAddress //Shaurya
+      
       _.set(req, ['body'], {});
       _.set(req, ['body', 'campaign_completed'], true);
      
