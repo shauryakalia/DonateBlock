@@ -44,10 +44,12 @@ module.exports = {
       //let vendor = await vendorDB.selectVendor(campaignRequirement, quantity, amount);
       let vendor = await vendorDB.allVendor();
       console.log(vendor);
-      var final_vendor,i_price=1000000000;
+      var final_vendor,i_price=1000000000,consignment_total_amount;
+
       let v_o = vendor.filter(v => {
         let obj = v.inventory.filter(o => {
           if( o.item == campaign_data.campaignRequirement && o.quantity >= campaign_data.quantity && (o.price * campaign_data.quantity) <= campaign_data.amount){
+            consignment_total_amount = o.price * campaign_data.quantity;
             return o;
           }
         });
@@ -57,10 +59,16 @@ module.exports = {
         }
       })
 
-      await vendorDB.putConsignment(final_vendor, campaign_data);
+      await vendorDB.putConsignment(final_vendor, campaign_data,consignment_total_amount);
 
-      await campaignDB.addSelectedVendorDetail(campaign_data.id, final_vendor);
-      return true;
+      await campaignDB.addSelectedVendorDetail(campaign_data.id, final_vendor,consignment_total_amount);
+      
+      let selected_vendor = {
+        consignment_total_amount: consignment_total_amount,
+        vendor_wallet: final_vendor.vendorWalletAddress
+      };
+      
+      return selected_vendor;
     }
     catch (err) {
       let selectVendorError = {

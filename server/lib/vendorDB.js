@@ -71,12 +71,20 @@ module.exports = {
 
     getInventory: async (vendor_id) => {
 
-        let queryRes = await Vendor.find({ _id: vendor_id }, { inventory: 1, _id: 0 });
+        let queryRes = await Vendor.findById({ _id: vendor_id }, { inventory: 1, _id: 0 }).lean();
         return queryRes;
     },
 
     itemDelivered: async (vendor_id, campaignId)=> {
-        let queryRes = await Vendor.update({'_id' :vendor_id, 'consignment.id':campaignId }, {$set: {'consignment.$.sent':true}});
+        let queryRes = await Vendor.findById({_id : vendor_id}).lean();
+        let data = queryRes.consignment.map(b => {
+            if(b.campaign_id == campaignId){
+                b.sent = true;
+            }
+            return b;
+        });
+        //let queryRes = await Vendor.update({'_id' :vendor_id, 'consignment.id':campaignId }, {$set: {'consignment.$.sent':true}});
+        await Vendor.update({_id :vendor_id},{ $set: {consignment: data}});
         return queryRes;
     },
 
@@ -91,10 +99,11 @@ module.exports = {
     //     return queryRes;
 
     // }
-    putConsignment: async (final_vendor, campaign) => {
+    putConsignment: async (final_vendor, campaign,consignment_total_amount) => {
         let consignment = {
             campaign_id: campaign._id,
             campaign_data: campaign,
+            consignment_amount: consignment_total_amount,
             sent: false
         };
         let queryRes = await Vendor.update({_id: final_vendor._id},{$push:{ consignment : consignment}});

@@ -465,7 +465,29 @@ vendorProfilePicUpload: async (req,res,next) => {
       }
 
       const vendor_id  = _.get(req, ['body', 'vendor_id'], '');
-      const item_data = _.get(req, ['body', 'inventory'], []);
+      const item_data = [
+        {
+          id: 1,
+          item: "clothes", 
+          quantity: parseInt(req.body.clothesQuantity),
+          price: parseInt(req.body.clothesPrice)
+
+        },
+       {
+        id: 2,
+          item: "books",
+          quantity: parseInt(req.body.booksQuantity),
+          price: parseInt(req.body.booksPrice),
+
+        },
+        {
+          id: 3,
+          item:  "food",
+          quantity: parseInt(req.body.foodQuantity),
+          price: parseInt(req.body.foodPrice),
+
+        }
+      ];
       let vendor_data = await vendorDB.updateInventory(vendor_id, item_data);
       _.set(req, ['body'], {} );
       _.set(req, ['body','updated Inventory'], true );
@@ -542,7 +564,7 @@ vendorProfilePicUpload: async (req,res,next) => {
         _.set(req, ['error'], vendorError);
         return next();
       }
-      _.set(req, ['body', 'item_sent'], true );
+      _.set(req, ['body', 'sent'], true );
       return next();
 
     }
