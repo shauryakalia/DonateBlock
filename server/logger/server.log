@@ -883,3 +883,68 @@
 21-11-2018 04:17:10.735 INFO  server started at port 9000 
 21-11-2018 04:19:30.163 INFO  POST: /v1/donateToCampaign 
 21-11-2018 04:19:30.163 INFO  Params: {"campaign_id":"5bf475a9dc3f05450f7a9cf2","donation_amount":"0.75"} 
+22-11-2018 23:39:43.991 INFO  server started at port 9000 
+22-11-2018 23:39:49.606 INFO  POST: /v1/organisationLogin 
+22-11-2018 23:39:49.606 INFO  Params: {"orgPhone":"1010101010","orgPassword":"cry123","isd_code":"91"} 
+22-11-2018 23:40:11.646 INFO  POST: /v1/userLogin 
+22-11-2018 23:40:11.647 INFO  Params: {"phone":"1212121212","password":"user123","isd_code":"91"} 
+22-11-2018 23:46:40.940 INFO  server started at port 9000 
+22-11-2018 23:47:03.654 INFO  POST: /v1/donateToCampaign 
+22-11-2018 23:47:03.654 INFO  Params: {"campaign_id":"5bf475a9dc3f05450f7a9cf2","donation_amount":"0.5"} 
+22-11-2018 23:47:48.000 INFO  server started at port 9000 
+22-11-2018 23:47:51.198 INFO  POST: /v1/donateToCampaign 
+22-11-2018 23:47:51.198 INFO  Params: {"campaign_id":"5bf475a9dc3f05450f7a9cf2","donation_amount":"0.5"} 
+22-11-2018 23:50:58.572 INFO  server started at port 9000 
+22-11-2018 23:51:03.317 INFO  POST: /v1/donateToCampaign 
+22-11-2018 23:51:03.318 INFO  Params: {"campaign_id":"5bf475a9dc3f05450f7a9cf2","donation_amount":"0.5"} 
+22-11-2018 23:52:04.435 INFO  server started at port 9000 
+22-11-2018 23:52:08.011 INFO  POST: /v1/donateToCampaign 
+22-11-2018 23:52:08.012 INFO  Params: {"campaign_id":"5bf475a9dc3f05450f7a9cf2","donation_amount":"0.5"} 
+22-11-2018 23:54:08.952 INFO  server started at port 9000 
+22-11-2018 23:54:14.960 INFO  POST: /v1/donateToCampaign 
+22-11-2018 23:54:14.961 INFO  Params: {"campaign_id":"5bf475a9dc3f05450f7a9cf2","donation_amount":"0.25"} 
+22-11-2018 23:57:44.631 INFO  server started at port 9000 
+22-11-2018 23:57:58.018 INFO  POST: /v1/donateToCampaign 
+22-11-2018 23:57:58.019 INFO  Params: {"campaign_id":"5bf475a9dc3f05450f7a9cf2","donation_amount":"0.1"} 
+23-11-2018 00:14:09.576 INFO  POST: /v1/createCampaign 
+23-11-2018 00:14:09.576 INFO  Params: {"campaignName":"book4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+23-11-2018 00:14:09.589 INFO  ERROR : User logged in on another device-Token mismatch 
+23-11-2018 00:14:19.911 INFO  POST: /v1/organisationLogin 
+23-11-2018 00:14:19.911 INFO  Params: {"orgPhone":"1010101010","orgPassword":"cry123","isd_code":"91"} 
+23-11-2018 00:14:35.478 INFO  POST: /v1/createCampaign 
+23-11-2018 00:14:35.478 INFO  Params: {"campaignName":"book4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+23-11-2018 00:17:29.001 INFO  server started at port 9000 
+23-11-2018 00:17:46.436 INFO  GET: /v1/getSelfCampaign 
+23-11-2018 00:17:46.436 INFO  [32mParams: [39m[32m{}[39m 
+23-11-2018 00:21:37.250 INFO  server started at port 9000 
+23-11-2018 00:23:21.803 INFO  POST: /v1/createCampaign 
+23-11-2018 00:23:21.804 INFO  Params: {"campaignName":"bokitabok4all","campaignCause":"books","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+23-11-2018 00:25:00.473 INFO  GET: /v1/getSelfCampaign 
+23-11-2018 00:25:00.473 INFO  Params: {} 
+23-11-2018 00:28:10.388 INFO  server started at port 9000 
+23-11-2018 00:28:12.686 INFO  POST: /v1/createCampaign 
+23-11-2018 00:28:12.687 INFO  Params: {"campaignCause":"sblelobook","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+23-11-2018 00:29:00.154 INFO  ERROR : Information missing can't register 
+23-11-2018 00:29:26.404 INFO  GET: /v1/getSelfCampaign 
+23-11-2018 00:29:26.404 INFO  Params: {} 
+23-11-2018 00:37:37.768 INFO  POST: /v1/createCampaign 
+23-11-2018 00:37:37.769 INFO  Params: {"campaignCause":"sblelobook","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+23-11-2018 00:38:19.410 INFO  ERROR : Information missing can't register 
+23-11-2018 00:38:59.708 INFO  server started at port 9000 
+23-11-2018 00:39:01.121 INFO  POST: /v1/createCampaign 
+23-11-2018 00:39:01.122 INFO  Params: {"campaignCause":"sblelobook","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar"} 
+23-11-2018 01:03:42.004 INFO  ERROR : Information missing can't register 
+23-11-2018 01:03:42.022 INFO  GET: /v1/getSelfCampaign 
+23-11-2018 01:03:42.022 INFO  Params: {} 
+23-11-2018 01:04:11.716 INFO  server started at port 9000 
+23-11-2018 01:04:31.712 INFO  POST: /v1/createCampaign 
+23-11-2018 01:04:31.713 INFO  Params: {"campaignCause":"Book for poor log","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar","campaignName":"Kitab hi bhavishya h"} 
+23-11-2018 01:06:45.260 INFO  server started at port 9000 
+23-11-2018 01:07:12.642 INFO  POST: /v1/createCampaign 
+23-11-2018 01:07:12.643 INFO  Params: {"campaignCause":"Book for poor log","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar","campaignName":"Kitab hi bhavishya h"} 
+23-11-2018 01:09:46.600 INFO  GET: /v1/getSelfCampaign 
+23-11-2018 01:09:46.600 INFO  Params: {} 
+23-11-2018 01:10:58.866 INFO  POST: /v1/donateToCampaign 
+23-11-2018 01:10:58.866 INFO  Params: {"campaign_id":"5bf705e592e8ec3337581719","donation_amount":"0.5"} 
+23-11-2018 01:13:00.696 INFO  GET: /v1/getUserWallet 
+23-11-2018 01:13:00.696 INFO  Params: {} 

@@ -24,62 +24,62 @@ const _                   =   require('lodash'),
 // const compiledFactory = require('../../ethereum/build/CampaignFactory.json');
 //let abi = compiledFactory.interface;
 const abi = [
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "name": "deployedCampaigns",
-      "outputs": [
-        {
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "getAllCampaigns",
-      "outputs": [
-        {
-          "name": "",
-          "type": "address[]"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "aim",
-          "type": "uint256"
-        }
-      ],
-      "name": "createCampaign",
-      "outputs": [
-        {
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    }
-  ];
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "deployedCampaigns",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getAllCampaigns",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "aim",
+				"type": "uint256"
+			}
+		],
+		"name": "createCampaign",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+];
 const ethers = require('ethers');
 let provider = ethers.getDefaultProvider('rinkeby');
-let CampaignFactoryAddress = '0x827a8C777dFC31e8Fb423019634e36b5076BF509';
+let CampaignFactoryAddress = '0x989922da4b1628cb8d2986EAc18AC2E735b1477e';
 
 
 

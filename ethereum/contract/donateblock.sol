@@ -39,14 +39,13 @@ contract DonateBlockCampaign {
         findVendor = 0; 
     }
 
-    function donate() public payable returns(uint) {
+    function donate() public payable {
         //amountRaised = amountRaised + msg.value; use : this.balance
         donors.push(msg.sender);
         if (this.balance >= amountRequired) {
             // call find vendor
             findVendor = 1; 
         }
-        return findVendor;
     }
 
     function payVendor(address recipient, uint val) public restricted {
