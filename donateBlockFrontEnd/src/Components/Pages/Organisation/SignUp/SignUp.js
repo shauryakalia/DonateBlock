@@ -86,22 +86,14 @@ class SignUp extends React.Component {
       showAlert: false,
       alertType: '',
       alertTitle:'',
-      firstName: '',
-      lastName: '',
-      email: '',
-      contact: '',
-      isd: '',
-      gender: '1',
-      dob: '11/01/1998',
-      street: 'asdfgf lkjhj',
-      address: '',
-      city: '',
-      zip: '',
-      province:'',
-      country: '',
-      adhaar: '1234 5678 9098',
-      password: '',
-      confirmpassword: '',
+      orgName  :  '',
+      orgEmail : '',
+      orgPhone :  '',
+      isd_code : '',
+      orgPassword : '',
+      orgRegId : '',
+      orgAddress : '',
+      orgOwnerName : '',  
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -125,9 +117,9 @@ class SignUp extends React.Component {
   };
 
   handleSubmit(event) {
-    BackendServices.SignUp( this.state.gender, this.state.dob, this.state.street, this.state.email, this.state.password, this.state.firstName, this.state.lastName, this.state.contact, this.state.isd, this.state.address, this.state.city, this.state.province,  this.state.zip, this.state.country, this.state.adhaar )
+    BackendServices.orgSignUp( this.state.orgName, this.state.orgEmail, this.state.orgPhone, this.state.isd_code, this.state.orgPassword, this.state.orgRegId, this.state.orgAddress, this.state.orgOwnerName)
     .then(res => {
-      this.creatAlert(true, "success", "You are just one step away from Registering with us.");
+      this.creatAlert(true, "success", "You are Succesfully Signed Up..");
   }, error => {
 
       console.log(error)

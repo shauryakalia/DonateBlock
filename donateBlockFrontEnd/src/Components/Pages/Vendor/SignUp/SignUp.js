@@ -9,7 +9,6 @@ import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import { Typography, Grid } from '@material-ui/core';
 import BasicInfoForm from './BasicInfoForm';
-import OtpForm from './OtpForm';
 import Review from './Review';
 import { NavLink } from 'react-router-dom';
 import BackendServices from "../../../../Services/BackendServices";
@@ -66,7 +65,7 @@ const styles = theme => ({
   },
 });
 
-const steps = ['Basic Info.', 'Verify Details', 'Confirm OTP'];
+const steps = ['Basic Info.', 'Verify Details'];
 
 function getStepContent(step, values, handleChange) {
   switch (step) {
@@ -74,8 +73,6 @@ function getStepContent(step, values, handleChange) {
       return <BasicInfoForm values={values} handleChange={handleChange}/>;
     case 1:
       return <Review values={values} handleChange={handleChange}/>;
-    case 2:
-      return <OtpForm email={values.email}/>;
     default:
       throw new Error('Unknown step');
   }
@@ -87,13 +84,16 @@ class SignUp extends React.Component {
     this.state = {
       activeStep: 0,
       showAlert: false,
-      vendorName: '',
-      vendorEmail: '', 
-      vendorPhone: '', 
-      isd_code: '', 
-      vendorPassword: '', 
-      vendorRegId: '', 
-      vendorAddress: '',
+      alertType: '',
+      alertTitle:'',
+      vendorName  : '' ,
+      vendorEmail : '',
+      vendorPhone :  '',
+      isd_code : '',
+      vendorPassword : '',
+      confirmpassword: '',
+      vendorRegId : '',
+      vendorAddress : '',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -117,9 +117,9 @@ class SignUp extends React.Component {
   };
 
   handleSubmit(event) {
-    BackendServices.vendorSignUp(this.state.vendorName, this.state.vendorEmail, this.state.vendorPhone, this.state.isd_code, this.state.vendorPassword, this.state.vendorRegId, this.state.vendorAddress)
+    BackendServices.vendorSignUp( this.state.vendorName, this.state.vendorEmail, this.state.vendorPhone, this.state.isd_code, this.state.vendorPassword, this.state.vendorRegId, this.state.vendorAddress)
     .then(res => {
-      this.creatAlert(true, "success", "You are now a registered User.");
+      this.creatAlert(true, "success", "You are successfully Signed Up.");
   }, error => {
 
       console.log(error)
@@ -183,18 +183,35 @@ class SignUp extends React.Component {
               {this.state.activeStep === steps.length ? (
                 <React.Fragment>
                   <Typography variant="h5" gutstateterBottom>
-                    Thank you for registering with us.
+                    {this.state.alertType === "Success" ? 'Thank you for registering with us.' : 'Error in Signing Up !'}
                   </Typography>
                   <Typography variant="subtitle1">
-                    You are now a certified user for UniTrade Blockchain Trade-Finance platform powered by Newgen Software Technologies Pvt.Ltd..
+                    {this.state.alertType === "Success" ? 'You are now a certified user for UniTrade Blockchain Trade-Finance platform powered by Newgen Software Technologies Pvt.Ltd..': 'There were some errors in signing you up last time, please retry.'}
                   </Typography>
                   <Grid container spacing={24}><Grid item xs={4}></Grid>
                   <Grid item xs={4}>
-                  <NavLink to="/login">
+                  {this.state.alertType === "Success" ?(
+                  <NavLink to="/userLogin">
                   <Button size="contained" color="primary" style = {{align: 'center', marginTop :10, marginBottom :10}}>
                     Back to Login 
                   </Button>
                   </NavLink>
+                  ):(
+                    <Grid container justify="space-between">
+                    <Grid item>
+                    <NavLink to="/userLogin">
+                    <Button size="contained" color="primary" style = {{ marginTop :10, marginBottom :10, marginRight: 1}}>
+                      Back to Login 
+                    </Button>
+                    </NavLink>
+                    </Grid>
+                    <Grid item>
+                  <Button size="contained" onClick={this.handleReset} color="primary" style = {{marginTop :10, marginBottom :10}}>
+                    Retry 
+                  </Button>
+                  </Grid>
+                  </Grid>
+                  )}
                   </Grid><Grid item xs={4}></Grid>
                   </Grid>  
                 </React.Fragment>
@@ -210,10 +227,10 @@ class SignUp extends React.Component {
                     <Button
                       variant="contained"
                       color="secondary"
-                      onClick={this.state.activeStep === steps.length - 2 ? this.handleSubmit : this.handleNext}
+                      onClick={this.state.activeStep === steps.length - 1 ? this.handleSubmit : this.handleNext}
                       className={classes.button}
                     >
-                      {this.state.activeStep === steps.length - 2 ? 'Submit' : (this.state.activeStep === 0 ? 'Next':'Done')}
+                      {this.state.activeStep === steps.length - 1 ? 'Submit' : (this.state.activeStep === 0 ? 'Next':'Done')}
                     </Button>
                   </div>
                 </React.Fragment>

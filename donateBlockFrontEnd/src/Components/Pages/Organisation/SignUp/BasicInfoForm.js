@@ -49,13 +49,13 @@ class BasicInfoForm extends React.Component {
             autoComplete="Email"
           />
         </Grid>
-        <Grid item xs={2} sm={1}>
+        <Grid item xs={1} sm={0.5}>
         <TextField
             required
-            id="isd"
-            name="isd"
+            id="isd_code"
+            name="isd_code"
             label="ISD"
-            value={this.props.values.isd}
+            value={this.props.values.isd_code}
             onChange={this.props.handleChange}
             fullWidth
             autoComplete="91"
@@ -64,10 +64,10 @@ class BasicInfoForm extends React.Component {
         <Grid item xs={10} sm={5}>
           <TextField
             required
-            id="contact"
-            name="contact"
+            id="orgPhone"
+            name="orgPhone"
             label="Contact No."
-            value={this.props.values.contact}
+            value={this.props.values.orgPhone}
             onChange={this.props.handleChange}
             fullWidth
             autoComplete="Contact"
@@ -77,10 +77,10 @@ class BasicInfoForm extends React.Component {
         <Grid item xs={12}>
           <TextField
             required
-            id="address"
-            name="address"
+            id="orgAddress"
+            name="orgAddress"
             label="Address"
-            value={this.props.values.address}
+            value={this.props.values.orgAddress}
             onChange={this.props.handleChange}
             fullWidth
             autoComplete="address-line1"
@@ -101,14 +101,14 @@ class BasicInfoForm extends React.Component {
         <Grid item xs={12} sm={6}>
           <TextField
             required
-            id="password"
-            name="password"
+            id="orgPassword"
+            name="orgPassword"
             label="Password"
-            value={this.props.values.password}
+            value={this.props.values.orgPassword}
             onChange={this.props.handleChange}
             type="Password"
             fullWidth
-            autoComplete="password"
+            autoComplete="orgPassword"
           />
         </Grid>
         <Grid item xs={12} sm={6}>
