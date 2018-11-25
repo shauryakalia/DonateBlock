@@ -56,7 +56,7 @@ class createCampaign extends React.Component {
       campaignCause: '',
       campaignDiscription: '',
       amount_required: '',
-      campaignRequirement: '',
+      campaignRequirement: 'food',
       quantity: 0,
       campaignAddress: '',
     };
@@ -172,7 +172,7 @@ class createCampaign extends React.Component {
                   required
                   id="campaignRequirement"
                   name="campaignRequirement"
-                  label="Requirement"
+                  label="Please Select Requirement"
                   value={this.state.campaignRequirement}
                   onChange={this.handleChange}
                   fullWidth

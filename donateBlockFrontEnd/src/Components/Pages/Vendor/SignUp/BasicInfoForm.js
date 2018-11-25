@@ -18,58 +18,58 @@ class BasicInfoForm extends React.Component {
         <Grid item xs={12} sm={6}>
           <TextField
             required
-            id="firstName"
-            name="firstName"
-            label="First name"
-            value={this.props.values.firstName}
+            id="vendorName"
+            name="vendorName"
+            label="Vendor Name"
+            value={this.props.values.vendorName}
+            fullWidth
+            autoComplete="fname"
+            onChange={this.props.handleChange}
+          />
+          <TextField
+            required
+            id="vendorEmail"
+            name="vendorEmail"
+            label="Vendor Email"
+            value={this.props.values.vendorEmail}
             fullWidth
             autoComplete="fname"
             onChange={this.props.handleChange}
           />
         </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
+        </Grid>
+        <Grid item xs={2} sm={1}>
+        <TextField
             required
-            id="lastName"
-            name="lastName"
-            label="Last name"
-            value={this.props.values.lastName}
+            id="isd_code"
+            name="isd_code"
+            label="ISD"
+            value={this.props.values.isd_code}
             onChange={this.props.handleChange}
             fullWidth
-            autoComplete="lname"
+            autoComplete="isd_code"
           />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={10} sm={5}>
           <TextField
             required
-            id="email"
-            name="email"
-            label="Email Address"
-            value={this.props.values.email}
-            onChange={this.props.handleChange}
-            fullWidth
-            autoComplete="Email"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id="contact"
-            name="contact"
+            id="vendorPhone"
+            name="vendorPhone"
             label="Contact No."
-            value={this.props.values.contact}
+            value={this.props.values.vendorPhone}
             onChange={this.props.handleChange}
             fullWidth
             autoComplete="Contact"
           />
+          
         </Grid>
         <Grid item xs={12}>
           <TextField
             required
-            id="address"
-            name="address"
-            label="Address line 1"
-            value={this.props.values.address}
+            id="vendorAddress"
+            name="vendorAddress"
+            label="Address"
+            value={this.props.values.vendorAddress}
             onChange={this.props.handleChange}
             fullWidth
             autoComplete="address-line1"
@@ -78,53 +78,26 @@ class BasicInfoForm extends React.Component {
         <Grid item xs={12} sm={6}>
           <TextField
             required
-            id="city"
-            name="city"
-            label="City"
-            value={this.props.values.city}
+            id="vendorRegId"
+            name="vendorRegId"
+            label="Reg. ID"
+            value={this.props.values.vendorRegId}
             onChange={this.props.handleChange}
             fullWidth
             autoComplete="address-level2"
           />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <TextField id="province" name="province"value={this.props.values.state} onChange={this.props.handleChange} label="State/Province/Region" fullWidth />
-        </Grid>
-        <Grid item xs={12} sm={6}>
           <TextField
             required
-            id="zip"
-            name="zip"
-            label="Zip / Postal code"
-            value={this.props.values.zip}
-            onChange={this.props.handleChange}
-            fullWidth
-            autoComplete="postal-code"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id="country"
-            name="country"
-            label="Country"
-            value={this.props.values.country}
-            onChange={this.props.handleChange}
-            fullWidth
-            autoComplete="country"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id="password"
-            name="password"
-            label="Password"
-            value={this.props.values.password}
+            id="vendorPassword"
+            name="vendorPassword"
+            label="vendorPassword"
+            value={this.props.values.vendorPassword}
             onChange={this.props.handleChange}
             type="Password"
             fullWidth
-            autoComplete="password"
+            autoComplete="vendorPassword"
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -137,10 +110,9 @@ class BasicInfoForm extends React.Component {
             value={this.props.values.confirmpassword}
             onChange={this.props.handleChange}
             fullWidth
-            autoComplete="Password"
+            autoComplete="confirmpassword"
           />
         </Grid>
-      </Grid>
     </React.Fragment>
   );
 }

@@ -30,33 +30,6 @@ class BackendServices {
         });
     }
 
-    SignUp(gender, dob, street, email, password, firstName, lastName, contact, isd, address, city, province,  zip, country, adhaar) {
-        return $.ajax({
-            //contentType: 'application/x-www-form-urlencoded',
-            data: {
-                first_name: firstName,
-                last_name: lastName,
-                phone: contact,
-                email: email,
-                isd_code: isd,
-                password: password,
-                gender: gender,
-                date_of_birth: dob,
-                street: street,
-                address: address,
-                city: city,
-                state: province,
-                country: country,
-                zip: zip,
-                aadhaar: adhaar,
-            },
-            dataType: 'json',
-            processData: true,
-            type: 'POST',
-            url: API_URL + '/registerUser'
-        });
-    }
-
     vendorSignUp(vendorName, vendorEmail, vendorPhone, isd_code, vendorPassword, vendorRegId, vendorAddress) {
         return $.ajax({
             //contentType: 'application/x-www-form-urlencoded',
