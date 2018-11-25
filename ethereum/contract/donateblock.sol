@@ -21,8 +21,8 @@ contract DonateBlockCampaign {
 
     address public vendorAddress;
     uint public value;
-    uint findVendor;
-    bool public complete;
+    uint public findVendor;
+    uint public complete;
     address public organization;
     address[] public donors;
     uint public amountRequired;
@@ -34,8 +34,8 @@ contract DonateBlockCampaign {
 
     function DonateBlockCampaign (uint aim, address org) public {
         organization = org;
-        amountRequired = aim;        
-        complete = false;
+        amountRequired = aim * 1000000000000000000;        
+        complete = 0;
         findVendor = 0; 
     }
 
@@ -48,7 +48,8 @@ contract DonateBlockCampaign {
         }
     }
 
-    function payVendor(address recipient, uint val) public restricted {
+    function payVendor(address recipient, uint val, uint completed) public {
+        complete = completed;
         vendorAddress = recipient;
         value = val;
         recipient.transfer(val);

@@ -470,21 +470,21 @@ vendorProfilePicUpload: async (req,res,next) => {
           id: 1,
           item: "clothes", 
           quantity: parseInt(req.body.clothesQuantity),
-          price: parseInt(req.body.clothesPrice)
+          price: parseFloat(req.body.clothesPrice)
 
         },
        {
         id: 2,
           item: "books",
           quantity: parseInt(req.body.booksQuantity),
-          price: parseInt(req.body.booksPrice),
+          price: parseFloat(req.body.booksPrice),
 
         },
         {
           id: 3,
           item:  "food",
           quantity: parseInt(req.body.foodQuantity),
-          price: parseInt(req.body.foodPrice),
+          price: parseFloat(req.body.foodPrice),
 
         }
       ];

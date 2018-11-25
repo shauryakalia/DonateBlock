@@ -89,7 +89,7 @@ module.exports = {
     },
 
     allVendor: async () => {
-        let queryRes = await Vendor.find({},{inventory:1,_id:1}).lean();
+        let queryRes = await Vendor.find({},{vendorWalletAddress : 1,inventory:1,_id:1}).lean();
         return queryRes;
     },
 

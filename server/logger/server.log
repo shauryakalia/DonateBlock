@@ -948,3 +948,483 @@
 23-11-2018 01:10:58.866 INFO  Params: {"campaign_id":"5bf705e592e8ec3337581719","donation_amount":"0.5"} 
 23-11-2018 01:13:00.696 INFO  GET: /v1/getUserWallet 
 23-11-2018 01:13:00.696 INFO  Params: {} 
+23-11-2018 15:09:48.225 INFO  server started at port 9000 
+23-11-2018 15:10:02.344 INFO  POST: /v1/organisationLogin 
+23-11-2018 15:10:02.344 INFO  [32mParams: [39m[32m{"orgPhone":"1010101010","orgPassword":"cry123","isd_code":"91"}[39m 
+23-11-2018 15:10:29.111 INFO  POST: /v1/createCampaign 
+23-11-2018 15:10:29.111 INFO  [32mParams: [39m[32m{"campaignCause":"Book for poor log","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar","campaignName":" latest book"}[39m 
+23-11-2018 15:11:30.738 INFO  GET: /v1/getSelfCampaign 
+23-11-2018 15:11:30.738 INFO  [32mParams: [39m[32m{}[39m 
+23-11-2018 15:12:53.789 INFO  server started at port 9000 
+23-11-2018 15:13:09.901 INFO  POST: /v1/createCampaign 
+23-11-2018 15:13:09.901 INFO  Params: {"campaignCause":"Book for poor log","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar","campaignName":" latest book 2 "} 
+23-11-2018 15:14:29.568 INFO  GET: /v1/getSelfCampaign 
+23-11-2018 15:14:29.568 INFO  Params: {} 
+23-11-2018 15:14:57.913 INFO  server started at port 9000 
+23-11-2018 15:15:06.473 INFO  POST: /v1/createCampaign 
+23-11-2018 15:15:06.473 INFO  [32mParams: [39m[32m{"campaignCause":"Book for poor log","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar","campaignName":" latest book 3"}[39m 
+23-11-2018 15:15:27.779 INFO  GET: /v1/getSelfCampaign 
+23-11-2018 15:15:27.779 INFO  [32mParams: [39m[32m{}[39m 
+23-11-2018 15:18:38.369 INFO  server started at port 9000 
+23-11-2018 15:18:41.267 INFO  POST: /v1/userLogin 
+23-11-2018 15:18:41.267 INFO  [32mParams: [39m[32m{"phone":"1212121212","password":"user123","isd_code":"91"}[39m 
+23-11-2018 15:20:20.682 INFO  server started at port 9000 
+23-11-2018 15:20:24.835 INFO  POST: /v1/donateToCampaign 
+23-11-2018 15:20:24.836 INFO  Params: {"campaign_id":"5bf7cc31481b4e456be5b0bf","donation_amount":"0.25"} 
+23-11-2018 15:21:32.934 INFO  server started at port 9000 
+23-11-2018 15:21:38.263 INFO  POST: /v1/userLogin 
+23-11-2018 15:21:38.263 INFO  Params: {"phone":"1212121212","password":"user123","isd_code":"91"} 
+23-11-2018 15:22:23.847 INFO  POST: /v1/donateToCampaign 
+23-11-2018 15:22:23.848 INFO  Params: {"campaign_id":"5bf7cc31481b4e456be5b0bf","donation_amount":"0.125"} 
+23-11-2018 15:23:20.321 INFO  server started at port 9000 
+23-11-2018 15:23:21.712 INFO  POST: /v1/donateToCampaign 
+23-11-2018 15:23:21.712 INFO  Params: {"campaign_id":"5bf7cc31481b4e456be5b0bf","donation_amount":"0.125"} 
+23-11-2018 15:30:17.038 INFO  server started at port 9000 
+23-11-2018 15:30:17.890 INFO  POST: /v1/donateToCampaign 
+23-11-2018 15:30:17.891 INFO  Params: {"campaign_id":"5bf7cc31481b4e456be5b0bf","donation_amount":"0.125"} 
+23-11-2018 15:31:26.848 INFO  server started at port 9000 
+23-11-2018 15:31:27.711 INFO  POST: /v1/donateToCampaign 
+23-11-2018 15:31:27.712 INFO  Params: {"campaign_id":"5bf7cc31481b4e456be5b0bf","donation_amount":"0.125"} 
+23-11-2018 15:32:26.403 INFO  server started at port 9000 
+23-11-2018 15:33:04.867 INFO  POST: /v1/donateToCampaign 
+23-11-2018 15:33:04.868 INFO  Params: {"campaign_id":"5bf7cc31481b4e456be5b0bf","donation_amount":"0.0625"} 
+23-11-2018 15:42:37.433 INFO  server started at port 9000 
+23-11-2018 15:42:37.954 INFO  POST: /v1/createCampaign 
+23-11-2018 15:42:37.954 INFO  Params: {"campaignCause":"Book for poor log","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar","campaignName":" latest book 4"} 
+23-11-2018 15:43:31.704 INFO  server started at port 9000 
+23-11-2018 15:43:39.411 INFO  POST: /v1/createCampaign 
+23-11-2018 15:43:39.411 INFO  Params: {"campaignCause":"Book for poor log","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar","campaignName":" latest book 4"} 
+23-11-2018 15:44:52.246 INFO  server started at port 9000 
+23-11-2018 15:44:54.601 INFO  GET: /v1/getSelfCampaign 
+23-11-2018 15:44:54.601 INFO  Params: {} 
+23-11-2018 15:45:39.905 INFO  POST: /v1/userLogin 
+23-11-2018 15:45:39.905 INFO  Params: {"phone":"1212121212","password":"user123","isd_code":"91"} 
+23-11-2018 15:46:13.137 INFO  POST: /v1/donateToCampaign 
+23-11-2018 15:46:13.137 INFO  Params: {"campaign_id":"5bf7d3051874394b0f1d73d5","donation_amount":"0.0525"} 
+24-11-2018 20:30:41.967 INFO  server started at port 9000 
+24-11-2018 20:30:47.716 INFO  POST: /v1/donateToCampaign 
+24-11-2018 20:30:47.716 INFO  Params: {"campaign_id":"5bf7d3051874394b0f1d73d5","donation_amount":"0.0525"} 
+24-11-2018 20:43:57.729 INFO  server started at port 9000 
+24-11-2018 20:44:02.834 INFO  GET: /v1/getSelfCampaign 
+24-11-2018 20:44:02.834 INFO  Params: {} 
+24-11-2018 20:44:23.440 INFO  POST: /v1/campaignCompleted 
+24-11-2018 20:44:23.440 INFO  Params: {"campaign_id":"5bec6ae3bd83901116bdfe2e"} 
+24-11-2018 20:44:23.577 INFO  ERROR : Campaign not found 
+24-11-2018 20:45:10.964 INFO  POST: /v1/campaignCompleted 
+24-11-2018 20:45:10.964 INFO  Params: {"campaign_id":"5bf7cc31481b4e456be5b0bf"} 
+24-11-2018 22:19:05.626 INFO  server started at port 9000 
+24-11-2018 22:19:08.466 INFO  POST: /v1/registerVendor 
+24-11-2018 22:19:08.466 INFO  [32mParams: [39m[32m{"vendorName":"Vendor 1","vendorEmail":"vendor3@gmail.com","vendorPhone":"1313131313","isd_code":"91","vendorPassword":"123456789","vendorRegId":"vendor","vendorAddress":"delhi"}[39m 
+24-11-2018 22:19:41.176 INFO  POST: /v1/vendorLogin 
+24-11-2018 22:19:41.176 INFO  [32mParams: [39m[32m{"vendorPhone":"1313131313","isd_code":"91","vendorPassword":"123456789"}[39m 
+24-11-2018 22:20:29.611 INFO  POST: /v1/updateInventory 
+24-11-2018 22:20:29.611 INFO  [32mParams: [39m[32m{"inventory":[{"item":"clothes","quantity":5,"price":2,"id":1},{"item":"books","quantity":7,"price":5,"id":2},{"item":"food","quantity":8,"price":3,"id":3}]}[39m 
+24-11-2018 22:20:29.627 INFO  ERROR : Error while updating inventory 
+24-11-2018 22:22:05.543 INFO  server started at port 9000 
+24-11-2018 22:22:07.152 INFO  POST: /v1/vendorLogin 
+24-11-2018 22:22:07.152 INFO  Params: {"vendorPhone":"1313131313","isd_code":"91","vendorPassword":"123456789"} 
+24-11-2018 22:22:35.604 INFO  POST: /v1/updateInventory 
+24-11-2018 22:22:35.605 INFO  Params: {"inventory":[{"item":"clothes","quantity":5,"price":2,"id":1},{"item":"books","quantity":7,"price":5,"id":2},{"item":"food","quantity":8,"price":3,"id":3}]} 
+24-11-2018 22:23:19.976 INFO  ERROR : Error while updating inventory 
+25-11-2018 14:39:59.886 INFO  POST: /v1/updateInventory 
+25-11-2018 14:39:59.887 INFO  Params: {"inventory":[{"item":"clothes","quantity":5,"price":2,"id":1},{"item":"books","quantity":7,"price":5,"id":2},{"item":"food","quantity":8,"price":3,"id":3}]} 
+25-11-2018 14:41:21.154 INFO  server started at port 9000 
+25-11-2018 14:41:23.434 INFO  POST: /v1/updateInventory 
+25-11-2018 14:41:23.435 INFO  Params: {"inventory":[{"item":"clothes","quantity":5,"price":2,"id":1},{"item":"books","quantity":7,"price":5,"id":2},{"item":"food","quantity":8,"price":3,"id":3}]} 
+25-11-2018 14:49:00.624 INFO  server started at port 9000 
+25-11-2018 14:49:04.493 INFO  POST: /v1/registerVendor 
+25-11-2018 14:49:04.494 INFO  [32mParams: [39m[32m{"vendorName":"Vendor 1","vendorEmail":"vendor3@gmail.com","vendorPhone":"1313131313","isd_code":"91","vendorPassword":"123456789","vendorRegId":"vendor","vendorAddress":"delhi"}[39m 
+25-11-2018 14:49:40.053 INFO  POST: /v1/vendorLogin 
+25-11-2018 14:49:40.053 INFO  [32mParams: [39m[32m{"vendorPhone":"1313131313","isd_code":"91","vendorPassword":"123456789"}[39m 
+25-11-2018 14:50:28.982 INFO  POST: /v1/updateInventory 
+25-11-2018 14:50:28.982 INFO  [32mParams: [39m[32m{"clothesQuantity":"10","clothesPrice":"1","booksQuantity":"10","booksPrice":"1","foodQuantity":"10","foodPrice":"1"}[39m 
+25-11-2018 14:50:39.539 INFO  GET: /v1/getInventory 
+25-11-2018 14:50:39.540 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 14:54:23.222 INFO  POST: /v1/createCampaign 
+25-11-2018 14:54:23.222 INFO  [32mParams: [39m[32m{"campaignCause":"Book for poor log","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar","campaignName":"book mongo"}[39m 
+25-11-2018 14:54:41.888 INFO  POST: /v1/createCampaign 
+25-11-2018 14:54:41.888 INFO  [32mParams: [39m[32m{"campaignCause":"Book for poor log","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3","campaignRequirement":"books","quantity":"30","campaignAddress":"new delhi nagar","campaignName":"book mongo"}[39m 
+25-11-2018 14:58:36.686 INFO  POST: /v1/userLogin 
+25-11-2018 14:58:36.686 INFO  [32mParams: [39m[32m{"phone":"1212121212","password":"user123","isd_code":"91"}[39m 
+25-11-2018 15:02:03.359 INFO  POST: /v1/donateToCampaign 
+25-11-2018 15:02:03.359 INFO  [32mParams: [39m[32m{"campaign_id":"5bfa6a5fc97b5225d0b784e2","donation_amount":"0.5"}[39m 
+25-11-2018 16:03:56.444 INFO  POST: /v1/createCampaign 
+25-11-2018 16:03:56.445 INFO  [32mParams: [39m[32m{"campaignCause":"Book for poor log","campaignDiscription":"Need to raise money for buying books for children.","amount_required":"3","campaignRequirement":"clothes","quantity":"30","campaignAddress":"new delhi nagar","campaignName":"book mongo"}[39m 
+25-11-2018 16:04:13.108 INFO  POST: /v1/registerUser 
+25-11-2018 16:04:13.108 INFO  [32mParams: [39m[32m{"first_name":"Raju","last_name":"Sapru","phone":"1234567890","email":"qwerty123456","isd_code":"91","password":"User@123","gender":"1","date_of_birth":"11/01/1998","street":"asdfgf lkjhj","address":"asdfqwer","city":"Noida","state":"UP","country":"India","zip":"123456","aadhaar":"1234 5678 9098"}[39m 
+25-11-2018 16:06:26.135 INFO  POST: /v1/registerUser 
+25-11-2018 16:06:26.135 INFO  [32mParams: [39m[32m{"first_name":"Dev","last_name":"Verma","phone":1210121212,"email":"qwerty@werty.c","isd_code":91,"password":"user123","gender":1,"date_of_birth":"11-01-1998","street":"qwer","address":"asdfghj","city":"asdfgh","state":"asd","country":"asdf","zip":"1234567","aadhaar":"123456789012"}[39m 
+25-11-2018 16:07:53.043 INFO  server started at port 9000 
+25-11-2018 16:08:44.803 INFO  POST: /v1/registerUser 
+25-11-2018 16:08:44.803 INFO  [32mParams: [39m[32m{"first_name":"Rajan","last_name":"Raj","phone":"1234567890","email":"asdfg12345","isd_code":"91","password":"User@123","gender":"1","date_of_birth":"11/01/1998","street":"asdfgf lkjhj","address":"sdfgzxcvbn","city":"Noida","state":"UP","country":"India","zip":"123456","aadhaar":"1234 5678 9098"}[39m 
+25-11-2018 16:10:08.483 INFO  server started at port 9000 
+25-11-2018 16:11:18.934 INFO  POST: /v1/registerUser 
+25-11-2018 16:11:18.934 INFO  Params: {"first_name":"Rajesh","last_name":"Raj","phone":"1234567890","email":"sazfdjgf","isd_code":"91","password":"User@123","gender":"1","date_of_birth":"11/01/1998","street":"asdfgf lkjhj","address":"asdfgvbnm","city":"dfghj","state":"UP","country":"India","zip":"123456","aadhaar":"1234 5678 9098"} 
+25-11-2018 16:12:30.638 INFO  server started at port 9000 
+25-11-2018 16:12:39.342 INFO  POST: /v1/registerUser 
+25-11-2018 16:12:39.342 INFO  Params: {"first_name":"Rajesh","last_name":"Raj","phone":"1234567890","email":"sazfdjgf","isd_code":"91","password":"User@123","gender":"1","date_of_birth":"11/01/1998","street":"asdfgf lkjhj","address":"asdfgvbnm","city":"dfghj","state":"UP","country":"India","zip":"123456","aadhaar":"1234 5678 9098"} 
+25-11-2018 16:13:25.504 INFO  POST: /v1/registerUser 
+25-11-2018 16:13:25.504 INFO  Params: {"first_name":"Rajesh","last_name":"Raj","phone":"1234567890","email":"sazfdjgf","isd_code":"91","password":"User@123","gender":"1","date_of_birth":"11/01/1998","street":"asdfgf lkjhj","address":"asdfgvbnm","city":"dfghj","state":"UP","country":"India","zip":"123456","aadhaar":"1234 5678 9098"} 
+25-11-2018 16:14:32.048 INFO  POST: /v1/userLogin 
+25-11-2018 16:14:32.048 INFO  Params: {"phone":"1234567890","password":"User@123","isd_code":"91"} 
+25-11-2018 16:14:35.581 INFO  GET: /v1/getAllCampaign 
+25-11-2018 16:14:35.581 INFO  Params: {} 
+25-11-2018 16:15:11.622 INFO  GET: /v1/getUserDetails 
+25-11-2018 16:15:11.622 INFO  Params: {} 
+25-11-2018 16:15:13.495 INFO  GET: /v1/getUserWallet 
+25-11-2018 16:15:13.496 INFO  Params: {} 
+25-11-2018 16:15:25.041 INFO  GET: /v1/getAllCampaign 
+25-11-2018 16:15:25.041 INFO  Params: {} 
+25-11-2018 16:21:59.129 INFO  GET: /v1/getAllCampaign 
+25-11-2018 16:21:59.129 INFO  Params: {} 
+25-11-2018 16:23:16.657 INFO  GET: /v1/getUserWallet 
+25-11-2018 16:23:16.658 INFO  Params: {} 
+25-11-2018 16:24:09.034 INFO  GET: /v1/getUserDetails 
+25-11-2018 16:24:09.034 INFO  Params: {} 
+25-11-2018 16:24:19.733 INFO  GET: /v1/getAllCampaign 
+25-11-2018 16:24:19.733 INFO  Params: {} 
+25-11-2018 16:25:05.032 INFO  GET: /v1/getUserWallet 
+25-11-2018 16:25:05.032 INFO  Params: {} 
+25-11-2018 16:25:23.841 INFO  GET: /v1/getAllCampaign 
+25-11-2018 16:25:23.841 INFO  Params: {} 
+25-11-2018 16:25:32.625 INFO  POST: /v1/donateToCampaign 
+25-11-2018 16:25:32.625 INFO  Params: {"campaign_id":"5bfa6a5fc97b5225d0b784e2","donation_amount":"0.1"} 
+25-11-2018 16:29:20.673 INFO  server started at port 9000 
+25-11-2018 16:30:17.221 INFO  GET: /v1/getAllCampaign 
+25-11-2018 16:30:17.222 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 16:30:21.074 INFO  GET: /v1/getAllCampaign 
+25-11-2018 16:30:21.074 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 16:30:53.669 INFO  GET: /v1/getUserDetails 
+25-11-2018 16:30:53.669 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 16:55:34.507 INFO  POST: /v1/registerOrganisation 
+25-11-2018 16:55:34.507 INFO  [32mParams: [39m[32m{"orgName":"CSR","orgEmail":"gfg56r5@hjk.com","orgPhone":"","isd_code":"","orgPassword":"","orgRegId":"45wert","orgAddress":"","orgOwnerName":"Raju Sapru"}[39m 
+25-11-2018 16:55:34.741 INFO  ERROR : Information missing can't register 
+25-11-2018 17:04:54.151 INFO  POST: /v1/registerOrganisation 
+25-11-2018 17:04:54.151 INFO  [32mParams: [39m[32m{"orgName":"CSR","orgEmail":"sadjhkasdhjfk3424","orgPhone":"","isd_code":"91","orgPassword":"User@123","orgRegId":"afdknkjsh33","orgAddress":"GFTfskmlksf","orgOwnerName":"Rajender"}[39m 
+25-11-2018 17:04:54.188 INFO  ERROR : Information missing can't register 
+25-11-2018 17:06:31.693 INFO  POST: /v1/registerOrganisation 
+25-11-2018 17:06:31.693 INFO  [32mParams: [39m[32m{"orgName":"CSR","orgEmail":"hjggfsd234","orgPhone":"1234567890","isd_code":"91","orgPassword":"User@123","orgRegId":"fjfy567","orgAddress":"asdfgr456","orgOwnerName":"Rajender"}[39m 
+25-11-2018 17:07:13.136 INFO  POST: /v1/organisationLogin 
+25-11-2018 17:07:13.136 INFO  [32mParams: [39m[32m{"orgPhone":"1234567890","orgPassword":"User@123","isd_code":"91"}[39m 
+25-11-2018 17:07:16.214 INFO  GET: /v1/getSelfCampaign 
+25-11-2018 17:07:16.214 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 17:08:43.868 INFO  POST: /v1/createCampaign 
+25-11-2018 17:08:43.868 INFO  [32mParams: [39m[32m{"campaignName":"Daya","campaignCause":"Donation","campaignDiscription":"none","amount_required":"1000","campaignRequirement":"clothes","quantity":"200","campaignAddress":"Noida"}[39m 
+25-11-2018 17:08:46.147 INFO  POST: /v1/createCampaign 
+25-11-2018 17:08:46.147 INFO  [32mParams: [39m[32m{"campaignName":"Daya","campaignCause":"Donation","campaignDiscription":"none","amount_required":"1000","campaignRequirement":"clothes","quantity":"200","campaignAddress":"Noida"}[39m 
+25-11-2018 17:12:18.826 INFO  POST: /v1/createCampaign 
+25-11-2018 17:12:18.826 INFO  [32mParams: [39m[32m{"campaignName":"Daya","campaignCause":"Donation","campaignDiscription":"none","amount_required":"1000","campaignRequirement":"clothes","quantity":"200","campaignAddress":"Noida"}[39m 
+25-11-2018 17:13:33.214 INFO  GET: /v1/getOrganisationWallet 
+25-11-2018 17:13:33.214 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 17:13:34.722 INFO  GET: /v1/getOrganisationDetails 
+25-11-2018 17:13:34.722 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 17:13:40.403 INFO  GET: /v1/getSelfCampaign 
+25-11-2018 17:13:40.403 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 17:23:03.150 INFO  POST: /v1/registerVendor 
+25-11-2018 17:23:03.150 INFO  [32mParams: [39m[32m{"vendorName":"Gokuad","vendorEmail":"fjnskjd34","vendorPhone":"1234567890","isd_code":"91","vendorPassword":"User@123","vendorRegId":"sietvse","vendorAddress":"sdjfisvut"}[39m 
+25-11-2018 17:23:47.727 INFO  POST: /v1/vendorLogin 
+25-11-2018 17:23:47.727 INFO  [32mParams: [39m[32m{"vendorPhone":"1234567890","vendorPassword":"User@123","isd_code":"91"}[39m 
+25-11-2018 17:23:53.083 INFO  GET: /v1/getVendorDetails 
+25-11-2018 17:23:53.083 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 17:23:56.891 INFO  GET: /v1/getInventory 
+25-11-2018 17:23:56.891 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 17:24:47.524 INFO  POST: /v1/updateInventory 
+25-11-2018 17:24:47.524 INFO  [32mParams: [39m[32m{"clothesQuantity":"6","clothesPrice":"7","booksQuantity":"8","booksPrice":"9","foodQuantity":"5","foodPrice":"4"}[39m 
+25-11-2018 17:24:54.638 INFO  GET: /v1/getInventory 
+25-11-2018 17:24:54.638 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 17:26:12.929 INFO  server started at port 9000 
+25-11-2018 17:26:27.198 INFO  GET: /v1/getInventory 
+25-11-2018 17:26:27.198 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 17:26:47.422 INFO  POST: /v1/updateInventory 
+25-11-2018 17:26:47.422 INFO  [32mParams: [39m[32m{"clothesQuantity":"20","clothesPrice":"26","booksQuantity":"8","booksPrice":"9","foodQuantity":"5","foodPrice":"4"}[39m 
+25-11-2018 17:26:49.397 INFO  GET: /v1/getInventory 
+25-11-2018 17:26:49.397 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 17:26:56.629 INFO  GET: /v1/getVendorWallet 
+25-11-2018 17:26:56.629 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 17:26:58.180 INFO  GET: /v1/getVendorDetails 
+25-11-2018 17:26:58.180 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 17:27:00.691 INFO  GET: /v1/getVendorDetails 
+25-11-2018 17:27:00.691 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 17:27:28.534 INFO  POST: /v1/vendorLogin 
+25-11-2018 17:27:28.534 INFO  [32mParams: [39m[32m{"vendorPhone":"123467890","vendorPassword":"User@123","isd_code":"91"}[39m 
+25-11-2018 17:27:28.542 INFO  ERROR : invalid username or password 
+25-11-2018 17:27:42.373 INFO  POST: /v1/vendorLogin 
+25-11-2018 17:27:42.373 INFO  [32mParams: [39m[32m{"vendorPhone":"1234567890","vendorPassword":"User@123","isd_code":"91"}[39m 
+25-11-2018 17:27:42.424 INFO  GET: /v1/getVendorDetails 
+25-11-2018 17:27:42.424 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 17:28:05.534 INFO  POST: /v1/organisationLogin 
+25-11-2018 17:28:05.534 INFO  [32mParams: [39m[32m{"orgPhone":"1234567890","orgPassword":"User@123","isd_code":"91"}[39m 
+25-11-2018 17:28:05.581 INFO  GET: /v1/getSelfCampaign 
+25-11-2018 17:28:05.581 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 17:28:23.998 INFO  server started at port 9000 
+25-11-2018 17:30:10.372 INFO  POST: /v1/createCampaign 
+25-11-2018 17:30:10.373 INFO  Params: {"campaignName":"CSIR","campaignCause":"donation","campaignDiscription":"none","amount_required":"2000","campaignRequirement":"","quantity":"20","campaignAddress":"asder34"} 
+25-11-2018 17:30:34.050 INFO  server started at port 9000 
+25-11-2018 17:30:47.412 INFO  POST: /v1/createCampaign 
+25-11-2018 17:30:47.412 INFO  Params: {"campaignName":"CSIR","campaignCause":"donation","campaignDiscription":"none","amount_required":"2000","campaignRequirement":"clothes","quantity":"20","campaignAddress":"asder34"} 
+25-11-2018 17:31:24.152 INFO  GET: /v1/getOrganisationWallet 
+25-11-2018 17:31:24.152 INFO  Params: {} 
+25-11-2018 17:33:25.483 INFO  POST: /v1/createCampaign 
+25-11-2018 17:33:25.483 INFO  Params: {"campaignName":"sdgS","campaignCause":"Donation","campaignDiscription":"none","amount_required":"2000","campaignRequirement":"","quantity":"20","campaignAddress":"chgfhg"} 
+25-11-2018 17:33:48.325 INFO  server started at port 9000 
+25-11-2018 17:34:11.052 INFO  POST: /v1/createCampaign 
+25-11-2018 17:34:11.052 INFO  Params: {"campaignName":"sdgS","campaignCause":"Donation","campaignDiscription":"none","amount_required":"2000","campaignRequirement":"books","quantity":"20","campaignAddress":"chgfhg"} 
+25-11-2018 17:34:21.934 INFO  server started at port 9000 
+25-11-2018 17:34:33.661 INFO  POST: /v1/createCampaign 
+25-11-2018 17:34:33.662 INFO  Params: {"campaignName":"sdgS","campaignCause":"Donation","campaignDiscription":"none","amount_required":"2000","campaignRequirement":"clothes","quantity":"20","campaignAddress":"chgfhg"} 
+25-11-2018 17:34:45.573 INFO  server started at port 9000 
+25-11-2018 17:35:00.912 INFO  POST: /v1/createCampaign 
+25-11-2018 17:35:00.912 INFO  Params: {"campaignName":"sdgS","campaignCause":"Donation","campaignDiscription":"none","amount_required":"2000","campaignRequirement":"food","quantity":"20","campaignAddress":"chgfhg"} 
+25-11-2018 17:35:12.928 INFO  server started at port 9000 
+25-11-2018 17:37:34.007 INFO  POST: /v1/createCampaign 
+25-11-2018 17:37:34.007 INFO  Params: {"campaignName":"CSJM","campaignCause":"asd","campaignDiscription":"none","amount_required":"3000","campaignRequirement":"food","quantity":"10","campaignAddress":"asddg"} 
+25-11-2018 17:38:47.266 INFO  server started at port 9000 
+25-11-2018 17:39:08.305 INFO  POST: /v1/createCampaign 
+25-11-2018 17:39:08.305 INFO  Params: {"campaignName":"CSJM","campaignCause":"asd","campaignDiscription":"none","amount_required":"3000","campaignRequirement":"food","quantity":"10","campaignAddress":"asddg"} 
+25-11-2018 17:41:25.475 INFO  GET: /v1/getSelfCampaign 
+25-11-2018 17:41:25.475 INFO  Params: {} 
+25-11-2018 17:42:18.321 INFO  POST: /v1/createCampaign 
+25-11-2018 17:42:18.321 INFO  Params: {"campaignName":"CSR","campaignCause":"Food 4 all","campaignDiscription":"none","amount_required":"4000","campaignRequirement":"clothes","quantity":"40","campaignAddress":"Noida"} 
+25-11-2018 17:43:00.409 INFO  GET: /v1/getSelfCampaign 
+25-11-2018 17:43:00.409 INFO  Params: {} 
+25-11-2018 17:44:44.775 INFO  GET: /v1/getOrganisationDetails 
+25-11-2018 17:44:44.775 INFO  Params: {} 
+25-11-2018 17:44:46.900 INFO  GET: /v1/getOrganisationWallet 
+25-11-2018 17:44:46.900 INFO  Params: {} 
+25-11-2018 17:48:13.301 INFO  server started at port 9000 
+25-11-2018 17:48:20.285 INFO  POST: /v1/userLogin 
+25-11-2018 17:48:20.285 INFO  Params: {"phone":"1234567890","password":"User@123","isd_code":"91"} 
+25-11-2018 17:48:23.522 INFO  GET: /v1/getAllCampaign 
+25-11-2018 17:48:23.523 INFO  Params: {} 
+25-11-2018 17:48:39.523 INFO  POST: /v1/donateToCampaign 
+25-11-2018 17:48:39.523 INFO  Params: {"campaign_id":"5bfa91c0aae1393a9a8ac8d9","donation_amount":"0.1"} 
+25-11-2018 17:49:21.139 INFO  GET: /v1/getAllCampaign 
+25-11-2018 17:49:21.139 INFO  Params: {} 
+25-11-2018 17:50:16.551 INFO  POST: /v1/organisationLogin 
+25-11-2018 17:50:16.552 INFO  Params: {"orgPhone":"1234567890","orgPassword":"User@123","isd_code":"91"} 
+25-11-2018 17:50:16.608 INFO  GET: /v1/getSelfCampaign 
+25-11-2018 17:50:16.608 INFO  Params: {} 
+25-11-2018 17:51:28.860 INFO  POST: /v1/createCampaign 
+25-11-2018 17:51:28.860 INFO  Params: {"campaignName":"GareeboKiCRY","campaignCause":"Donation","campaignDiscription":"None","amount_required":"0.2","campaignRequirement":"clothes","quantity":"10","campaignAddress":"Noida"} 
+25-11-2018 17:52:30.288 INFO  GET: /v1/getSelfCampaign 
+25-11-2018 17:52:30.288 INFO  Params: {} 
+25-11-2018 17:53:29.387 INFO  POST: /v1/userLogin 
+25-11-2018 17:53:29.387 INFO  Params: {"phone":"1234567890","password":"User@123","isd_code":"91"} 
+25-11-2018 17:53:29.437 INFO  GET: /v1/getAllCampaign 
+25-11-2018 17:53:29.437 INFO  Params: {} 
+25-11-2018 17:53:55.344 INFO  POST: /v1/vendorLogin 
+25-11-2018 17:53:55.344 INFO  Params: {"vendorPhone":"1234567890","vendorPassword":"User@123","isd_code":"91"} 
+25-11-2018 17:53:55.390 INFO  GET: /v1/getVendorDetails 
+25-11-2018 17:53:55.390 INFO  Params: {} 
+25-11-2018 17:54:00.924 INFO  GET: /v1/getInventory 
+25-11-2018 17:54:00.924 INFO  Params: {} 
+25-11-2018 17:54:52.072 INFO  POST: /v1/updateInventory 
+25-11-2018 17:54:52.072 INFO  Params: {"clothesQuantity":"20","clothesPrice":"0.01","booksQuantity":"8","booksPrice":"9","foodQuantity":"5","foodPrice":"4"} 
+25-11-2018 17:54:59.183 INFO  GET: /v1/getInventory 
+25-11-2018 17:54:59.183 INFO  Params: {} 
+25-11-2018 17:55:38.728 INFO  POST: /v1/updateInventory 
+25-11-2018 17:55:38.729 INFO  Params: {"clothesQuantity":"20","clothesPrice":"0.01","booksQuantity":"8","booksPrice":"9","foodQuantity":"5","foodPrice":"4"} 
+25-11-2018 17:57:11.574 INFO  server started at port 9000 
+25-11-2018 17:57:14.029 INFO  POST: /v1/updateInventory 
+25-11-2018 17:57:14.030 INFO  Params: {"clothesQuantity":"20","clothesPrice":"0.01","booksQuantity":"8","booksPrice":"9","foodQuantity":"5","foodPrice":"4"} 
+25-11-2018 17:57:54.042 INFO  GET: /v1/getInventory 
+25-11-2018 17:57:54.042 INFO  Params: {} 
+25-11-2018 17:58:12.919 INFO  POST: /v1/userLogin 
+25-11-2018 17:58:12.919 INFO  Params: {"phone":"1234567890","password":"cry123","isd_code":"91"} 
+25-11-2018 17:58:12.926 INFO  ERROR : invalid username or password 
+25-11-2018 17:58:49.271 INFO  POST: /v1/userLogin 
+25-11-2018 17:58:49.271 INFO  Params: {"phone":"1234567890","password":"cry123","isd_code":"91"} 
+25-11-2018 17:58:49.275 INFO  ERROR : invalid username or password 
+25-11-2018 17:59:02.688 INFO  POST: /v1/userLogin 
+25-11-2018 17:59:02.689 INFO  Params: {"phone":"1234567890","password":"User@123","isd_code":"91"} 
+25-11-2018 17:59:02.754 INFO  GET: /v1/getAllCampaign 
+25-11-2018 17:59:02.754 INFO  Params: {} 
+25-11-2018 17:59:10.789 INFO  POST: /v1/donateToCampaign 
+25-11-2018 17:59:10.789 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.2"} 
+25-11-2018 17:59:45.034 INFO  GET: /v1/getAllCampaign 
+25-11-2018 17:59:45.034 INFO  Params: {} 
+25-11-2018 18:00:10.166 INFO  POST: /v1/donateToCampaign 
+25-11-2018 18:00:10.166 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.1"} 
+25-11-2018 18:00:33.794 INFO  GET: /v1/getAllCampaign 
+25-11-2018 18:00:33.795 INFO  Params: {} 
+25-11-2018 18:00:40.740 INFO  GET: /v1/getUserWallet 
+25-11-2018 18:00:40.740 INFO  Params: {} 
+25-11-2018 18:01:27.806 INFO  GET: /v1/getUserWallet 
+25-11-2018 18:01:27.806 INFO  Params: {} 
+25-11-2018 18:01:31.014 INFO  GET: /v1/getAllCampaign 
+25-11-2018 18:01:31.014 INFO  Params: {} 
+25-11-2018 18:01:37.771 INFO  POST: /v1/donateToCampaign 
+25-11-2018 18:01:37.772 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.1"} 
+25-11-2018 18:03:23.213 INFO  server started at port 9000 
+25-11-2018 18:03:28.776 INFO  POST: /v1/donateToCampaign 
+25-11-2018 18:03:28.776 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.1"} 
+25-11-2018 18:04:06.757 INFO  server started at port 9000 
+25-11-2018 18:04:15.845 INFO  POST: /v1/donateToCampaign 
+25-11-2018 18:04:15.845 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.1"} 
+25-11-2018 18:04:46.319 INFO  server started at port 9000 
+25-11-2018 18:04:49.530 INFO  POST: /v1/donateToCampaign 
+25-11-2018 18:04:49.531 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.1"} 
+25-11-2018 18:05:09.749 INFO  GET: /v1/getAllCampaign 
+25-11-2018 18:05:09.749 INFO  Params: {} 
+25-11-2018 18:06:16.825 INFO  POST: /v1/vendorLogin 
+25-11-2018 18:06:16.825 INFO  Params: {"vendorPhone":"1234567890","vendorPassword":"User@123","isd_code":"91"} 
+25-11-2018 18:06:16.887 INFO  GET: /v1/getVendorDetails 
+25-11-2018 18:06:16.887 INFO  Params: {} 
+25-11-2018 18:06:20.196 INFO  GET: /v1/getVendorDetails 
+25-11-2018 18:06:20.196 INFO  Params: {} 
+25-11-2018 18:13:32.597 INFO  server started at port 9000 
+25-11-2018 18:13:55.460 INFO  POST: /v1/userLogin 
+25-11-2018 18:13:55.460 INFO  Params: {"phone":"1234567890","password":"User@123","isd_code":""} 
+25-11-2018 18:13:55.460 INFO  ERROR : phone or password or isd code missing 
+25-11-2018 18:14:01.872 INFO  POST: /v1/userLogin 
+25-11-2018 18:14:01.873 INFO  Params: {"phone":"1234567890","password":"User@123","isd_code":"91"} 
+25-11-2018 18:14:01.963 INFO  GET: /v1/getAllCampaign 
+25-11-2018 18:14:01.963 INFO  Params: {} 
+25-11-2018 18:14:32.230 INFO  POST: /v1/donateToCampaign 
+25-11-2018 18:14:32.230 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.1"} 
+25-11-2018 18:16:43.476 INFO  GET: /v1/getAllCampaign 
+25-11-2018 18:16:43.476 INFO  Params: {} 
+25-11-2018 18:17:02.419 INFO  server started at port 9000 
+25-11-2018 18:17:09.446 INFO  POST: /v1/donateToCampaign 
+25-11-2018 18:17:09.447 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.1"} 
+25-11-2018 18:20:49.816 INFO  server started at port 9000 
+25-11-2018 18:20:52.866 INFO  POST: /v1/donateToCampaign 
+25-11-2018 18:20:52.867 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.1"} 
+25-11-2018 18:23:48.277 INFO  server started at port 9000 
+25-11-2018 18:24:03.758 INFO  GET: /v1/getAllCampaign 
+25-11-2018 18:24:03.758 INFO  Params: {} 
+25-11-2018 18:24:14.364 INFO  POST: /v1/donateToCampaign 
+25-11-2018 18:24:14.364 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.1"} 
+25-11-2018 18:27:40.227 INFO  server started at port 9000 
+25-11-2018 18:27:41.736 INFO  POST: /v1/vendorLogin 
+25-11-2018 18:27:41.736 INFO  [32mParams: [39m[32m{"vendorPhone":"1234567890","vendorPassword":"User@123","isd_code":"91"}[39m 
+25-11-2018 18:27:41.805 INFO  GET: /v1/getVendorDetails 
+25-11-2018 18:27:41.805 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 18:27:45.287 INFO  GET: /v1/getInventory 
+25-11-2018 18:27:45.287 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 18:28:18.481 INFO  POST: /v1/updateInventory 
+25-11-2018 18:28:18.481 INFO  [32mParams: [39m[32m{"clothesQuantity":"20","clothesPrice":"0.001","booksQuantity":"8","booksPrice":"9","foodQuantity":"5","foodPrice":"4"}[39m 
+25-11-2018 18:28:20.797 INFO  GET: /v1/getInventory 
+25-11-2018 18:28:20.797 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 18:28:54.607 INFO  POST: /v1/userLogin 
+25-11-2018 18:28:54.607 INFO  [32mParams: [39m[32m{"phone":"1234567890","password":"User@123","isd_code":"91"}[39m 
+25-11-2018 18:28:54.655 INFO  GET: /v1/getAllCampaign 
+25-11-2018 18:28:54.655 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 18:30:39.477 INFO  server started at port 9000 
+25-11-2018 18:30:57.576 INFO  server started at port 9000 
+25-11-2018 18:31:03.448 INFO  POST: /v1/donateToCampaign 
+25-11-2018 18:31:03.448 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.01"} 
+25-11-2018 18:32:22.215 INFO  ERROR : Error while selecting vendor 
+25-11-2018 18:33:03.127 INFO  GET: /v1/getAllCampaign 
+25-11-2018 18:33:03.127 INFO  Params: {} 
+25-11-2018 18:33:23.721 INFO  POST: /v1/donateToCampaign 
+25-11-2018 18:33:23.721 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.01"} 
+25-11-2018 18:37:18.585 INFO  ERROR : Error while selecting vendor 
+25-11-2018 18:37:24.064 INFO  GET: /v1/getAllCampaign 
+25-11-2018 18:37:24.064 INFO  Params: {} 
+25-11-2018 18:37:30.793 INFO  POST: /v1/donateToCampaign 
+25-11-2018 18:37:30.794 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.01"} 
+25-11-2018 18:38:56.813 INFO  server started at port 9000 
+25-11-2018 18:38:59.529 INFO  POST: /v1/donateToCampaign 
+25-11-2018 18:38:59.529 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.01"} 
+25-11-2018 18:39:46.348 INFO  server started at port 9000 
+25-11-2018 18:52:16.436 INFO  server started at port 9000 
+25-11-2018 18:52:29.292 INFO  POST: /v1/donateToCampaign 
+25-11-2018 18:52:29.292 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.01"} 
+25-11-2018 19:03:22.358 INFO  server started at port 9000 
+25-11-2018 19:03:33.896 INFO  POST: /v1/donateToCampaign 
+25-11-2018 19:03:33.897 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.01"} 
+25-11-2018 19:05:16.871 INFO  ERROR : Error while selecting vendor 
+25-11-2018 19:05:25.194 INFO  POST: /v1/donateToCampaign 
+25-11-2018 19:05:25.194 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.01"} 
+25-11-2018 19:05:38.804 INFO  server started at port 9000 
+25-11-2018 19:05:45.981 INFO  GET: /v1/getAllCampaign 
+25-11-2018 19:05:45.981 INFO  Params: {} 
+25-11-2018 19:05:54.081 INFO  POST: /v1/donateToCampaign 
+25-11-2018 19:05:54.081 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.01"} 
+25-11-2018 19:08:29.118 INFO  server started at port 9000 
+25-11-2018 19:08:53.992 INFO  POST: /v1/donateToCampaign 
+25-11-2018 19:08:53.992 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.001"} 
+25-11-2018 19:12:28.884 INFO  server started at port 9000 
+25-11-2018 19:12:32.747 INFO  POST: /v1/donateToCampaign 
+25-11-2018 19:12:32.747 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.001"} 
+25-11-2018 19:12:33.898 INFO  POST: /v1/donateToCampaign 
+25-11-2018 19:12:33.898 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.001"} 
+25-11-2018 19:15:44.324 INFO  server started at port 9000 
+25-11-2018 19:15:50.026 INFO  GET: /v1/getAllCampaign 
+25-11-2018 19:15:50.027 INFO  Params: {} 
+25-11-2018 19:16:00.180 INFO  POST: /v1/donateToCampaign 
+25-11-2018 19:16:00.180 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.01"} 
+25-11-2018 19:17:07.163 INFO  server started at port 9000 
+25-11-2018 19:17:11.302 INFO  POST: /v1/donateToCampaign 
+25-11-2018 19:17:11.302 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.01"} 
+25-11-2018 19:19:52.711 INFO  server started at port 9000 
+25-11-2018 19:19:55.794 INFO  POST: /v1/donateToCampaign 
+25-11-2018 19:19:55.794 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.01"} 
+25-11-2018 19:21:07.178 INFO  server started at port 9000 
+25-11-2018 19:21:25.350 INFO  POST: /v1/donateToCampaign 
+25-11-2018 19:21:25.351 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.01"} 
+25-11-2018 19:27:54.068 INFO  server started at port 9000 
+25-11-2018 19:28:08.503 INFO  POST: /v1/donateToCampaign 
+25-11-2018 19:28:08.503 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.01"} 
+25-11-2018 19:30:31.847 INFO  server started at port 9000 
+25-11-2018 19:30:37.931 INFO  POST: /v1/donateToCampaign 
+25-11-2018 19:30:37.931 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.01"} 
+25-11-2018 19:40:43.098 INFO  server started at port 9000 
+25-11-2018 19:40:47.770 INFO  GET: /v1/getAllCampaign 
+25-11-2018 19:40:47.770 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 19:41:15.955 INFO  server started at port 9000 
+25-11-2018 19:41:26.038 INFO  POST: /v1/donateToCampaign 
+25-11-2018 19:41:26.038 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.001"} 
+25-11-2018 19:42:21.492 INFO  server started at port 9000 
+25-11-2018 19:42:32.226 INFO  POST: /v1/donateToCampaign 
+25-11-2018 19:42:32.226 INFO  Params: {"campaign_id":"5bfa93fcb5003a3c0081383d","donation_amount":"0.001"} 
+25-11-2018 19:42:55.389 INFO  GET: /v1/getAllCampaign 
+25-11-2018 19:42:55.389 INFO  Params: {} 
+25-11-2018 19:42:56.846 INFO  GET: /v1/getAllCampaign 
+25-11-2018 19:42:56.846 INFO  Params: {} 
+25-11-2018 19:51:01.572 INFO  server started at port 9000 
+25-11-2018 19:51:04.689 INFO  POST: /v1/vendorLogin 
+25-11-2018 19:51:04.689 INFO  [32mParams: [39m[32m{"vendorPhone":"1234567890","vendorPassword":"User@123","isd_code":"91"}[39m 
+25-11-2018 19:51:05.898 INFO  POST: /v1/vendorLogin 
+25-11-2018 19:51:05.898 INFO  [32mParams: [39m[32m{"vendorPhone":"1234567890","vendorPassword":"User@123","isd_code":"91"}[39m 
+25-11-2018 19:51:09.331 INFO  POST: /v1/vendorLogin 
+25-11-2018 19:51:09.331 INFO  [32mParams: [39m[32m{"vendorPhone":"1234567890","vendorPassword":"User@123","isd_code":"91"}[39m 
+25-11-2018 19:51:37.826 INFO  POST: /v1/vendorLogin 
+25-11-2018 19:51:37.826 INFO  [32mParams: [39m[32m{"vendorPhone":"1234567890","vendorPassword":"User@123","isd_code":"91"}[39m 
+25-11-2018 19:52:17.620 INFO  POST: /v1/vendorLogin 
+25-11-2018 19:52:17.620 INFO  [32mParams: [39m[32m{"vendorPhone":"1234567890","vendorPassword":"User@123","isd_code":"91"}[39m 
+25-11-2018 19:52:32.873 INFO  GET: /v1/getVendorDetails 
+25-11-2018 19:52:32.873 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 19:52:59.374 INFO  POST: /v1/itemDelivered 
+25-11-2018 19:52:59.374 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 19:53:02.598 INFO  GET: /v1/getVendorDetails 
+25-11-2018 19:53:02.598 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 19:53:20.223 INFO  POST: /v1/itemDelivered 
+25-11-2018 19:53:20.223 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 19:53:28.685 INFO  GET: /v1/getVendorDetails 
+25-11-2018 19:53:28.685 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 19:55:53.589 INFO  GET: /v1/getVendorDetails 
+25-11-2018 19:55:53.589 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 19:57:02.871 INFO  GET: /v1/getVendorDetails 
+25-11-2018 19:57:02.871 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 19:57:25.912 INFO  POST: /v1/itemDelivered 
+25-11-2018 19:57:25.912 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 19:59:01.723 INFO  POST: /v1/itemDelivered 
+25-11-2018 19:59:01.723 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 20:01:52.415 INFO  GET: /v1/getVendorDetails 
+25-11-2018 20:01:52.415 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 20:03:57.870 INFO  GET: /v1/getVendorDetails 
+25-11-2018 20:03:57.870 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 20:06:20.137 INFO  GET: /v1/getVendorDetails 
+25-11-2018 20:06:20.137 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 20:06:44.887 INFO  GET: /v1/getVendorDetails 
+25-11-2018 20:06:44.887 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 20:06:48.219 INFO  GET: /v1/getVendorDetails 
+25-11-2018 20:06:48.219 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 20:06:56.909 INFO  POST: /v1/itemDelivered 
+25-11-2018 20:06:56.910 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 20:07:34.267 INFO  GET: /v1/getVendorDetails 
+25-11-2018 20:07:34.267 INFO  [32mParams: [39m[32m{}[39m 
+25-11-2018 20:08:57.101 INFO  GET: /v1/getVendorDetails 
+25-11-2018 20:08:57.101 INFO  [32mParams: [39m[32m{}[39m 
