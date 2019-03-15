@@ -6,6 +6,7 @@
 const _                   = require('lodash'),
       bodyParser          = require('body-parser'),
       express             = require('express'),
+      cors                = require('cors'),
 //Internal modules
       config              = require('./config'),
       router              = require('./routers'),
@@ -18,6 +19,7 @@ const app                 = express(),
       port                = _.get(appConst, ['port'], 9000);
 
 // parse application/json
+app.use(cors());
 app.use(bodyParser.json());
 
 // parse application/urlencoded
