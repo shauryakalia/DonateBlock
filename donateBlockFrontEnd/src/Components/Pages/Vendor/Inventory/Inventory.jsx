@@ -122,6 +122,7 @@ class Inventory extends React.Component {
   
   closeSimplert() {
     this.setState({showAlert: false});
+    window.location.reload();
 }
 
 componentWillMount() {

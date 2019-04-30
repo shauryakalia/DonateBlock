@@ -1,0 +1,31 @@
+15-03-2019 15:46:33.073 INFO  server started at port 9000 
+15-03-2019 15:48:06.995 INFO  server started at port 9000 
+15-03-2019 15:49:01.025 INFO  POST: /v1/organisationLogin 
+15-03-2019 15:49:08.896 INFO  Params: {} 
+15-03-2019 15:51:30.210 INFO  ERROR : phone or password or isd code missing 
+15-03-2019 15:52:13.271 INFO  POST: /v1/organisationLogin 
+15-03-2019 15:52:13.486 INFO  Params: {} 
+15-03-2019 15:52:31.753 INFO  ERROR : phone or password or isd code missing 
+15-03-2019 15:55:19.108 INFO  POST: /v1/organisationLogin 
+15-03-2019 15:55:19.546 INFO  Params: {} 
+15-03-2019 15:56:03.167 INFO  ERROR : phone or password or isd code missing 
+15-03-2019 15:56:34.182 INFO  POST: /v1/organisationLogin 
+15-03-2019 15:56:36.069 INFO  Params: {"orgPhone":9999999999,"orgPassword":"User@123","isd_code":91} 
+15-03-2019 16:00:10.166 INFO  POST: /v1/userLogin 
+15-03-2019 16:00:10.679 INFO  Params: {"phone":"9999999999","password":"User@123","isd_code":"91"} 
+15-03-2019 16:00:10.921 INFO  ERROR : invalid username or password 
+15-03-2019 16:00:11.130 INFO  POST: /v1/organisationLogin 
+15-03-2019 16:00:11.359 INFO  Params: {"orgPhone":"9999999999","orgPassword":"User@123","isd_code":"91"} 
+15-03-2019 16:00:50.085 INFO  POST: /v1/organisationLogin 
+15-03-2019 16:00:50.317 INFO  Params: {"orgPhone":"9999999999","orgPassword":"User@123","isd_code":"91"} 
+15-03-2019 16:41:50.375 INFO  server started at port 9000 
+15-03-2019 16:42:01.654 INFO  POST: /v1/createCampaign 
+15-03-2019 16:42:03.079 INFO  Params: {"campaignName":"a","campaignCause":"sa","campaignDiscription":"as","amount_required":"10","campaignRequirement":"food","quantity":"10","campaignAddress":"123"} 
+15-03-2019 16:42:37.481 INFO  POST: /v1/createCampaign 
+15-03-2019 16:42:37.831 INFO  Params: {"campaignName":"a","campaignCause":"sa","campaignDiscription":"as","amount_required":"10","campaignRequirement":"food","quantity":"10","campaignAddress":"123"} 
+15-03-2019 16:56:10.021 INFO  server started at port 9000 
+15-03-2019 17:05:20.833 INFO  POST: /v1/createCampaign 
+15-03-2019 17:05:20.833 INFO  Params: {"campaignName":"a","campaignCause":"sa","campaignDiscription":"q","amount_required":"12","campaignRequirement":"food","quantity":"12","campaignAddress":"123"} 
+15-03-2019 17:06:48.218 INFO  server started at port 9000 
+15-03-2019 17:07:00.180 INFO  POST: /v1/createCampaign 
+15-03-2019 17:07:00.180 INFO  Params: {"campaignName":"a","campaignCause":"sa","campaignDiscription":"q","amount_required":"12","campaignRequirement":"food","quantity":"12","campaignAddress":"123"} 

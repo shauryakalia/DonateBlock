@@ -8,12 +8,6 @@ const styles = theme => ({
   listItem: {
     padding: `${theme.spacing.unit}px 0`,
   },
-  total: {
-    fontWeight: '700',
-  },
-  title: {
-    marginTop: theme.spacing.unit * 2,
-  },
 });
 
 class Review extends React.Component {
@@ -24,40 +18,32 @@ class Review extends React.Component {
    return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
-        User Summary
+        Vendor Summary
       </Typography>
       <List disablePadding>   
-          <ListItem className={styles.listItem}>
-            <ListItemText primary="First Name" secondary="Name that you entered" />
-            <Typography variant="body2">{this.props.values.firstName}</Typography>
+      <ListItem className={styles.listItem}>
+            <ListItemText primary="Vendor Name"  />
+            <Typography variant="body2">{this.props.values.vendorName}</Typography>
           </ListItem>
           <ListItem style={styles.listItem}>
-            <ListItemText primary="Last Name" secondary="Surname that you entered" />
-            <Typography variant="body2">{this.props.values.lastName}</Typography>
+            <ListItemText primary="Email Address"  />
+            <Typography variant="body2">{this.props.values.vendorEmail}</Typography>
           </ListItem>
           <ListItem style={styles.listItem}>
-            <ListItemText primary="Email Address" secondary="E-Mail ID that you enterted" />
-            <Typography variant="body2">{this.props.values.email}</Typography>
+            <ListItemText primary="ISD" />
+            <Typography variant="body2">{this.props.values.isd_code}</Typography>
           </ListItem>
           <ListItem style={styles.listItem}>
-            <ListItemText primary="Contact No." secondary="Phone Number that you enterted" />
-            <Typography variant="body2">{this.props.values.contact}</Typography>
+            <ListItemText primary="Contact No."  />
+            <Typography variant="body2">{this.props.values.vendorPhone}</Typography>
           </ListItem>
           <ListItem style={styles.listItem}>
-            <ListItemText primary="Residential Address" secondary="Local Address that you entered" />
-            <Typography variant="body2">{this.props.values.address}</Typography>
+            <ListItemText primary="Residential Address"  />
+            <Typography variant="body2">{this.props.values.vendorAddress}</Typography>
           </ListItem>
           <ListItem style={styles.listItem}>
-            <ListItemText primary="City" secondary="City where you live" />
-            <Typography variant="body2">{this.props.values.city}</Typography>
-          </ListItem>
-          <ListItem style={styles.listItem}>
-            <ListItemText primary="State/Province" secondary="Province where you're from" />
-            <Typography variant="body2">{this.props.values.province}</Typography>
-          </ListItem>
-          <ListItem style={styles.listItem}>
-            <ListItemText primary="Country" secondary="Country you belong to" />
-            <Typography variant="body2">{this.props.values.country}</Typography>
+            <ListItemText primary="Registration ID"  />
+            <Typography variant="body2">{this.props.values.vendorRegId}</Typography>
           </ListItem>
       </List>
     </React.Fragment>

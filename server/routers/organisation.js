@@ -26,6 +26,157 @@ const _                   =   require('lodash'),
 const abi = [
 	{
 		"constant": true,
+		"inputs": [],
+		"name": "organization",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "value",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "vendorAddress",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "donors",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "complete",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "recipient",
+				"type": "address"
+			},
+			{
+				"name": "val",
+				"type": "uint256"
+			},
+			{
+				"name": "completed",
+				"type": "uint256"
+			}
+		],
+		"name": "payVendor",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "amountRequired",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "donate",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "findVendor",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"name": "aim",
+				"type": "uint256"
+			},
+			{
+				"name": "org",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	}
+];
+const factoryabi = [
+	{
+		"constant": true,
 		"inputs": [
 			{
 				"name": "",
@@ -79,7 +230,7 @@ const abi = [
 ];
 const ethers = require('ethers');
 let provider = ethers.getDefaultProvider('rinkeby');
-let CampaignFactoryAddress = '0x989922da4b1628cb8d2986EAc18AC2E735b1477e';
+let CampaignFactoryAddress = '0x9ccf200EdbBDf5eA09477CbF231079D675238D6B';
 
 
 
@@ -514,9 +665,9 @@ organisationProfilePicUpload: async (req,res,next) => {
       const organisation_id  = _.get(req, ['body', 'organisation_id'], '');
       let organisation_details = await organisationDB.organisationDetails(organisation_id);
       let wallet = new ethers.Wallet(organisation_details.orgPrivateKey,provider);
-      let contract = new ethers.Contract(CampaignFactoryAddress, abi, provider);
+      let contract = new ethers.Contract(CampaignFactoryAddress, factoryabi, provider);
       let contractWithSigner = contract.connect(wallet);
-      //let contractWithSigner = new ethers.Contract(CampaignFactoryAddress, abi, wallet);
+      //let contractWithSigner = new ethers.Contract(CampaignFactoryAddress, factoryabi, wallet);
       let aim = parseInt(_.get(req,['body','amount_required'],100));
       let campaign_address = await contractWithSigner.functions.createCampaign(aim);
       let deployedCampaigns = await contract.functions.getAllCampaigns();
@@ -663,7 +814,10 @@ organisationProfilePicUpload: async (req,res,next) => {
       }
 ///-----------------------------------
       //details has the campaign consignment total amount and vendorWalletAddress //Shaurya
-      
+      let amountToSend = (details.selectedVendorDetail.consignment_amount) * 1000000000000000000/ 2;
+      let contract = new ethers.Contract(details.campaignWalletAddress, abi,provider);
+      await contract.functions.payVendor(details.selectedVendorDetail.vendorWalletAddress ,amountToSend,1);
+
       _.set(req, ['body'], {});
       _.set(req, ['body', 'campaign_completed'], true);
      

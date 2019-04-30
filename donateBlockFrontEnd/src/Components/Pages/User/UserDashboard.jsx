@@ -70,7 +70,7 @@ componentWillMount = () => {
     .then(res => {
       console.log(res.message)
       this.setState({
-        campaigns: res.message.campaign,
+        campaigns: res.message.campaign.filter(campaign => campaign.campaignWalletAddress !== undefined && campaign.amount_raised <= campaign.amount_required),
       })
   }, error => {
     this.setState({
@@ -134,6 +134,7 @@ creatAlert(Alert, Type, Title) {
 
 closeSimplert() {
   this.setState({showAlert: false});
+  window.location.reload();
 }
 
 render() {

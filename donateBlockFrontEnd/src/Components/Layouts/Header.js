@@ -184,6 +184,11 @@ class Header extends React.Component {
           <Typography variant="h2" color="textPrimary" align="center">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<font face='san-serif'> Donate Block</font></Typography>
           {sessionStorage.getItem('isLoggedIn')  ? this.LoggedInHeader(sessionStorage.getItem('role')):(
             <div>
+              <NavLink to="/">
+              <Button variant="contained"  color="primary" color="primary" style={{marginRight: 10}}>
+                Home
+              </Button>
+              </NavLink>
               <NavLink to="/about">
               <Button variant="contained"  color="primary" >
                 About

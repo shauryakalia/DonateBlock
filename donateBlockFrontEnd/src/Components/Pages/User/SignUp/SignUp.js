@@ -127,7 +127,7 @@ class SignUp extends React.Component {
   handleSubmit(event) {
     BackendServices.SignUp( this.state.gender, this.state.dob, this.state.street, this.state.email, this.state.password, this.state.firstName, this.state.lastName, this.state.contact, this.state.isd, this.state.address, this.state.city, this.state.province,  this.state.zip, this.state.country, this.state.adhaar )
     .then(res => {
-      this.creatAlert(true, "success", "You are just one step away from Registering with us.");
+      this.creatAlert(true, "success", "You are Succesfully Signed Up.");
   }, error => {
 
       console.log(error)

@@ -7,6 +7,9 @@ const _                   =   require('lodash'),
       multer              =   require('multer'),
       request             =   require('request'),
       jwt                 =   require('jsonwebtoken'),
+      mongoose            = require('mongoose'),
+      Q                   = require('q'),
+      async               = require("async"),
 // Internal Modules
       config              =   require('../config'),
       wallet              =   config.wallet,
@@ -19,7 +22,8 @@ const _                   =   require('lodash'),
       util                =   require('../util'),
       appConst            =   util.appConst,
       errorCode           =   util.errorCode,
-      REQUEST             =   config.REQUEST;
+      REQUEST             =   config.REQUEST,
+      Campaign            =   require('../model/Campaign');
 
 const abi = [
 	{
@@ -90,7 +94,7 @@ const abi = [
 		"outputs": [
 			{
 				"name": "",
-				"type": "bool"
+				"type": "uint256"
 			}
 		],
 		"payable": false,
@@ -106,6 +110,10 @@ const abi = [
 			},
 			{
 				"name": "val",
+				"type": "uint256"
+			},
+			{
+				"name": "completed",
 				"type": "uint256"
 			}
 		],
@@ -133,14 +141,23 @@ const abi = [
 		"constant": false,
 		"inputs": [],
 		"name": "donate",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "findVendor",
 		"outputs": [
 			{
 				"name": "",
 				"type": "uint256"
 			}
 		],
-		"payable": true,
-		"stateMutability": "payable",
+		"payable": false,
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -161,7 +178,7 @@ const abi = [
 ];
 const ethers = require('ethers');
 let provider = ethers.getDefaultProvider('rinkeby');
-let CampaignFactoryAddress = '0x169FE2EE864770CE7fc11c5EE1642531Ed703F90';
+let CampaignFactoryAddress = '0x9ccf200EdbBDf5eA09477CbF231079D675238D6B';
 
 module.exports  = {
   registerUser: async (req, res, next) => {
@@ -230,7 +247,7 @@ module.exports  = {
 
       _.set(req, ['body'], {});
       _.set(req, ['body'], details);
-     
+     console.log(details);
       return next();
 
     }
@@ -264,21 +281,25 @@ module.exports  = {
       const campaign_id = _.get(req, ['body', 'campaign_id'], '');
       let campaign_data = await campaignDB.getCampaignById(campaign_id);
       let campaign_wallet_address = campaign_data.campaignWalletAddress;//await campaignDB.getCampaignWallet(campaign_id);
-      let contract = new ethers.Contract(campaign_wallet_address.campaignWalletAddress, abi, provider);
+      let contract = new ethers.Contract(campaign_wallet_address, abi, provider);
       let contractWithSigner = contract.connect(user_wallet);
       let amount = ethers.utils.parseEther(donation_amount);
+      let amountRaised = parseFloat(campaign_data.amount_raised) + parseFloat(donation_amount);
+      let campaignUpdate =  await Campaign.update({ _id: campaign_id }, { $set: { amount_raised: amountRaised } });
       await contractWithSigner.functions.donate({
         value : amount
       });
-      let findVendor = await contract.functions.findVendor();
-      if(findVendor === 1)
+      let findVendor = await contract.findVendor();
+      if(parseInt(findVendor) === 1)
       {
         // call find vendor api 
         let vendor_selected = await donateBlock.selectVendor(campaign_data);
         console.log(vendor_selected);
         //vendor_Selected is an obj which contains - consignment_total_amount and vendor_wallet //Shaurya
-
-
+        // Pay first half to vendor        
+        let amountToVendor = (vendor_selected.consignment_total_amount * 1000000000000000000)/2; 
+      await contract.functions.payVendor(vendor_selected.vendor_wallet ,amountToVendor,0);
+    //    await contract.transfer(campaign_wallet_address,vendor_selected.vendor_wallet , amountToVendor);
       }
 
           _.set(req, ['body'], {});
@@ -769,6 +790,7 @@ module.exports  = {
       }
 
       let details = await userDB.getUserWallet(db_id);
+
 
 
       _.set(req, ['body'], {});

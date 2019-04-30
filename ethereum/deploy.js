@@ -11,6 +11,7 @@ const web3 = new Web3(provider);
 
 // just to be able to use async await
 const deploy = async () => {
+    console.log("entrypoint");
     const accounts = await web3.eth.getAccounts();
     console.log('deploying with account :' , accounts[0]);
     const res = await new web3.eth.Contract(JSON.parse(compiledFactory.interface))

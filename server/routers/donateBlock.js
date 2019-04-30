@@ -38,7 +38,7 @@ module.exports = {
       const campaign_data ={ campaign_id :campaign._id,
         campaignRequirement : campaign.campaignRequirement,
         quantity : campaign.quantity,
-        amount : campaign.amount_raised,
+        amount : campaign.amount_required,
         address: campaign.campaignAddress
       };
       //let vendor = await vendorDB.selectVendor(campaignRequirement, quantity, amount);
@@ -51,7 +51,8 @@ module.exports = {
           if( o.item == campaign_data.campaignRequirement && o.quantity >= campaign_data.quantity && (o.price * campaign_data.quantity) <= campaign_data.amount){
             consignment_total_amount = o.price * campaign_data.quantity;
             return o;
-          }
+           }
+          // let wallet = v.vendorWalletAddress;
         });
         if((obj[0].price * campaign_data.quantity)<i_price){
           final_vendor = v;

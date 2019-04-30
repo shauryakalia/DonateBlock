@@ -50,10 +50,6 @@ class Review extends React.Component {
             <ListItemText primary="Registration ID" />
             <Typography variant="body2">{this.props.values.orgRegId}</Typography>
           </ListItem>
-          <ListItem style={styles.listItem}>
-            <ListItemText primary="Country" />
-            <Typography variant="body2">{this.props.values.country}</Typography>
-          </ListItem>
       </List>
     </React.Fragment>
   );
