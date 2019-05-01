@@ -797,9 +797,9 @@ organisationProfilePicUpload: async (req,res,next) => {
       const organisation_id  = _.get(req, ['body', 'organisation_id'], ''),
             campaignId = _.get(req, ['body','campaign_id'], '');
 
-      let details  = await campaignDB.campaignCompleted(campaignId);//Adding a new verified campaign for an organisationDB
+      let campaigndetails  = await campaignDB.campaignCompleted(campaignId);//Adding a new verified campaign for an organisationDB
 
-      if(!details)
+      if(!campaigndetails)
       {          // error: "Error in adding new campaign for an Organisation to the db",
         let invalidCampaignError = {
           status: true,
@@ -814,9 +814,9 @@ organisationProfilePicUpload: async (req,res,next) => {
       }
 ///-----------------------------------
       //details has the campaign consignment total amount and vendorWalletAddress //Shaurya
-      let amountToSend = (details.selectedVendorDetail.consignment_amount) * 1000000000000000000/ 2;
-      let contract = new ethers.Contract(details.campaignWalletAddress, abi,provider);
-      await contract.functions.payVendor(details.selectedVendorDetail.vendorWalletAddress ,amountToSend,1);
+      let amountToSend = (campaigndetails.selectedVendorDetail.consignment_amount) * 1000000000000000000/ 2;
+      let contract = new ethers.Contract(campaigndetails.campaignWalletAddress, abi,provider);
+      await contract.functions.payVendor(campaigndetails.selectedVendorDetail.vendorWalletAddress ,amountToSend,1);
 
       _.set(req, ['body'], {});
       _.set(req, ['body', 'campaign_completed'], true);
